@@ -160,8 +160,8 @@ module.exports = function (env = {}, argv = {}) {
         inject: true,
         prefix: "favicons/",
         favicons: {
-          appName: "DDR Tools - card draw and more!",
-          appShortName: "DDR Tools",
+          appName: "Performai Card Draw",
+          appShortName: "Performai Card Draw",
           theme_color: "#28b6ea",
           display: "standalone",
           scope: "/",
@@ -183,7 +183,7 @@ module.exports = function (env = {}, argv = {}) {
         },
       }),
       new HtmlWebpackPlugin({
-        title: "DDR Tools - card draw and more!",
+        title: "Performai Card Draw",
         filename: "index.html",
         meta: {
           description: packageJson.description,
@@ -198,7 +198,7 @@ module.exports = function (env = {}, argv = {}) {
         ? [
             new ZipPlugin({
               path: __dirname,
-              filename: `DDRCardDraw-${version}.zip`,
+              filename: `PerformaiCardDraw-${version}.zip`,
               exclude: "__offline_serviceworker",
             }),
           ]

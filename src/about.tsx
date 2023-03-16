@@ -28,33 +28,6 @@ export function About() {
             <li key={i}>{injectPumpoutLink(line)}</li>
           ))}
       </UL>
-      <p>{t({ id: "contact.prompt" })}</p>
-      <ButtonGroup vertical>
-        <AnchorButton
-          href="https://m.me/noah.manneschmidt"
-          target="_blank"
-          text={t({ id: "contact.facebook" })}
-          rightIcon={IconNames.SHARE}
-        />
-        <AnchorButton
-          href="https://twitter.com/Cathadan"
-          target="_blank"
-          text={t({ id: "contact.twitter" })}
-          rightIcon={IconNames.SHARE}
-        />
-        <AnchorButton
-          href="https://github.com/noahm/DDRCardDraw"
-          target="_blank"
-          text={t({ id: "contact.github" })}
-          rightIcon={IconNames.SHARE}
-        />
-        <AnchorButton
-          href="https://discord.gg/QPyEATsbP7"
-          target="_blank"
-          text={t({ id: "contact.discord" })}
-          rightIcon={IconNames.SHARE}
-        />
-      </ButtonGroup>
     </div>
   );
 }

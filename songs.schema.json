@@ -8,7 +8,7 @@
     "meta": {
       "type": "object",
       "description": "Describes unique configuration options for this game",
-      "required": ["lastUpdated", "difficulties", "lvlMax", "flags"],
+      "required": ["lastUpdated", "difficulties", "categories", "lvlMax", "flags"],
       "additionalProperties": false,
       "properties": {
         "lastUpdated": {
@@ -35,6 +35,10 @@
           },
           "additionalItems": false
         },
+        "categories": {
+          "$ref": "#/$defs/uniqueStringArr",
+          "description": "List of song categories"
+        },
         "flags": {
           "$ref": "#/$defs/uniqueStringArr",
           "description": "List of all special flags one might filter songs by"
@@ -48,15 +52,15 @@
       "type": "object",
       "description": "Defines the default configuration for this game",
       "required": [
-        "style",
         "difficulties",
+        "categories",
         "lowerLvlBound",
         "upperLvlBound",
         "flags"
       ],
       "additionalProperties": false,
       "properties": {
-        "style": { "type": "string" },
+        "categories": { "$ref": "#/$defs/uniqueStringArr" },
         "difficulties": { "$ref": "#/$defs/uniqueStringArr" },
         "flags": { "$ref": "#/$defs/uniqueStringArr" },
         "lowerLvlBound": { "type": "integer" },
@@ -65,7 +69,7 @@
     },
     "i18n": {
       "type": "object",
-      "description": "Set of localized values for display of any styles, difficulties, or flags",
+      "description": "Set of localized values for display of any categories, difficulties, or flags",
       "required": ["en"],
       "additionalProperties": {
         "$ref": "#/$defs/i18nDictRoot"
@@ -114,7 +118,7 @@
             "type": "string"
           }
         },
-        "required": ["name", "artist", "jacket", "charts"],
+        "required": ["name", "artist", "jacket", "charts", "category"],
         "additionalProperties": false
       },
       "additionalItems": false
@@ -127,13 +131,12 @@
       "additionalProperties": false,
       "properties": {
         "flags": { "$ref": "#/$defs/uniqueStringArr" },
-        "style": { "type": "string", "description": "e.g. single/double" },
         "diffClass": {
           "type": "string",
           "description": "e.g. expert/challenge"
         },
         "lvl": {
-          "type": "integer"
+          "type": "number"
         },
         "step": {
           "type": "number"
@@ -151,7 +154,7 @@
           "type": "string"
         }
       },
-      "required": ["lvl", "diffClass", "style"]
+      "required": ["lvl", "diffClass"]
     },
     "uniqueStringArr": {
       "description": "An array of strings without any duplicate values",

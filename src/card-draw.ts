@@ -11,7 +11,7 @@ export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
     nameTranslation: currentSong.name_translation,
     artist: currentSong.artist,
     artistTranslation: currentSong.artist_translation,
-    bpm: currentSong.bpm,
+    bpm: currentSong.bpm ?? '0',
     difficultyClass: chart.diffClass,
     level: chart.lvl,
     flags: (chart.flags || []).concat(currentSong.flags || []),

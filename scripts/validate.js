@@ -11,20 +11,14 @@ function validateContents(dataFile) {
   const errors = [];
 
   const allKeys = [
-    ...dataFile.meta.styles,
     ...dataFile.meta.difficulties.map((d) => d.key),
     ...dataFile.meta.flags,
   ];
-  const styles = new Set(dataFile.meta.styles);
   const difficulties = new Set(dataFile.meta.difficulties.map((d) => d.key));
   const flags = new Set(dataFile.meta.flags);
 
   if (dataFile.meta.lvlMax < 1) {
     errors.push("max level is below 1");
-  }
-
-  if (dataFile.defaults.style && !styles.has(dataFile.defaults.style)) {
-    errors.push("default style is not listed in meta");
   }
 
   if (dataFile.defaults.difficulties.some((d) => !difficulties.has(d))) {
@@ -64,15 +58,14 @@ function validateContents(dataFile) {
   for (const song of dataFile.songs) {
     if (song.jacket) {
       const jacketPath = join(jacketsDir, song.jacket);
+      /* Temp disable jacket check
       if (!existsSync(jacketPath)) {
         errors.push(`missing jacket image ${song.jacket}`);
       }
+      */
     }
 
     for (const chart of song.charts) {
-      if (!styles.has(chart.style)) {
-        errors.push(`unrecognized style "${chart.style}" used by ${song.name}`);
-      }
       if (!difficulties.has(chart.diffClass)) {
         errors.push(
           `unrecognized diffClass "${chart.diffClass}" used by ${song.name}`

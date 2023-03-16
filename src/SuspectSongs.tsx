@@ -1,5 +1,4 @@
 import { useDrawState } from "./draw-state";
-import { useContext } from "react";
 import styles from "./SuspectSongs.css";
 
 const allAscii = /^[a-zA-Z .'?&!-_0-9]+$/;
@@ -7,6 +6,7 @@ const anyAscii = /[a-zA-Z]/;
 
 export function SuspectSongs() {
   const gameData = useDrawState((s) => s.gameData);
+  const dataSetName = useDrawState((s) => s.dataSetName);
   if (!gameData) {
     return null;
   }
@@ -26,7 +26,10 @@ export function SuspectSongs() {
     <div className={styles.suspectSongs}>
       {suspectSongs.map((song) => (
         <div className={styles.song}>
-          <img src={`jackets/${song.jacket}`} className={styles.img} />
+          <img
+            src={`jackets/${dataSetName}/${song.jacket}`}
+            className={styles.img}
+          />
           <p>{song.name}</p>
           <p>{song.name_translation}</p>
         </div>

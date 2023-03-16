@@ -7,7 +7,7 @@ import { getAvailableLevels } from "./game-data-utils";
 export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
   return {
     name: currentSong.name,
-    jacket: chart.jacket || currentSong.jacket,
+    jacket: currentSong.jacket,
     nameTranslation: currentSong.name_translation,
     artist: currentSong.artist,
     artistTranslation: currentSong.artist_translation,

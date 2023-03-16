@@ -25,6 +25,7 @@ import { IconNames } from "@blueprintjs/icons";
 import { useIsNarrow } from "../hooks/useMediaQuery";
 import { EligibleChartsListFilter } from "../eligible-charts-list";
 import shallow from "zustand/shallow";
+import { formatLevel } from "../game-data-utils";
 
 function getAvailableDifficulties(gameData: GameData) {
   let s = new Set<string>();
@@ -42,6 +43,16 @@ function getAvailableCategories(gameData: GameData) {
     s.add(f.category);
   }
   return gameData.meta.categories.filter((category) => s.has(category));
+}
+
+function getAvailableLevels(gameData: GameData) {
+  let s = new Set<number>();
+  for (const f of gameData.songs) {
+    for (const c of f.charts) {
+      s.add(c.lvl);
+    }
+  }
+  return [...s].sort((a, b) => a - b);
 }
 
 function ShowChartsToggle({ inDrawer }: { inDrawer: boolean }) {
@@ -229,26 +240,38 @@ function Controls() {
         </FormGroup>
         <div className={styles.inlineControls}>
           <FormGroup label="Lvl Min" contentClassName={styles.narrowInput}>
-            <NumericInput
+            <HTMLSelect
+              id="lvlMin"
+              large
               fill
               value={lowerBound}
-              min={1}
-              max={Math.max(upperBound, lowerBound, 1)}
-              clampValueOnBlur
-              large
-              onValueChange={handleLowerBoundChange}
-            />
+              onChange={(e) => {
+                handleLowerBoundChange(Number(e.target.value));
+              }}
+            >
+              {getAvailableLevels(gameData).map((level) => (
+                <option key={level} value={level}>
+                  {formatLevel(level)}
+                </option>
+              ))}
+            </HTMLSelect>
           </FormGroup>
           <FormGroup label="Lvl Max" contentClassName={styles.narrowInput}>
-            <NumericInput
+            <HTMLSelect
+              id="lvlMax"
+              large
               fill
               value={upperBound}
-              min={lowerBound}
-              max={lvlMax}
-              clampValueOnBlur
-              large
-              onValueChange={handleUpperBoundChange}
-            />
+              onChange={(e) => {
+                handleUpperBoundChange(Number(e.target.value));
+              }}
+            >
+              {getAvailableLevels(gameData).map((level) => (
+                <option key={level} value={level}>
+                  {formatLevel(level)}
+                </option>
+              ))}
+            </HTMLSelect>
           </FormGroup>
         </div>
       </div>

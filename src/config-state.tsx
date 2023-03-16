@@ -17,7 +17,7 @@ export interface ConfigState {
 }
 
 export const useConfigState = createStore<ConfigState>((set, get) => ({
-  chartCount: 5,
+  chartCount: 4,
   upperBound: 0,
   lowerBound: 0,
   useWeights: false,

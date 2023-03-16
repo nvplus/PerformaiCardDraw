@@ -7,9 +7,9 @@ import { CardLabel, LabelType } from "./card-label";
 import { DrawnChart } from "../models/Drawing";
 import { AbbrDifficulty, formatLevel } from "../game-data-utils";
 import { useDifficultyColor } from "../hooks/useDifficultyColor";
-import { ShockBadge } from "./shock-badge";
 import { Popover2 } from "@blueprintjs/popover2";
 import { SongSearch } from "../song-search";
+import { useDrawState } from "../draw-state";
 
 const isJapanese = detectedLanguage === "ja";
 
@@ -33,6 +33,7 @@ interface Props {
 }
 
 export function SongCard(props: Props) {
+  const dataSetName = useDrawState((s) => s.dataSetName);
   const {
     chart,
     vetoedBy,
@@ -72,7 +73,7 @@ export function SongCard(props: Props) {
   let jacketBg = {};
   if (jacket) {
     jacketBg = {
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("jackets/${jacket}")`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("jackets/${dataSetName}/${jacket}")`,
     };
   }
 

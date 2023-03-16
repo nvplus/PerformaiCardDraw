@@ -6,7 +6,6 @@ import { Drawing } from "./models/Drawing";
 import { useConfigState } from "./config-state";
 import { EligibleChartsList } from "./eligible-charts-list";
 import { Callout, NonIdealState } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
 import logo from "./assets/ddr-tools-256.png";
 
 const renderDrawing = (drawing: Drawing) => (
@@ -30,14 +29,8 @@ export function DrawingList() {
       <div className={styles.empty}>
         <NonIdealState
           icon={<img src={logo} height={128} />}
-          title="DDR Tools"
+          title="Performai Card Draw"
           description="Click 'Draw' above to draw some songs at random. Chose from other games in the top left menu."
-          action={
-            <Callout intent="primary" icon={IconNames.WRENCH}>
-              DDR Card Draw now has a new name and URL. Look for more new
-              features coming soon!
-            </Callout>
-          }
         />
       </div>
     );

@@ -52,6 +52,7 @@ export const useDrawState = createStore<DrawState>((set, get) => ({
       /* webpackChunkName: "songData" */ `./songs/${dataSetName}.json`
     );
     set({
+      dataSetName,
       gameData: data,
       drawings: [],
       fuzzySearch: new FuzzySearch(

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { IconMenu } from "./icon-menu";
 import { CardLabel, LabelType } from "./card-label";
 import { DrawnChart } from "../models/Drawing";
-import { AbbrDifficulty } from "../game-data-utils";
+import { AbbrDifficulty, formatLevel } from "../game-data-utils";
 import { useDifficultyColor } from "../hooks/useDifficultyColor";
 import { ShockBadge } from "./shock-badge";
 import { Popover2 } from "@blueprintjs/popover2";
@@ -56,7 +56,6 @@ export function SongCard(props: Props) {
     bpm,
     difficultyClass,
     level,
-    hasShock,
     jacket,
   } = replacedWith || chart;
   const diffAccentColor = useDifficultyColor(difficultyClass);
@@ -154,10 +153,14 @@ export function SongCard(props: Props) {
           className={styles.cardFooter}
           style={{ backgroundColor: diffAccentColor }}
         >
-          <div className={styles.bpm}>{bpm} BPM</div>
-          {hasShock && <ShockBadge />}
+          <div className={styles.bpm}>
+            {chart.flags.findIndex((flag) => flag === "std") !== -1
+              ? "ST"
+              : "DX"}
+          </div>
+
           <div className={styles.difficulty}>
-            <AbbrDifficulty diffClass={difficultyClass} /> {level}
+            <AbbrDifficulty diffClass={difficultyClass} /> {formatLevel(level)}
           </div>
         </div>
       </Popover2>

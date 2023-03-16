@@ -11,7 +11,7 @@ import { useMemo } from "react";
 import { CountingSet } from "./utils";
 import { useDrawState } from "./draw-state";
 import { useIntl } from "./hooks/useIntl";
-import { getMetaString } from "./game-data-utils";
+import { formatLevel, getMetaString } from "./game-data-utils";
 import { Theme, useTheme } from "./theme-toggle";
 import { useIsNarrow } from "./hooks/useMediaQuery";
 
@@ -44,14 +44,16 @@ export function DiffHistogram({ charts }: Props) {
       key: diff.key,
       label: getMetaString(t, diff.key),
       data: orderedLevels.map((lvl) => ({
-        level: lvl,
+        level: formatLevel(lvl),
         count: countByClassAndLvl[diff.key].get(lvl) || 0,
       })),
     }));
     return [
       dataPerDiff,
       difficulties.map((d) => d.color),
-      Array.from(allLevels.values()).sort((a, b) => a - b),
+      Array.from(allLevels.values())
+        .sort((a, b) => a - b)
+        .map((level) => formatLevel(level)),
       Array.from(allLevels.valuesWithCount())
         .sort((a, b) => a[0] - b[0])
         .map(([_, count]) => count),

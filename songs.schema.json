@@ -8,20 +8,16 @@
     "meta": {
       "type": "object",
       "description": "Describes unique configuration options for this game",
-      "required": ["lastUpdated", "styles", "difficulties", "lvlMax", "flags"],
+      "required": ["lastUpdated", "difficulties", "lvlMax", "flags"],
       "additionalProperties": false,
       "properties": {
         "lastUpdated": {
           "type": "integer",
           "description": "Unix timestamp of last update to this data file"
         },
-        "styles": {
-          "$ref": "#/$defs/uniqueStringArr",
-          "description": "List of all play styles available"
-        },
         "difficulties": {
           "type": "array",
-          "description": "List of all difficultiy classes available",
+          "description": "List of all difficulty classes available",
           "items": {
             "type": "object",
             "properties": {
@@ -88,10 +84,10 @@
           "artist": {
             "type": "string"
           },
-          "genre": {
+          "artist_translation": {
             "type": "string"
           },
-          "artist_translation": {
+          "category": {
             "type": "string"
           },
           "bpm": {
@@ -114,17 +110,11 @@
           "folder": {
             "type": "string"
           },
-          "saHash": {
-            "type": "string"
-          },
-          "saIndex": {
-            "type": "string"
-          },
           "remyLink": {
             "type": "string"
           }
         },
-        "required": ["name", "artist", "bpm", "jacket", "charts"],
+        "required": ["name", "artist", "jacket", "charts"],
         "additionalProperties": false
       },
       "additionalItems": false

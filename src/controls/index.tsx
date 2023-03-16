@@ -26,41 +26,22 @@ import { useIsNarrow } from "../hooks/useMediaQuery";
 import { EligibleChartsListFilter } from "../eligible-charts-list";
 import shallow from "zustand/shallow";
 
-function getAvailableDifficulties(gameData: GameData, selectedStyle: string) {
+function getAvailableDifficulties(gameData: GameData) {
   let s = new Set<string>();
   for (const f of gameData.songs) {
     for (const c of f.charts) {
-      if (c.style === selectedStyle) {
-        s.add(c.diffClass);
-      }
+      s.add(c.diffClass);
     }
   }
   return gameData.meta.difficulties.filter((d) => s.has(d.key));
 }
 
-function getDiffsAndRangeForNewStyle(
-  gameData: GameData,
-  selectedStyle: string
-) {
+function getAvailableCategories(gameData: GameData) {
   let s = new Set<string>();
-  const range = { high: 0, low: 100 };
   for (const f of gameData.songs) {
-    for (const c of f.charts) {
-      if (c.style === selectedStyle) {
-        s.add(c.diffClass);
-        if (c.lvl > range.high) {
-          range.high = c.lvl;
-        }
-        if (c.lvl < range.low) {
-          range.low = c.lvl;
-        }
-      }
-    }
+    s.add(f.category);
   }
-  return {
-    diffs: gameData.meta.difficulties.filter((d) => s.has(d.key)),
-    lvlRange: range,
-  };
+  return gameData.meta.categories.filter((category) => s.has(category));
 }
 
 function ShowChartsToggle({ inDrawer }: { inDrawer: boolean }) {
@@ -173,22 +154,25 @@ function Controls() {
     upperBound,
     update: updateState,
     difficulties: selectedDifficulties,
+    categories: selectedCategories,
     flags: selectedFlags,
-    style: selectedStyle,
     chartCount,
   } = configState;
-  const availableDifficulties = useMemo(() => {
+  const [availableDifficulties, availableCategories] = useMemo(() => {
     if (!gameData) {
-      return [];
+      return [[], []];
     }
-    return getAvailableDifficulties(gameData, selectedStyle);
-  }, [gameData, selectedStyle]);
+    return [
+      getAvailableDifficulties(gameData),
+      getAvailableCategories(gameData),
+    ];
+  }, [gameData]);
   const isNarrow = useIsNarrow();
 
   if (!gameData) {
     return null;
   }
-  const { flags, lvlMax, styles: gameStyles } = gameData.meta;
+  const { flags, lvlMax } = gameData.meta;
 
   const handleLowerBoundChange = (newLow: number) => {
     if (newLow !== lowerBound && !isNaN(newLow)) {
@@ -268,40 +252,6 @@ function Controls() {
           </FormGroup>
         </div>
       </div>
-      {gameStyles.length > 1 && (
-        <FormGroup labelFor="style" label={t("style")}>
-          <HTMLSelect
-            id="style"
-            large
-            value={selectedStyle}
-            onChange={(e) => {
-              updateState((prev) => {
-                const next = { ...prev, style: e.currentTarget.value };
-                const { diffs, lvlRange } = getDiffsAndRangeForNewStyle(
-                  gameData,
-                  next.style
-                );
-                if (diffs.length === 1) {
-                  next.difficulties = new Set(diffs.map((d) => d.key));
-                }
-                if (lvlRange.low > next.upperBound) {
-                  next.upperBound = lvlRange.low;
-                }
-                if (lvlRange.high < next.lowerBound) {
-                  next.lowerBound = lvlRange.high;
-                }
-                return next;
-              });
-            }}
-          >
-            {gameStyles.map((style) => (
-              <option key={style} value={style}>
-                {t("meta." + style)}
-              </option>
-            ))}
-          </HTMLSelect>
-        </FormGroup>
-      )}
       <FormGroup label={t("difficulties")}>
         {availableDifficulties.map((dif) => (
           <Checkbox
@@ -322,6 +272,29 @@ function Controls() {
               });
             }}
             label={t("meta." + dif.key)}
+          />
+        ))}
+      </FormGroup>
+      <FormGroup label={t("categories")}>
+        {availableCategories.map((category) => (
+          <Checkbox
+            key={`${category}`}
+            name="categories"
+            value={category}
+            checked={selectedCategories.has(category)}
+            onChange={(e) => {
+              const { checked, value } = e.currentTarget;
+              updateState((s) => {
+                const categories = new Set(s.categories);
+                if (checked) {
+                  categories.add(value);
+                } else {
+                  categories.delete(value);
+                }
+                return { categories };
+              });
+            }}
+            label={t("meta." + category)}
           />
         ))}
       </FormGroup>

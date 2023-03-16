@@ -15,6 +15,7 @@ import { useIntl } from "./hooks/useIntl";
 import { useIsNarrow } from "./hooks/useMediaQuery";
 import { atom, useAtom } from "jotai";
 import { DiffHistogram } from "./histogram";
+import Container from "./Container";
 
 function songKeyFromChart(chart: DrawnChart) {
   return `${chart.name}:${chart.artist}`;
@@ -73,16 +74,18 @@ export function EligibleChartsList() {
           top: "50px",
         }}
       >
-        <NavbarGroup>
-          {charts.length} eligible charts from {songs.size} songs (of{" "}
-          {gameData.songs.length} total)
-        </NavbarGroup>
-        {configState.flags.size > 0 && !isNarrow && (
+        <Container>
           <NavbarGroup>
-            <NavbarDivider />
-            <EligibleChartsListFilter />
+            {charts.length} eligible charts from {songs.size} songs (of{" "}
+            {gameData.songs.length} total)
           </NavbarGroup>
-        )}
+          {configState.flags.size > 0 && !isNarrow && (
+            <NavbarGroup>
+              <NavbarDivider />
+              <EligibleChartsListFilter />
+            </NavbarGroup>
+          )}
+        </Container>
       </Navbar>
       <DiffHistogram charts={filteredCharts} />
       <div className={styles.chartList}>

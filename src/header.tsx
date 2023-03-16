@@ -10,6 +10,7 @@ import { IconNames } from "@blueprintjs/icons";
 import { Popover2, Tooltip2 } from "@blueprintjs/popover2";
 import { useState } from "react";
 import { About } from "./about";
+import Container from "./Container";
 import { HeaderControls } from "./controls";
 import { useIntl } from "./hooks/useIntl";
 import { LastUpdate } from "./last-update";
@@ -39,22 +40,24 @@ export function Header() {
         top: 0,
       }}
     >
-      <Dialog isOpen={aboutOpen} onClose={() => setAboutOpen(false)}>
-        <About />
-      </Dialog>
-      <Navbar.Group align={Alignment.LEFT}>
-        <Popover2 content={menu} placement="bottom-start">
-          <Button icon={IconNames.MENU} />
-        </Popover2>
-        <Navbar.Divider />
-        <Tooltip2 content="Change Song Data" placement="bottom">
-          <VersionSelect />
-        </Tooltip2>
-        <DataLoadingSpinner />
-      </Navbar.Group>
-      <Navbar.Group align={Alignment.RIGHT}>
-        <HeaderControls />
-      </Navbar.Group>
+      <Container>
+        <Dialog isOpen={aboutOpen} onClose={() => setAboutOpen(false)}>
+          <About />
+        </Dialog>
+        <Navbar.Group align={Alignment.LEFT}>
+          <Popover2 content={menu} placement="bottom-start">
+            <Button icon={IconNames.MENU} />
+          </Popover2>
+          <Navbar.Divider />
+          <Tooltip2 content="Change Song Data" placement="bottom">
+            <VersionSelect />
+          </Tooltip2>
+          <DataLoadingSpinner />
+        </Navbar.Group>
+        <Navbar.Group align={Alignment.RIGHT}>
+          <HeaderControls />
+        </Navbar.Group>
+      </Container>
     </Navbar>
   );
 }

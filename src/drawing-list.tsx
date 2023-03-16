@@ -14,7 +14,9 @@ const renderDrawing = (drawing: Drawing) => (
 );
 
 const ScrollableDrawings = memo((props: { drawings: Drawing[] }) => {
-  return <div>{props.drawings.map(renderDrawing)}</div>;
+  return (
+    <div className={styles.container}>{props.drawings.map(renderDrawing)}</div>
+  );
 });
 
 export function DrawingList() {

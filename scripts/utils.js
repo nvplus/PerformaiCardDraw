@@ -65,12 +65,12 @@ function downloadJacket(coverUrl, localFilename = undefined) {
   const absoluteOutput = path.join(JACKETS_PATH, outputPath);
   if (!fs.existsSync(absoluteOutput)) {
     requestQueue
-      .add(() => jimp.read(coverUrl))
+      .add(() => jimp.read({ url: coverUrl, headers: {}} ))
       .then((img) =>
         img.resize(128, jimp.AUTO).quality(80).writeAsync(absoluteOutput)
       )
       .catch((e) => {
-        console.error("image download failure");
+        console.error(`image download failure while requesting ${coverUrl}`);
         console.error(e);
       });
   }

@@ -2,6 +2,7 @@ import { GameData, Song, Chart } from "./models/SongData";
 import { times } from "./utils";
 import { DrawnChart, Drawing } from "./models/Drawing";
 import { ConfigState } from "./config-state";
+import { getAvailableLevels } from "./game-data-utils";
 
 export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
   return {
@@ -13,7 +14,6 @@ export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
     bpm: currentSong.bpm,
     difficultyClass: chart.diffClass,
     level: chart.lvl,
-    hasShock: !!chart.shock,
     flags: (chart.flags || []).concat(currentSong.flags || []),
     song: currentSong,
   };
@@ -33,7 +33,7 @@ export function songIsValid(
   if (forPocketPick && !config.constrainPocketPicks) {
     return true;
   }
-  return !song.flags || song.flags.every((f) => config.flags.has(f));
+  return (!song.flags || song.flags.every((f) => config.flags.has(f))) && config.categories.has(song.category);
 }
 
 /** returns true if chart matches configured difficulty/style/lvl/flags */
@@ -43,10 +43,9 @@ export function chartIsValid(
   forPocketPick = false
 ): boolean {
   if (forPocketPick && !config.constrainPocketPicks) {
-    return chart.style === config.style;
+    return true;
   }
   return (
-    chart.style === config.style &&
     config.difficulties.has(chart.diffClass) &&
     chart.lvl >= config.lowerBound &&
     chart.lvl <= config.upperBound &&
@@ -59,7 +58,7 @@ export function* eligibleCharts(config: ConfigState, songs: Song[]) {
     if (!songIsValid(config, currentSong)) {
       continue;
     }
-    const charts = currentSong.charts.filter((c) => c.style === config.style);
+    const charts = currentSong.charts;
 
     for (const chart of charts) {
       if (!chartIsValid(config, chart)) {
@@ -83,16 +82,16 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
     chartCount: numChartsToRandom,
     upperBound,
     lowerBound,
-    style,
     useWeights,
     forceDistribution,
     weights,
   } = configData;
 
   const validCharts: Record<string, Array<DrawnChart>> = {};
-  times(gameData.meta.lvlMax, (n) => {
-    validCharts[n.toString()] = [];
-  });
+  const availableLevels = getAvailableLevels(gameData);
+  availableLevels.forEach(level => {
+    validCharts[level.toString()] = [];
+  })
 
   for (const chart of eligibleCharts(configData, gameData.songs)) {
     validCharts[chart.level].push(chart);
@@ -112,7 +111,7 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
   const expectedDrawPerLevel: Record<string, number> = {};
 
   // build an array of possible levels to pick from
-  for (let level = lowerBound; level <= upperBound; level++) {
+  for (const level of availableLevels) {
     let weightAmount = 0;
     if (useWeights) {
       weightAmount = weights[level];
@@ -130,7 +129,7 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
   // so a level with a weight of 15% can only show up on at most 1 card, a level with
   // a weight of 30% can only show up on at most 2 cards, etc.
   if (useWeights && forceDistribution) {
-    for (let level = lowerBound; level <= upperBound; level++) {
+    for (const level of availableLevels) {
       let normalizedWeight =
         expectedDrawPerLevel[level.toString()] / totalWeights;
       expectedDrawPerLevel[level] = Math.ceil(

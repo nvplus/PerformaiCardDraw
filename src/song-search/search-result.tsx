@@ -1,4 +1,4 @@
-import { AbbrDifficulty } from "../game-data-utils";
+import { AbbrDifficulty, formatLevel } from "../game-data-utils";
 import { useDifficultyColor } from "../hooks/useDifficultyColor";
 import { useIntl } from "../hooks/useIntl";
 import { ConfigState } from "../config-state";
@@ -52,7 +52,8 @@ export function SearchResult({
   if (typeof data.chart === "object") {
     label = (
       <>
-        <AbbrDifficulty diffClass={data.chart.diffClass} /> {data.chart.lvl}
+        <AbbrDifficulty diffClass={data.chart.diffClass} />{" "}
+        {formatLevel(data.chart.lvl)}
       </>
     );
   } else if (typeof data.chart === "string") {

@@ -8,10 +8,8 @@
     "constrainPocketPicks": "Pocket picks must match draw options",
     "useWeightedDistributions": "Use Weighted Distributions",
     "orderByAction": "Re-order by pick/ban",
-    "style": "Style",
-    "single": "Single",
-    "double": "Double",
     "difficulties": "Difficulties",
+    "categories": "Categories",
     "weights": {
       "explanation": "Set a fixed probability that charts of each difficulty level will be drawn.",
       "check": {
@@ -25,7 +23,6 @@
       "hide": "Hide Options",
       "invalid": "Couldn't draw anything with current settings!"
     },
-    "shockArrows": "Shock Arrows",
     "difficulty": {
       "ace": {
         "beg": {

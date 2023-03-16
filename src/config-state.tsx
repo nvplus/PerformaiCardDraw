@@ -9,8 +9,8 @@ export interface ConfigState {
   weights: number[];
   forceDistribution: boolean;
   constrainPocketPicks: boolean;
-  style: string;
   difficulties: ReadonlySet<string>;
+  categories: ReadonlySet<string>;
   flags: ReadonlySet<string>;
   showPool: boolean;
   update: SetState<ConfigState>;
@@ -25,8 +25,8 @@ export const useConfigState = createStore<ConfigState>((set, get) => ({
   weights: [],
   forceDistribution: true,
   constrainPocketPicks: true,
-  style: "",
   difficulties: new Set(),
+  categories: new Set(),
   flags: new Set(),
   showPool: false,
   update: set,

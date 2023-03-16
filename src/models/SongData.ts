@@ -22,10 +22,6 @@ export interface GameData {
      */
     lastUpdated: number;
     /**
-     * List of all play styles available
-     */
-    styles: string[];
-    /**
      * List of all difficultiy classes available
      */
     difficulties: {
@@ -38,6 +34,7 @@ export interface GameData {
        */
       color: string;
     }[];
+    categories: string[];
     /**
      * List of all special flags one might filter songs by
      */
@@ -48,8 +45,8 @@ export interface GameData {
    * Defines the default configuration for this game
    */
   defaults: {
-    style: string;
     difficulties: UniqueStringArr;
+    categories: UniqueStringArr;
     flags: UniqueStringArr;
     lowerLvlBound: number;
     upperLvlBound: number;
@@ -76,32 +73,25 @@ export interface Song {
   flags?: UniqueStringArr;
   name: string;
   artist: string;
-  genre?: string;
   artist_translation?: string;
+  category: string;
+  genre?: string;
   bpm: string;
   name_translation?: string;
   search_hint?: string;
   charts: Chart[];
   jacket: string;
   folder?: string;
-  saHash?: string;
-  saIndex?: string;
   remyLink?: string;
 }
 export interface Chart {
   flags?: UniqueStringArr;
-  /**
-   * e.g. single/double
-   */
-  style: string;
   /**
    * e.g. expert/challenge
    */
   diffClass: string;
   lvl: number;
   step?: number;
-  shock?: number;
-  freeze?: number;
   jacket?: string;
   author?: string;
 }

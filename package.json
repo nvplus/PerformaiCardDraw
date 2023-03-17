@@ -9,6 +9,7 @@
     "build:zip": "npm run validate && webpack --env zip",
     "import:maimai": "node scripts/maimai/import-maimai.js",
     "import:maimai-jackets": "ts-node scripts/maimai/import-maimai-jackets.ts",
+    "import:chunithm": "ts-node scripts/import-chunithm.ts",
     "validate": "npm run validate:json && npm run validate:ts",
     "validate:json": "node scripts/validate.js",
     "validate:ts": "tsc --noemit"

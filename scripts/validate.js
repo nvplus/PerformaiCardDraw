@@ -1,5 +1,5 @@
 const { readdirSync, writeFileSync, existsSync } = require("fs");
-const { resolve, join } = require("path");
+const { basename, resolve, join } = require("path");
 const { validate: validateJSONSchema } = require("jsonschema");
 
 const dataFileNames = readdirSync(resolve(join(__dirname, "../src/songs")));
@@ -7,7 +7,7 @@ const jacketsDir = resolve(join(__dirname, "../src/assets/jackets"));
 const songsSchema = require("../songs.schema.json");
 const schemaLocation = "src/models/SongData.ts";
 
-function validateContents(dataFile) {
+function validateContents(dataFilename, dataFile) {
   const errors = [];
 
   const allKeys = [
@@ -24,11 +24,6 @@ function validateContents(dataFile) {
   if (dataFile.defaults.difficulties.some((d) => !difficulties.has(d))) {
     errors.push("some default difficulties are missing from meta");
   }
-
-  // removed to allow for hidden flags like "plus" charts in SMX
-  // if (dataFile.defaults.flags.some((d) => !flags.has(d))) {
-  //   errors.push("some default flags are missing from meta");
-  // }
 
   if (dataFile.defaults.lowerLvlBound > dataFile.defaults.upperLvlBound) {
     errors.push("default level bounds are reversed");
@@ -57,12 +52,10 @@ function validateContents(dataFile) {
 
   for (const song of dataFile.songs) {
     if (song.jacket) {
-      const jacketPath = join(jacketsDir, song.jacket);
-      /* Temp disable jacket check
+      const jacketPath = join(jacketsDir, basename(dataFilename, '.json'), song.jacket);
       if (!existsSync(jacketPath)) {
         errors.push(`missing jacket image ${song.jacket}`);
       }
-      */
     }
 
     for (const chart of song.charts) {
@@ -88,7 +81,7 @@ for (const dataFile of dataFileNames) {
   });
 
   if (result.valid) {
-    const consistencyErrors = validateContents(songData);
+    const consistencyErrors = validateContents(dataFile, songData);
     if (consistencyErrors.length) {
       consistencyErrors.forEach((err) => console.error(" * " + err));
       console.log(`\n${dataFile} has inconsistent data!`);

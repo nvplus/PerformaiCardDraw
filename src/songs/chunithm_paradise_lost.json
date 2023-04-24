@@ -4,8 +4,7 @@
       { "key": "basic", "color": "#22ac38" },
       { "key": "advanced", "color": "#e5004f" },
       { "key": "expert", "color": "#e5004f" },
-      { "key": "master", "color": "#af0bd2" },
-      { "key": "worldsend", "color": "black" }
+      { "key": "master", "color": "#af0bd2" }
     ],
     "categories": [
       "POPS＆ANIME",

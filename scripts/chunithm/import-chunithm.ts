@@ -1,5 +1,5 @@
 import path from "path";
-import { writeJsonData } from "./utils";
+import { writeJsonData } from "../utils";
 
 const fetch = require('node-fetch');
 
@@ -28,7 +28,7 @@ function extractSheets(rawSong: Record<string, any>) {
     {
       flags: [rawSong.we_tex, rawSong.lev_we],
       diffClass: 'worldsend',
-      lvl: rawSong?.lev_we ?? null,
+      lvl: 0,
     },
   ].filter((e) => !!e.lvl).map((rawSheet) => ({
     ...rawSheet,

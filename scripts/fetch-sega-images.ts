@@ -1,7 +1,13 @@
 /* eslint-disable no-await-in-loop */
 import fs from 'node:fs';
 import download from 'download';
-import sleep from 'sleep-promise';
+import pqueue from 'p-queue';
+
+const requestQueue = new pqueue({
+  concurrency: 6, // 6 concurrent max
+  interval: 1000,
+  intervalCap: 10, // 10 per second max
+});
 
 export default async function run(
   gameCode: string,
@@ -15,15 +21,13 @@ export default async function run(
   for (const [index, song] of songs.entries()) {
     if (song.jacket && !fs.existsSync(`${coverImgDir}/${song.jacket}`)) {
       console.info(`(${1 + index} / ${songs.length}) ${song.name}`);
-      const imageUrl = `${baseUrl}/${song.jacket}`;
+      const imageUrl = `${baseUrl}${song.jacket}`;
 
-      try {
-        await download(imageUrl, coverImgDir, { filename: song.jacket, headers, rejectUnauthorized: false });
-      }
-      catch (err) {
-        console.log(`Could not download jacket for: ${song.name}`)
-      }
-      await sleep(100);
+      requestQueue
+        .add(() => download(imageUrl, coverImgDir, { filename: song.jacket, headers, rejectUnauthorized: false }))
+        .catch((e) => {
+          console.log(`Could not download jacket for: ${song.name}`)
+        });
     }
   }
 

@@ -81,6 +81,9 @@
         "type": "object",
         "title": "Song",
         "properties": {
+          "id": {
+            "type": "string"
+          },
           "flags": { "$ref": "#/$defs/uniqueStringArr" },
           "name": {
             "type": "string"

@@ -83,7 +83,7 @@ async function run() {
   console.info(`OK, ${rawSongs.length} songs fetched.`);
 
   const songs = rawSongs.map((rawSong) => extractSong(rawSong));
-  const filePath = path.join(__dirname, '../', OUTFILE);
+  const filePath = path.join(__dirname, '../../', OUTFILE);
   const existingData = require(filePath);
 
   const maimaiData = {

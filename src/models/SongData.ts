@@ -73,6 +73,7 @@ export interface I18NDict {
       };
 }
 export interface Song {
+  id?: string;
   flags?: UniqueStringArr;
   name: string;
   artist: string;

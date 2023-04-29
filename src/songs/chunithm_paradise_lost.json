@@ -11,7 +11,8 @@
       "niconico",
       "東方Project",
       "ORIGINAL",
-      "VARIETY"
+      "VARIETY",
+      "ゲキマイ"
     ],
     "flags": [],
     "lvlMax": 14,
@@ -24,7 +25,8 @@
       "niconico",
       "東方Project",
       "ORIGINAL",
-      "VARIETY"
+      "VARIETY",
+      "ゲキマイ"
     ],
     "flags": [],
     "lowerLvlBound": 12,
@@ -44,6 +46,7 @@
       "東方Project": "東方Project",
       "ORIGINAL": "ORIGINAL",
       "VARIETY": "VARIETY",
+      "ゲキマイ": "GekiChuMai",
       "WORLD'S END": "WORLD'S END",
       "$abbr": {
         "basic": "BAS",

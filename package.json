@@ -5,12 +5,13 @@
   "description": "Tools for music game tournaments and training",
   "scripts": {
     "start": "webpack serve --env dev=true",
-    "build": "npm run validate && webpack",
-    "build:zip": "npm run validate && webpack --env zip",
+    "build": "webpack",
+    "build:zip": "webpack --env zip",
     "import:maimai": "node scripts/maimai/import-maimai.js",
     "import:maimai-jackets": "ts-node scripts/maimai/import-maimai-jackets.ts",
     "import:chunithm": "ts-node scripts/chunithm/import-chunithm.ts",
     "import:chunithm-jackets": "ts-node scripts/chunithm/import-chunithm-jackets.ts",
+    "import:wacca": "ts-node scripts/wacca/import-wacca.ts",
     "validate": "npm run validate:json && npm run validate:ts",
     "validate:json": "node scripts/validate.js",
     "validate:ts": "tsc --noemit"

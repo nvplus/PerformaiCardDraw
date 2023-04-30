@@ -18,6 +18,7 @@ export default async function run(
 ) {
   const coverImgDir = `src/assets/jackets/${gameCode}`;
 
+  /*
   console.info(`Fetching data from: ${dataUrl} ...`);
   const response = await fetch(dataUrl);
   const data: Record<string, any> = await response.json();
@@ -29,17 +30,20 @@ export default async function run(
     }),
     {}
   );
+  */
 
   console.info('* Downloading cover image for songs ...');
   for (const [index, song] of songs.entries()) {
     if (song.jacket && !fs.existsSync(`${coverImgDir}/${song.jacket}`)) {
       console.info(`(${1 + index} / ${songs.length}) ${song.name}`);
+      /*
       const arcadeSong = arcadeSongs[song.name];
       if (!arcadeSong || arcadeSong.artist !== song.artist) {
         console.log(`Could not find or download jacket for: ${song.name}`);
         continue;
       }
-      const imageUrl = `${baseUrl}${arcadeSong.imageName}`;
+      */
+      const imageUrl = `${baseUrl}${song.jacket}`;
 
       requestQueue
         .add(() =>

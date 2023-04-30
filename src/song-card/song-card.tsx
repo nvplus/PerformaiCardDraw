@@ -1,17 +1,17 @@
-import classNames from "classnames";
-import { detectedLanguage } from "../utils";
-import styles from "./song-card.css";
-import { useState } from "react";
-import { IconMenu } from "./icon-menu";
-import { CardLabel, LabelType } from "./card-label";
-import { DrawnChart } from "../models/Drawing";
-import { AbbrDifficulty, formatLevel } from "../game-data-utils";
-import { useDifficultyColor } from "../hooks/useDifficultyColor";
-import { Popover2 } from "@blueprintjs/popover2";
-import { SongSearch } from "../song-search";
-import { useDrawState } from "../draw-state";
+import classNames from 'classnames';
+import { detectedLanguage } from '../utils';
+import styles from './song-card.css';
+import { useState } from 'react';
+import { IconMenu } from './icon-menu';
+import { CardLabel, LabelType } from './card-label';
+import { DrawnChart } from '../models/Drawing';
+import { AbbrDifficulty, formatLevel } from '../game-data-utils';
+import { useDifficultyColor } from '../hooks/useDifficultyColor';
+import { Popover2 } from '@blueprintjs/popover2';
+import { SongSearch } from '../song-search';
+import { useDrawState } from '../draw-state';
 
-const isJapanese = detectedLanguage === "ja";
+const isJapanese = detectedLanguage === 'ja';
 
 type Player = 1 | 2;
 
@@ -155,9 +155,11 @@ export function SongCard(props: Props) {
           style={{ backgroundColor: diffAccentColor }}
         >
           <div className={styles.bpm}>
-            {chart.flags.findIndex((flag) => flag === "std") !== -1
-              ? "ST"
-              : "DX"}
+            {dataSetName.startsWith('maimai')
+              ? chart.flags.findIndex((flag) => flag === 'std') !== -1
+                ? 'ST'
+                : 'DX'
+              : null}
           </div>
 
           <div className={styles.difficulty}>

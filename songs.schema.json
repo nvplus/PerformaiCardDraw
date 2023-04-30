@@ -141,6 +141,9 @@
         "lvl": {
           "type": "number"
         },
+        "levelConstant": {
+          "type": "number"
+        },
         "step": {
           "type": "number"
         },

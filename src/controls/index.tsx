@@ -1,11 +1,11 @@
-import { FormattedMessage } from "react-intl";
-import { useMemo, useState } from "react";
-import { WeightsControls } from "./controls-weights";
-import styles from "./controls.css";
-import { useDrawState } from "../draw-state";
-import { useConfigState } from "../config-state";
-import { GameData } from "../models/SongData";
-import { useIntl } from "../hooks/useIntl";
+import { FormattedMessage } from 'react-intl';
+import { useMemo, useState } from 'react';
+import { WeightsControls } from './controls-weights';
+import styles from './controls.css';
+import { useDrawState } from '../draw-state';
+import { useConfigState } from '../config-state';
+import { GameData } from '../models/SongData';
+import { useIntl } from '../hooks/useIntl';
 import {
   NumericInput,
   Checkbox,
@@ -19,13 +19,14 @@ import {
   Switch,
   NavbarDivider,
   DrawerSize,
-} from "@blueprintjs/core";
-import { Tooltip2 } from "@blueprintjs/popover2";
-import { IconNames } from "@blueprintjs/icons";
-import { useIsNarrow } from "../hooks/useMediaQuery";
-import { EligibleChartsListFilter } from "../eligible-charts-list";
-import shallow from "zustand/shallow";
-import { formatLevel } from "../game-data-utils";
+  InputGroup,
+} from '@blueprintjs/core';
+import { Tooltip2 } from '@blueprintjs/popover2';
+import { IconNames } from '@blueprintjs/icons';
+import { useIsNarrow } from '../hooks/useMediaQuery';
+import { EligibleChartsListFilter } from '../eligible-charts-list';
+import shallow from 'zustand/shallow';
+import { formatLevel } from '../game-data-utils';
 
 function getAvailableDifficulties(gameData: GameData) {
   let s = new Set<string>();
@@ -66,10 +67,10 @@ function ShowChartsToggle({ inDrawer }: { inDrawer: boolean }) {
   );
   return (
     <Switch
-      alignIndicator={inDrawer ? "left" : "right"}
+      alignIndicator={inDrawer ? 'left' : 'right'}
       large
       className={styles.showAllToggle}
-      label={t("showSongPool")}
+      label={t('showSongPool')}
       checked={showPool}
       onChange={(e) => {
         const showPool = !!e.currentTarget.checked;
@@ -108,7 +109,7 @@ export function HeaderControls() {
       <Drawer
         isOpen={settingsOpen}
         position={Position.RIGHT}
-        size={isNarrow ? DrawerSize.LARGE : "500px"}
+        size={isNarrow ? DrawerSize.LARGE : '500px'}
         onClose={() => setSettingsOpen(false)}
         title={
           <FormattedMessage
@@ -158,6 +159,7 @@ function Controls() {
   );
   const configState = useConfigState();
   const {
+    useLevelConstants,
     useWeights,
     constrainPocketPicks,
     orderByAction,
@@ -220,7 +222,7 @@ function Controls() {
       )}
       <div className={isNarrow ? undefined : styles.inlineControls}>
         <FormGroup
-          label={t("chartCount")}
+          label={t('chartCount')}
           contentClassName={styles.narrowInput}
         >
           <NumericInput
@@ -239,43 +241,85 @@ function Controls() {
           />
         </FormGroup>
         <div className={styles.inlineControls}>
-          <FormGroup label="Lvl Min" contentClassName={styles.narrowInput}>
-            <HTMLSelect
-              id="lvlMin"
-              large
-              fill
-              value={lowerBound}
-              onChange={(e) => {
-                handleLowerBoundChange(Number(e.target.value));
-              }}
-            >
-              {getAvailableLevels(gameData).map((level) => (
-                <option key={level} value={level}>
-                  {formatLevel(level)}
-                </option>
-              ))}
-            </HTMLSelect>
-          </FormGroup>
-          <FormGroup label="Lvl Max" contentClassName={styles.narrowInput}>
-            <HTMLSelect
-              id="lvlMax"
-              large
-              fill
-              value={upperBound}
-              onChange={(e) => {
-                handleUpperBoundChange(Number(e.target.value));
-              }}
-            >
-              {getAvailableLevels(gameData).map((level) => (
-                <option key={level} value={level}>
-                  {formatLevel(level)}
-                </option>
-              ))}
-            </HTMLSelect>
-          </FormGroup>
+          {!useLevelConstants ? (
+            <>
+              <FormGroup label="Lvl Min" contentClassName={styles.narrowInput}>
+                <HTMLSelect
+                  id="lvlMin"
+                  large
+                  fill
+                  value={lowerBound}
+                  onChange={(e) => {
+                    handleLowerBoundChange(Number(e.target.value));
+                  }}
+                >
+                  {getAvailableLevels(gameData).map((level) => (
+                    <option key={level} value={level}>
+                      {formatLevel(level)}
+                    </option>
+                  ))}
+                </HTMLSelect>
+              </FormGroup>
+              <FormGroup label="Lvl Max" contentClassName={styles.narrowInput}>
+                <HTMLSelect
+                  id="lvlMax"
+                  large
+                  fill
+                  value={upperBound}
+                  onChange={(e) => {
+                    handleUpperBoundChange(Number(e.target.value));
+                  }}
+                >
+                  {getAvailableLevels(gameData).map((level) => (
+                    <option key={level} value={level}>
+                      {formatLevel(level)}
+                    </option>
+                  ))}
+                </HTMLSelect>
+              </FormGroup>
+            </>
+          ) : (
+            <>
+              <div className={styles.inlineControls}>
+                <FormGroup
+                  label="Lvl Constant Min"
+                  contentClassName={styles.narrowInput}
+                >
+                  <NumericInput
+                    id="levelConstantMin"
+                    allowNumericCharactersOnly={false}
+                    stepSize={0.1}
+                    large
+                    fill
+                    value={lowerBound}
+                    onValueChange={(e) => {
+                      handleLowerBoundChange(e);
+                    }}
+                  />
+                </FormGroup>
+                <FormGroup
+                  label="Lvl Constant Max"
+                  contentClassName={styles.narrowInput}
+                >
+                  <NumericInput
+                    id="levelConstantMax"
+                    allowNumericCharactersOnly={false}
+                    stepSize={0.1}
+                    large
+                    fill
+                    value={upperBound}
+                    onValueChange={(e) => {
+                      handleUpperBoundChange(e);
+                    }}
+                  />
+                </FormGroup>
+              </div>
+            </>
+          )}
         </div>
       </div>
-      <FormGroup label={t("difficulties")}>
+
+      <FormGroup label={t('difficulties')}>
         {availableDifficulties.map((dif) => (
           <Checkbox
             key={`${dif.key}`}
@@ -294,11 +338,11 @@ function Controls() {
                 return { difficulties };
               });
             }}
-            label={t("meta." + dif.key)}
+            label={t('meta.' + dif.key)}
           />
         ))}
       </FormGroup>
-      <FormGroup label={t("categories")}>
+      <FormGroup label={t('categories')}>
         {availableCategories.map((category) => (
           <Checkbox
             key={`${category}`}
@@ -317,16 +361,16 @@ function Controls() {
                 return { categories };
               });
             }}
-            label={t("meta." + category)}
+            label={t('meta.' + category)}
           />
         ))}
       </FormGroup>
       {!!flags.length && (
-        <FormGroup label={t("include")}>
+        <FormGroup label={t('include')}>
           {flags.map((key) => (
             <Checkbox
               key={`${dataSetName}:${key}`}
-              label={t("meta." + key)}
+              label={t('meta.' + key)}
               value={key}
               checked={selectedFlags.has(key)}
               onChange={() =>
@@ -352,7 +396,7 @@ function Controls() {
             const reorder = !!e.currentTarget.checked;
             updateState({ orderByAction: reorder });
           }}
-          label={t("orderByAction")}
+          label={t('orderByAction')}
         />
         <Checkbox
           id="constrainPocketPicks"
@@ -361,7 +405,7 @@ function Controls() {
             const constrainPocketPicks = !!e.currentTarget.checked;
             updateState({ constrainPocketPicks });
           }}
-          label={t("constrainPocketPicks")}
+          label={t('constrainPocketPicks')}
         />
         <Checkbox
           id="weighted"
@@ -370,7 +414,16 @@ function Controls() {
             const useWeights = !!e.currentTarget.checked;
             updateState({ useWeights });
           }}
-          label={t("useWeightedDistributions")}
+          label={t('useWeightedDistributions')}
+        />
+        <Checkbox
+          id="useLevelConstants"
+          checked={useLevelConstants}
+          onChange={(e) => {
+            const useLevelConstants = !!e.currentTarget.checked;
+            updateState({ useLevelConstants });
+          }}
+          label="Use Level Constants"
         />
         {useWeights && <WeightsControls high={upperBound} low={lowerBound} />}
       </FormGroup>

@@ -1,9 +1,10 @@
-import createStore, { SetState } from "zustand";
+import createStore, { SetState } from 'zustand';
 
 export interface ConfigState {
   chartCount: number;
   upperBound: number;
   lowerBound: number;
+  useLevelConstants: boolean;
   useWeights: boolean;
   orderByAction: boolean;
   weights: number[];
@@ -20,6 +21,7 @@ export const useConfigState = createStore<ConfigState>((set, get) => ({
   chartCount: 4,
   upperBound: 0,
   lowerBound: 0,
+  useLevelConstants: false,
   useWeights: false,
   orderByAction: true,
   weights: [],

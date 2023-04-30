@@ -1,8 +1,8 @@
-import { GameData, Song, Chart } from "./models/SongData";
-import { times } from "./utils";
-import { DrawnChart, Drawing } from "./models/Drawing";
-import { ConfigState } from "./config-state";
-import { getAvailableLevels } from "./game-data-utils";
+import { GameData, Song, Chart } from './models/SongData';
+import { times } from './utils';
+import { DrawnChart, Drawing } from './models/Drawing';
+import { ConfigState } from './config-state';
+import { getAvailableLevels } from './game-data-utils';
 
 export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
   return {
@@ -14,6 +14,7 @@ export function getDrawnChart(currentSong: Song, chart: Chart): DrawnChart {
     bpm: currentSong.bpm ?? '0',
     difficultyClass: chart.diffClass,
     level: chart.lvl,
+    levelConstant: chart.levelConstant ?? 0,
     flags: (chart.flags || []).concat(currentSong.flags || []),
     song: currentSong,
   };
@@ -33,7 +34,10 @@ export function songIsValid(
   if (forPocketPick && !config.constrainPocketPicks) {
     return true;
   }
-  return (!song.flags || song.flags.every((f) => config.flags.has(f))) && config.categories.has(song.category);
+  return (
+    (!song.flags || song.flags.every((f) => config.flags.has(f))) &&
+    config.categories.has(song.category)
+  );
 }
 
 /** returns true if chart matches configured difficulty/style/lvl/flags */
@@ -45,10 +49,13 @@ export function chartIsValid(
   if (forPocketPick && !config.constrainPocketPicks) {
     return true;
   }
+  const chartLevel = config.useLevelConstants
+    ? chart.levelConstant ?? 0
+    : chart.lvl;
   return (
     config.difficulties.has(chart.diffClass) &&
-    chart.lvl >= config.lowerBound &&
-    chart.lvl <= config.upperBound &&
+    chartLevel >= config.lowerBound &&
+    chartLevel <= config.upperBound &&
     (!chart.flags || chart.flags.every((f) => config.flags.has(f)))
   );
 }
@@ -89,9 +96,9 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
 
   const validCharts: Record<string, Array<DrawnChart>> = {};
   const availableLevels = getAvailableLevels(gameData);
-  availableLevels.forEach(level => {
+  availableLevels.forEach((level) => {
     validCharts[level.toString()] = [];
-  })
+  });
 
   for (const chart of eligibleCharts(configData, gameData.songs)) {
     validCharts[chart.level].push(chart);

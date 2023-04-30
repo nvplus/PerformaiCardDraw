@@ -1,4 +1,4 @@
-import { Song } from "./SongData";
+import { Song } from './SongData';
 
 export interface DrawnChart {
   name: string;
@@ -9,6 +9,7 @@ export interface DrawnChart {
   bpm: string;
   difficultyClass: string;
   level: number;
+  levelConstant?: number;
   flags: string[];
   song: Song;
   id?: number;

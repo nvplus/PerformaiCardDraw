@@ -94,6 +94,7 @@ export interface Chart {
    */
   diffClass: string;
   lvl: number;
+  levelConstant?: number;
   step?: number;
   shock?: number;
   freeze?: number;

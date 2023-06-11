@@ -6,7 +6,6 @@ const anyAscii = /[a-zA-Z]/;
 
 export function SuspectSongs() {
   const gameData = useDrawState((s) => s.gameData);
-  const dataSetName = useDrawState((s) => s.dataSetName);
   if (!gameData) {
     return null;
   }
@@ -27,7 +26,7 @@ export function SuspectSongs() {
       {suspectSongs.map((song) => (
         <div className={styles.song}>
           <img
-            src={`jackets/${dataSetName}/${song.jacket}`}
+            src={`jackets/${song.jacket}`}
             className={styles.img}
           />
           <p>{song.name}</p>

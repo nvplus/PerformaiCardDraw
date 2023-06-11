@@ -13,7 +13,7 @@ async function run() {
   const data = JSON.parse(
     fs.readFileSync(`src/songs/${GAME_CODE}.json`, 'utf-8')
   );
-  await fetchImages(GAME_CODE, DATA_URL, BASE_URL, data.songs);
+  await fetchImages(DATA_URL, BASE_URL, data.songs);
 }
 
 if (require.main === module) run();

@@ -1,6 +1,5 @@
-import { Song } from "./models/SongData";
-import { Music } from "react-feather";
-import { useDrawState } from "./draw-state";
+import { Song } from './models/SongData';
+import { Music } from 'react-feather';
 
 interface Props {
   song: Song;
@@ -9,11 +8,10 @@ interface Props {
 }
 
 export function SongJacket(props: Props) {
-  const dataSetName = useDrawState((s) => s.dataSetName);
   if (props.song.jacket) {
     return (
       <img
-        src={`jackets/${dataSetName}/${props.song.jacket}`}
+        src={`jackets/${props.song.jacket}`}
         className={props.className}
         style={{ height: `${props.height}px` }}
       />

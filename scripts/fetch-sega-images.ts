@@ -10,18 +10,18 @@ const requestQueue = new pqueue({
 });
 
 export default async function run(
-  gameCode: string,
   baseUrl: string,
   songs: Record<string, any>[],
   headers?: Record<string, string>,
 ) {
-  const coverImgDir = `src/assets/jackets/${gameCode}`;
+  const coverImgDir = `src/assets/jackets`;
 
   console.info('* Downloading cover image for songs ...');
   for (const [index, song] of songs.entries()) {
     if (song.jacket && !fs.existsSync(`${coverImgDir}/${song.jacket}`)) {
       console.info(`(${1 + index} / ${songs.length}) ${song.name}`);
-      const imageUrl = `${baseUrl}${song.jacket}`;
+      const jacketName = song.jacket.split('/')[1];
+      const imageUrl = `${baseUrl}${jacketName}`;
 
       requestQueue
         .add(() => download(imageUrl, coverImgDir, { filename: song.jacket, headers, rejectUnauthorized: false }))

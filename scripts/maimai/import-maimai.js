@@ -1,11 +1,10 @@
 const fetch = require('node-fetch');
 const path = require('path');
-const {
-  writeJsonData,
-} = require("../utils");
+const { writeJsonData } = require('../utils');
 
-const DATA_URL = 'https://web.archive.org/web/20220319043829/https://maimai.sega.jp/data/maimai_songs.json';
-const OUTFILE = "src/songs/maimai_dx_universe.json";
+const DATA_URL =
+  'https://web.archive.org/web/20230316205106/https://maimai.sega.jp/data/maimai_songs.json';
+const OUTFILE = 'src/songs/maimai_dx_festival.json';
 
 const versionMap = new Map([
   [0, null],
@@ -37,7 +36,9 @@ function extractSong(rawSong) {
   const version = versionMap.get(versionId);
 
   if (version === undefined) {
-    logger.warn(`Unknown version id: ${versionId}, remember to add new version entry.`);
+    log.warn(
+      `Unknown version id: ${versionId}, remember to add new version entry.`
+    );
   }
 
   return {
@@ -46,7 +47,7 @@ function extractSong(rawSong) {
     folder: version,
     category: rawSong.catcode,
     jacket: rawSong.image_url,
-    charts: extractCharts(rawSong)
+    charts: extractCharts(rawSong),
   };
 }
 
@@ -62,15 +63,17 @@ function extractCharts(rawSong) {
     { flags: ['std'], diffClass: 'expert', lvl: rawSong.lev_exp },
     { flags: ['std'], diffClass: 'master', lvl: rawSong.lev_mas },
     { flags: ['std'], diffClass: 'remaster', lvl: rawSong.lev_remas },
-  ].filter((e) => !!e.lvl).map((rawSheet) => ({
-    ...rawSheet,
-    lvl: convertLevel(rawSheet.lvl)
-  }));
+  ]
+    .filter((e) => !!e.lvl)
+    .map((rawSheet) => ({
+      ...rawSheet,
+      lvl: convertLevel(rawSheet.lvl),
+    }));
 }
 
 function convertLevel(lvl) {
   if (lvl.endsWith('+')) {
-    return Number(`${lvl.substring(0, lvl.length-1)}.5`);
+    return Number(`${lvl.substring(0, lvl.length - 1)}.5`);
   }
   return Number(lvl);
 }
@@ -88,8 +91,8 @@ async function run() {
 
   const maimaiData = {
     ...existingData,
-    songs
-  }
+    songs,
+  };
 
   await writeJsonData(maimaiData, filePath);
   console.info('Done!');

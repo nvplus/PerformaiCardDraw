@@ -7,7 +7,7 @@
     "start": "webpack serve --env dev=true",
     "build": "yarn validate && webpack",
     "build:zip": "webpack --env zip",
-    "import:maimai": "node scripts/maimai/import-maimai.js",
+    "import:maimai": "ts-node scripts/maimai/import-maimai.ts",
     "import:maimai-jackets": "ts-node scripts/maimai/import-maimai-jackets.ts",
     "import:chunithm": "ts-node scripts/chunithm/import-chunithm.ts",
     "import:chunithm-jackets": "ts-node scripts/chunithm/import-chunithm-jackets.ts",
@@ -100,5 +100,6 @@
   "resolutions": {
     "loader-utils": "^2.0.0",
     "xml2js": "^0.5.0"
-  }
+  },
+  "packageManager": "yarn@4.0.0-rc.40"
 }

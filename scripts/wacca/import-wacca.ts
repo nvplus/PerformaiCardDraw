@@ -22,7 +22,7 @@ function extractSheets(rawSong: Record<string, any>) {
     flags: [],
     diffClass: sheet.difficulty,
     lvl: convertLevel(sheet.level),
-    levelConstant: Number(sheet.levelValue.toFixed(1)),
+    levelConstant: Number(sheet.levelValue.toFixed(1)), // These are wrong!
   }));
 }
 

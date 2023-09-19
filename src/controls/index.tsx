@@ -264,7 +264,7 @@ function GeneralSettings() {
   if (!gameData) {
     return null;
   }
-  const { lvlMax, styles: gameStyles } = gameData.meta;
+  const { lvlMax } = gameData.meta;
 
   const handleLowerBoundChange = (newLow: number) => {
     if (newLow !== lowerBound && !isNaN(newLow)) {

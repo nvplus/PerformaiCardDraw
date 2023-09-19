@@ -34,7 +34,6 @@ export interface GameData {
      * Unix timestamp of last update to this data file
      */
     lastUpdated: number;
-    styles: UniqueStringArr;
     /**
      * List of all difficulty classes available
      */
@@ -51,7 +50,6 @@ export interface GameData {
     categories: UniqueStringArr;
     flags: UniqueStringArr1;
     lvlMax: number;
-    usesDrawGroups?: boolean;
   };
   /**
    * Defines the default configuration for this game
@@ -107,7 +105,6 @@ export interface Chart {
    */
   lvl: number;
   levelConstant?: number;
-  drawGroup?: number;
   step?: number;
   shock?: number;
   freeze?: number;

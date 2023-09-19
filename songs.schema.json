@@ -146,7 +146,7 @@
           "description": "e.g. expert/challenge"
         },
         "lvl": {
-          "type": "integer",
+          "type": "number",
           "description": "in-game numeric rating"
         },
         "levelConstant": {

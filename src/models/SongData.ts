@@ -21,14 +21,20 @@ export type UniqueStringArr2 = string[];
  * Describes the shape of data that any individual json file under `src/songs` will conform to
  */
 export interface GameData {
+  $schema?: string;
   /**
    * Describes unique configuration options for this game
    */
   meta: {
     /**
+     * If supplied, the parent folder name in the game select menu
+     */
+    menuParent?: string;
+    /**
      * Unix timestamp of last update to this data file
      */
     lastUpdated: number;
+    styles: UniqueStringArr;
     /**
      * List of all difficulty classes available
      */
@@ -45,6 +51,7 @@ export interface GameData {
     categories: UniqueStringArr;
     flags: UniqueStringArr1;
     lvlMax: number;
+    usesDrawGroups?: boolean;
   };
   /**
    * Defines the default configuration for this game
@@ -95,8 +102,12 @@ export interface Chart {
    * e.g. expert/challenge
    */
   diffClass: string;
+  /**
+   * in-game numeric rating
+   */
   lvl: number;
   levelConstant?: number;
+  drawGroup?: number;
   step?: number;
   shock?: number;
   freeze?: number;

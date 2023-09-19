@@ -1,23 +1,70 @@
-import { HTMLSelect, Spinner, SpinnerSize } from '@blueprintjs/core';
+import {
+  Button,
+  Menu,
+  MenuItem,
+  Spinner,
+  SpinnerSize,
+} from '@blueprintjs/core';
+import { Select } from '@blueprintjs/select';
 import { ReactNode, useEffect, useState } from 'react';
 import { useDrawState } from './draw-state';
 import { useDataSets } from './hooks/useDataSets';
-import styles from './app.css';
+import { groupGameData } from './utils';
+import { useIntl } from './hooks/useIntl';
 
 export function VersionSelect() {
+  const { t } = useIntl();
   const { current, available, loadData } = useDataSets();
   return (
-    <HTMLSelect
-      className={styles.versionSelect}
-      value={current.name}
-      onChange={(e) => loadData(e.currentTarget.value)}
+    <Select
+      items={available}
+      filterable={false}
+      itemListRenderer={(listProps) => {
+        const groupedItems = groupGameData(listProps.filteredItems);
+        return (
+          <Menu role="listbox" ulRef={listProps.itemsParentRef}>
+            <MenuItem disabled text={t('gameMenu.title')} />
+            {groupedItems.map((item) => {
+              if (item.type === 'game') {
+                return listProps.renderItem(item, item.index);
+              } else {
+                return (
+                  <MenuItem
+                    key={item.name}
+                    icon="folder-open"
+                    text={t('gameMenu.parent.' + item.name)}
+                  >
+                    {item.games.map((g) => listProps.renderItem(g, g.index))}
+                  </MenuItem>
+                );
+              }
+            })}
+          </Menu>
+        );
+      }}
+      itemRenderer={(
+        item,
+        {
+          handleClick: onClick,
+          handleFocus: onFocus,
+          modifiers: { active, disabled, matchesPredicate },
+        }
+      ) =>
+        matchesPredicate ? null : (
+          <MenuItem
+            role="listitem"
+            // icon="document"
+            key={item.name}
+            text={item.display}
+            {...{ onClick, onFocus, active, disabled }}
+            selected={current.name === item.name}
+          />
+        )
+      }
+      onItemSelect={(item) => loadData(item.name)}
     >
-      {available.map((d) => (
-        <option value={d.name} key={d.name}>
-          {d.display}
-        </option>
-      ))}
-    </HTMLSelect>
+      <Button text={current.display} rightIcon="double-caret-vertical" />
+    </Select>
   );
 }
 
@@ -40,9 +87,10 @@ interface DelayProps {
 function DelayRender(props: DelayProps) {
   const [display, setDisplay] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
+    const handle = setTimeout(() => {
       setDisplay(true);
     }, 200);
+    return () => clearTimeout(handle);
   }, []);
   if (display) {
     return <>{props.children}</>;

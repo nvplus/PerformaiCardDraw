@@ -1,7 +1,8 @@
-import { App } from "./app";
-import { render } from "react-dom";
-import styles from "./app.css";
-const appRoot = document.createElement("main");
+import { App } from './app';
+import { createRoot } from 'react-dom/client';
+import styles from './app.css';
+const appRoot = document.createElement('main');
 document.body.prepend(appRoot);
 appRoot.className = styles.main;
-render(<App />, appRoot);
+const root = createRoot(appRoot);
+root.render(<App />);

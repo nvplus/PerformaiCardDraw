@@ -5,12 +5,19 @@
   "additionalProperties": false,
   "required": ["songs", "meta", "defaults", "i18n"],
   "properties": {
+    "$schema": {
+      "type": "string"
+    },
     "meta": {
       "type": "object",
       "description": "Describes unique configuration options for this game",
       "required": ["lastUpdated", "difficulties", "categories", "lvlMax", "flags"],
       "additionalProperties": false,
       "properties": {
+        "menuParent": {
+          "type": "string",
+          "description": "If supplied, the parent folder name in the game select menu"
+        },
         "lastUpdated": {
           "type": "integer",
           "description": "Unix timestamp of last update to this data file"
@@ -139,7 +146,8 @@
           "description": "e.g. expert/challenge"
         },
         "lvl": {
-          "type": "number"
+          "type": "integer",
+          "description": "in-game numeric rating"
         },
         "levelConstant": {
           "type": "number"

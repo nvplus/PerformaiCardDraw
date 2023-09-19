@@ -1,5 +1,5 @@
 import { useIntl } from './hooks/useIntl';
-import { GameData } from './models/SongData';
+import { GameData, I18NDict } from './models/SongData';
 
 export function getMetaString(t: (key: string) => string, key: string) {
   return t('meta.' + key);
@@ -39,4 +39,10 @@ export function getAvailableLevels(gameData: GameData | null): number[] {
     song.charts.forEach((chart) => levelSet.add(chart.lvl));
   });
   return [...levelSet].sort((a, b) => a - b);
+}
+
+export function getDiffAbbr(gameData: GameData, diffClass: string) {
+  return ((gameData.i18n.en as I18NDict)['$abbr'] as I18NDict)[
+    diffClass
+  ] as string;
 }

@@ -1,5 +1,5 @@
 import { useIntl } from "react-intl";
-import { ButtonGroup, AnchorButton, UL, Classes } from "@blueprintjs/core";
+import { ButtonGroup, AnchorButton, UL, Classes, H2 } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 function injectPumpoutLink(str: string) {
@@ -21,6 +21,7 @@ export function About() {
 
   return (
     <div className={Classes.DIALOG_BODY}>
+      <H2>Credits</H2>
       <UL>
         {t({ id: "about" })
           .split(" * ")

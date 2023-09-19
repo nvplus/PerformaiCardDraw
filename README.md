@@ -41,8 +41,9 @@ yarn validate:json
 yarn build:zip
 ```
 
-There are some other useful scripts in `scripts/` that help in maintaining data integrity and pulling
-in new song data. Several have top-level aliases so you can conveniently update song data:
+## Data imports
+
+There are some other useful scripts in `scripts/` that help in maintaining data integrity and pulling in new song data. Several have top-level aliases so you can conveniently update song data: (must have node and yarn installed, and run `yarn install` once, as above)
 
 ```sh
 # Import song data

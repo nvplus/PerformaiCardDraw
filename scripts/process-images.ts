@@ -3,8 +3,8 @@ import jimp from 'jimp';
 import fs from 'fs';
 import path from 'path';
 
-const IN_DIR = path.resolve(__dirname, "../new-jackets");
-const OUT_DIR = path.resolve(__dirname, "../processed-jackets");
+const IN_DIR = path.resolve(__dirname, '../new-jackets');
+const OUT_DIR = path.resolve(__dirname, '../processed-jackets');
 
 function transformFilename(f: string) {
   return `${f.slice(0, -11)}.jpg`;

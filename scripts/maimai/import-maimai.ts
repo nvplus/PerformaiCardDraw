@@ -120,7 +120,7 @@ async function run() {
   console.info(`Fetching data from: ${DATA_URL} ...`);
   const response = await fetch(DATA_URL);
 
-  const rawSongs = await response.json();
+  const rawSongs: any = await response.json();
   console.info(`OK, ${rawSongs.length} songs fetched.`);
 
   const songs = rawSongs.map((rawSong: Record<string, any>) =>

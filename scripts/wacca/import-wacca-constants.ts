@@ -123,6 +123,9 @@ async function scrapeWebsite() {
         }
 
         if (songName && difficulty && levelConstant) {
+          // Sanitize
+          songName = songName.replace('＆', '&');
+
           const constantMap = songs[songName];
           songs[songName] = { ...constantMap, [difficulty]: levelConstant };
         }

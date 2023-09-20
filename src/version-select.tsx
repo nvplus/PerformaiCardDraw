@@ -12,6 +12,7 @@ import { useDataSets } from './hooks/useDataSets';
 import { groupGameData } from './utils';
 import { useIntl } from './hooks/useIntl';
 import { useConfigState } from './config-state';
+import styles from './app.css';
 
 export function VersionSelect() {
   const { t } = useIntl();
@@ -68,7 +69,11 @@ export function VersionSelect() {
         update({ useLevelConstants: false });
       }}
     >
-      <Button text={current.display} rightIcon="double-caret-vertical" />
+      <Button
+        className={styles.versionSelect}
+        text={current.display}
+        rightIcon="double-caret-vertical"
+      />
     </Select>
   );
 }

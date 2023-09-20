@@ -63,10 +63,13 @@ button {
   font-size: 16px !important;
 } /* avoid iOS auto-zoom */
 
-.versionSelect {
-  max-width: 110px;
+.versionSelect span {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-  @media (min-width: 576px) {
+  @media (min-width:700px) {
     max-width: 100%;
   }
 }

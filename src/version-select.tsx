@@ -11,10 +11,12 @@ import { useDrawState } from './draw-state';
 import { useDataSets } from './hooks/useDataSets';
 import { groupGameData } from './utils';
 import { useIntl } from './hooks/useIntl';
+import { useConfigState } from './config-state';
 
 export function VersionSelect() {
   const { t } = useIntl();
   const { current, available, loadData } = useDataSets();
+  const { update } = useConfigState();
   return (
     <Select
       items={available}
@@ -48,7 +50,7 @@ export function VersionSelect() {
           handleClick: onClick,
           handleFocus: onFocus,
           modifiers: { active, disabled, matchesPredicate },
-        }
+        },
       ) =>
         matchesPredicate ? null : (
           <MenuItem
@@ -61,7 +63,10 @@ export function VersionSelect() {
           />
         )
       }
-      onItemSelect={(item) => loadData(item.name)}
+      onItemSelect={(item) => {
+        loadData(item.name);
+        update({ useLevelConstants: false });
+      }}
     >
       <Button text={current.display} rightIcon="double-caret-vertical" />
     </Select>

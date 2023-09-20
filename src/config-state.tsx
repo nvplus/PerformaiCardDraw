@@ -1,5 +1,5 @@
-import type { StoreApi } from "zustand";
-import { createWithEqualityFn } from "zustand/traditional";
+import type { StoreApi } from 'zustand';
+import { createWithEqualityFn } from 'zustand/traditional';
 
 export interface ConfigState {
   chartCount: number;
@@ -22,7 +22,7 @@ export interface ConfigState {
   tournamentRounds: string[];
   showPlayerAndRoundLabels: boolean;
   defaultPlayersPerDraw: number;
-  update: StoreApi<ConfigState>["setState"];
+  update: StoreApi<ConfigState>['setState'];
 }
 
 export const useConfigState = createWithEqualityFn<ConfigState>(
@@ -44,13 +44,13 @@ export const useConfigState = createWithEqualityFn<ConfigState>(
     showEligibleCharts: false,
     playerNames: [],
     tournamentRounds: [
-      "Pools",
+      'Pools',
       "Winner's Bracket",
       "Winner's Finals",
       "Loser's Bracket",
       "Loser's Finals",
-      "Grand Finals",
-      "Tiebreaker",
+      'Grand Finals',
+      'Tiebreaker',
     ],
     showPlayerAndRoundLabels: false,
     defaultPlayersPerDraw: 2,

@@ -52,6 +52,9 @@
         },
         "lvlMax": {
           "type": "integer"
+        },
+        "constantFilteringEnabled": {
+          "type": "boolean"
         }
       }
     },

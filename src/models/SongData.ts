@@ -50,6 +50,7 @@ export interface GameData {
     categories: UniqueStringArr;
     flags: UniqueStringArr1;
     lvlMax: number;
+    constantFilteringEnabled?: boolean;
   };
   /**
    * Defines the default configuration for this game

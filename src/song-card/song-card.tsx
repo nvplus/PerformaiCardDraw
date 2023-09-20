@@ -1,17 +1,17 @@
-import { Popover } from "@blueprintjs/core";
-import classNames from "classnames";
-import { useMemo, useState } from "react";
-import { shallow } from "zustand/shallow";
-import { useConfigState } from "../config-state";
-import { useDrawing } from "../drawing-context";
-import { DrawnChart, EligibleChart } from "../models/Drawing";
-import { SongSearch } from "../song-search";
-import { detectedLanguage } from "../utils";
-import { CardLabel, LabelType } from "./card-label";
-import { IconMenu } from "./icon-menu";
-import styles from "./song-card.css";
-import { formatLevel } from "../game-data-utils";
-import { useDrawState } from "../draw-state";
+import { Popover } from '@blueprintjs/core';
+import classNames from 'classnames';
+import { useMemo, useState } from 'react';
+import { shallow } from 'zustand/shallow';
+import { useConfigState } from '../config-state';
+import { useDrawing } from '../drawing-context';
+import { DrawnChart, EligibleChart } from '../models/Drawing';
+import { SongSearch } from '../song-search';
+import { detectedLanguage } from '../utils';
+import { CardLabel, LabelType } from './card-label';
+import { IconMenu } from './icon-menu';
+import styles from './song-card.css';
+import { formatLevel } from '../game-data-utils';
+import { useDrawState } from '../draw-state';
 
 const isJapanese = detectedLanguage === 'ja';
 
@@ -52,9 +52,9 @@ function useIconCallbacksForChart(chartId: string): IconCallbacks {
 
   return useMemo(
     () => ({
-      onVeto: handleBanPickPocket.bind(undefined, "ban", chartId),
-      onProtect: handleBanPickPocket.bind(undefined, "protect", chartId),
-      onReplace: handleBanPickPocket.bind(undefined, "pocket", chartId),
+      onVeto: handleBanPickPocket.bind(undefined, 'ban', chartId),
+      onProtect: handleBanPickPocket.bind(undefined, 'protect', chartId),
+      onReplace: handleBanPickPocket.bind(undefined, 'pocket', chartId),
       onRedraw: redrawChart.bind(undefined, chartId),
       onReset: resetChart.bind(undefined, chartId),
       onSetWinner: setWinner.bind(undefined, chartId),

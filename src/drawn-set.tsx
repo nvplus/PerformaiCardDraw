@@ -1,12 +1,13 @@
-import { memo, useState } from "react";
-import { SongCard } from "./song-card";
-import styles from "./drawn-set.css";
-import { Drawing } from "./models/Drawing";
-import { SetLabels } from "./tournament-mode/drawing-labels";
-import { DrawingProvider, useDrawing } from "./drawing-context";
-import { DrawingActions } from "./tournament-mode/drawing-actions";
-import { SyncWithPeers } from "./tournament-mode/sync-with-peers";
-import { useConfigState } from "./config-state";
+import { memo, useState } from 'react';
+import { SongCard } from './song-card';
+import styles from './drawn-set.css';
+import { Drawing } from './models/Drawing';
+import { SetLabels } from './tournament-mode/drawing-labels';
+import { DrawingProvider, useDrawing } from './drawing-context';
+import { DrawingActions } from './tournament-mode/drawing-actions';
+import { SyncWithPeers } from './tournament-mode/sync-with-peers';
+import { useConfigState } from './config-state';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const HUE_STEP = (255 / 8) * 3;
 let hue = Math.floor(Math.random() * 255);
@@ -23,11 +24,38 @@ interface Props {
 function ChartList() {
   const charts = useDrawing((d) => d.charts);
   return (
-    <div className={styles.chartList}>
-      {charts.map((c) => (
-        <ChartFromContext key={c.id} chartId={c.id} />
-      ))}
-    </div>
+    <AnimatePresence>
+      <motion.div
+        className={styles.chartList}
+        variants={{
+          hidden: {
+            opacity: 0,
+            scale: 0.8,
+            transition: {
+              type: 'spring',
+              bounce: 0.4,
+              staggerChildren: 0.02,
+              staggerDirection: -1,
+            },
+          },
+          show: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              type: 'spring',
+              bounce: 0.4,
+              staggerChildren: 0.3,
+            },
+          },
+        }}
+        initial="hidden"
+        animate="show"
+      >
+        {charts.map((c) => (
+          <ChartFromContext key={c.id} chartId={c.id} />
+        ))}
+      </motion.div>
+    </AnimatePresence>
   );
 }
 
@@ -47,15 +75,38 @@ function ChartFromContext({ chartId }: { chartId: string }) {
     return null;
   }
   return (
-    <SongCard
-      vetoedBy={veto?.player}
-      protectedBy={protect?.player}
-      replacedBy={pocketPick?.player}
-      replacedWith={pocketPick?.pick}
-      winner={winner?.player}
-      chart={chart}
-      actionsEnabled
-    />
+    <motion.div
+      layout
+      style={{ display: 'flex', flex: '1 0 0' }}
+      variants={{
+        hidden: {
+          opacity: 0,
+          scale: 0.8,
+          transition: {
+            type: 'spring',
+            bounce: 0.4,
+          },
+        },
+        show: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            type: 'spring',
+            bounce: 0.4,
+          },
+        },
+      }}
+    >
+      <SongCard
+        vetoedBy={veto?.player}
+        protectedBy={protect?.player}
+        replacedBy={pocketPick?.player}
+        replacedWith={pocketPick?.pick}
+        winner={winner?.player}
+        chart={chart}
+        actionsEnabled
+      />
+    </motion.div>
   );
 }
 
@@ -64,7 +115,7 @@ function TournamentModeSpacer() {
   if (showLabels) {
     return null;
   }
-  return <div style={{ height: "15px" }} />;
+  return <div style={{ height: '15px' }} />;
 }
 
 const DrawnSet = memo<Props>(function DrawnSet({ drawing }) {

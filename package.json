@@ -70,6 +70,7 @@
     "favicons": "^7.1.4",
     "favicons-webpack-plugin": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "framer-motion": "^10.16.4",
     "fuzzy-search": "^3.0.2",
     "he": "^1.2.0",
     "html-webpack-plugin": "^5.5.3",

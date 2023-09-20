@@ -11,7 +11,7 @@ const colorToDifficulty = {
   '#ffa3d3': 'expert',
 };
 
-async function modifyJsonFile(constants) {
+async function modifyJsonFile(constants: any) {
   const filePath = path.join(
     __dirname,
     '../..',
@@ -78,7 +78,7 @@ async function scrapeWebsite() {
         const columns = $(row).find('td');
 
         let songName,
-          difficulty = null;
+          difficulty: string | null = null;
 
         if (columns.length === 4) {
           const secondColumnStyle = columns.eq(1).attr('style');
@@ -88,7 +88,10 @@ async function scrapeWebsite() {
             );
             if (backgroundColorMatch) {
               const backgroundColor = backgroundColorMatch[1].trim();
-              difficulty = colorToDifficulty[backgroundColor] || null;
+              difficulty =
+                colorToDifficulty[
+                  backgroundColor as keyof typeof colorToDifficulty
+                ] || null;
               const firstColumn = columns.eq(0).text();
               const thirdColumn = columns.eq(2).find('a').text().trim();
               if (firstColumn) {
@@ -106,7 +109,10 @@ async function scrapeWebsite() {
             );
             if (backgroundColorMatch) {
               const backgroundColor = backgroundColorMatch[1].trim();
-              difficulty = colorToDifficulty[backgroundColor] || null;
+              difficulty =
+                colorToDifficulty[
+                  backgroundColor as keyof typeof colorToDifficulty
+                ] || null;
               songName = columns.eq(1).find('a').text().trim();
             }
           }

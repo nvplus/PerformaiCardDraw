@@ -396,7 +396,7 @@ function GeneralSettings() {
                     stepSize={0.1}
                     large
                     fill
-                    value={upperBound}
+                    value={upperBound.toFixed(1)}
                     onValueChange={(e) => {
                       handleUpperBoundChange(e);
                     }}

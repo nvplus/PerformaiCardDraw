@@ -1,14 +1,10 @@
 import fetch from 'node-fetch';
 import path from 'path';
 import { writeJsonData } from '../utils';
-import {
-  MAIMAI_FESTIVAL_UNLOCKS,
-  MAIMAI_UNIVERSE_PLUS_UNLOCKS,
-} from './unlockable-maimai-songs';
 
 const DATA_URL =
-  'https://web.archive.org/web/20230316205106/https://maimai.sega.jp/data/maimai_songs.json';
-const OUTFILE = 'src/songs/maimai_dx_festival.json';
+  'https://web.archive.org/web/20230913080336/https://maimai.sega.jp/data/maimai_songs.json';
+const OUTFILE = 'src/songs/maimai_dx_festival_plus.json';
 
 const versionMap = new Map([
   [0, null],
@@ -32,6 +28,8 @@ const versionMap = new Map([
   [220, 'UNiVERSE'],
   [225, 'UNiVERSE PLUS'],
   [230, 'FESTiVAL'],
+  [235, 'FESTiVAL PLUS'],
+  [240, 'BUDDiES'],
   //! add further version here !//
 ]);
 
@@ -41,42 +39,9 @@ function extractSong(rawSong: Record<string, any>) {
 
   if (version === undefined) {
     console.warn(
-      `Unknown version id: ${versionId}, remember to add new version entry.`
+      `Unknown version id: ${versionId}, remember to add new version entry.`,
     );
   }
-
-  const flags = [];
-  if (MAIMAI_FESTIVAL_UNLOCKS.songs.includes(rawSong.title)) {
-    flags.push('unlock');
-  }
-
-  if (MAIMAI_UNIVERSE_PLUS_UNLOCKS.songs.includes(rawSong.title)) {
-    flags.push('unlock_uni_plus');
-  }
-
-  const charts = extractCharts(rawSong).map((chart) => {
-    if (
-      MAIMAI_FESTIVAL_UNLOCKS.dxCharts.includes(rawSong.title) &&
-      chart.flags.includes('dx')
-    ) {
-      return { ...chart, flags: ['dx', 'unlock'] };
-    }
-
-    if (
-      MAIMAI_FESTIVAL_UNLOCKS.stdCharts.includes(rawSong.title) &&
-      chart.flags.includes('std')
-    ) {
-      return { ...chart, flags: ['std', 'unlock'] };
-    }
-
-    if (
-      MAIMAI_UNIVERSE_PLUS_UNLOCKS.dxCharts.includes(rawSong.title) &&
-      chart.flags.includes('dx')
-    ) {
-      return { ...chart, flags: ['dx', 'unlock_uni_plus'] };
-    }
-    return chart;
-  });
 
   return {
     name: rawSong.title,
@@ -84,8 +49,7 @@ function extractSong(rawSong: Record<string, any>) {
     folder: version,
     category: rawSong.catcode,
     jacket: `maimai/${rawSong.image_url}`,
-    charts,
-    flags,
+    charts: extractCharts(rawSong),
   };
 }
 
@@ -124,7 +88,7 @@ async function run() {
   console.info(`OK, ${rawSongs.length} songs fetched.`);
 
   const songs = rawSongs.map((rawSong: Record<string, any>) =>
-    extractSong(rawSong)
+    extractSong(rawSong),
   );
   const filePath = path.join(__dirname, '../../', OUTFILE);
   const existingData = require(filePath);

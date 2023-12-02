@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "target": "es6",
         "checkJs": true,
         "moduleResolution": "Node16",
         "module": "Node16",

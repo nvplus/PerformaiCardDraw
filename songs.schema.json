@@ -174,8 +174,8 @@
       "required": ["lvl", "diffClass"]
     },
     "uniqueStringArr": {
-      "description": "An array of strings without any duplicate values",
       "type": "array",
+      "description": "An array of strings without any duplicate values",
       "items": {
         "type": "string"
       },
@@ -189,10 +189,16 @@
       "additionalProperties": {
         "oneOf": [
           { "type": "string" },
-          {
-            "type": "object",
-            "additionalProperties": { "type": "string" }
-          }
+          { "$ref": "#/$defs/i18nDictBranch" }
+        ]
+      }
+    },
+    "i18nDictBranch": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string" },
+          { "$ref": "#/$defs/i18nDictBranch" }
         ]
       }
     }

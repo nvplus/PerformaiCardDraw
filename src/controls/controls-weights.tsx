@@ -1,11 +1,11 @@
-import { shallow } from "zustand/shallow";
-import styles from "./controls-weights.css";
-import { useDrawState } from "../draw-state";
-import { zeroPad } from "../utils";
-import { useMemo } from "react";
-import { useConfigState } from "../config-state";
-import { useIntl } from "../hooks/useIntl";
-import { NumericInput, Checkbox, Classes } from "@blueprintjs/core";
+import { shallow } from 'zustand/shallow';
+import styles from './controls-weights.css';
+import { useDrawState } from '../draw-state';
+import { zeroPad } from '../utils';
+import { useMemo } from 'react';
+import { useConfigState } from '../config-state';
+import { useIntl } from '../hooks/useIntl';
+import { NumericInput, Checkbox, Classes } from '@blueprintjs/core';
 import { formatLevel, getAvailableLevels } from '../game-data-utils';
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
   high: number;
   low: number;
 }
-const pctFmt = new Intl.NumberFormat(undefined, { style: "percent" });
+const pctFmt = new Intl.NumberFormat(undefined, { style: 'percent' });
 
 export function WeightsControls({ usesTiers, high, low }: Props) {
   const { t } = useIntl();
@@ -37,7 +37,7 @@ export function WeightsControls({ usesTiers, high, low }: Props) {
   const groups = useMemo(
     () =>
       getAvailableLevels(gameData).filter((lvl) => lvl >= low && lvl <= high),
-    [high, low]
+    [high, low],
   );
 
   function toggleForceDistribution() {
@@ -106,38 +106,42 @@ export function WeightsControls({ usesTiers, high, low }: Props) {
     <section className={styles.weights}>
       <p className={Classes.TEXT_MUTED}>
         {forceDistribution
-          ? t("weights.forcedExplanation")
-          : t("weights.explanation")}
+          ? t('weights.forcedExplanation')
+          : t('weights.explanation')}
       </p>
       {groups.map((group, i) => (
         <div className={styles.level} key={group}>
           <NumericInput
+            type="number"
+            inputMode="numeric"
             width={2}
             name={`weight-${group}`}
-            value={weights[group] || ""}
+            value={weights[group] || ''}
             min={0}
             onValueChange={(v) => setWeight(group, v)}
             placeholder="0"
             fill
           />
-          {groupSongsAt === group && ">="}
-          {usesTiers ? `T${zeroPad(group, 2)}` : group}{" "}
+          {groupSongsAt === group && '>='}
+          {usesTiers ? `T${zeroPad(group, 2)}` : formatLevel(group)}{' '}
           <sub>{percentages[i]}</sub>
         </div>
       ))}
       <Checkbox
-        label={t("weights.check.label")}
-        title={t("weights.check.title")}
+        label={t('weights.check.label')}
+        title={t('weights.check.title')}
         checked={forceDistribution}
         onChange={toggleForceDistribution}
       />
       <Checkbox
-        label={t("weights.group.label")}
-        title={t("weights.group.title")}
+        label={t('weights.group.label')}
+        title={t('weights.group.title')}
         checked={!!groupSongsAt}
         onChange={toggleGroupCheck}
       />
       <NumericInput
+        type="number"
+        inputMode="numeric"
         width={2}
         disabled={!groupSongsAt}
         value={groupSongsAt || high - 1}

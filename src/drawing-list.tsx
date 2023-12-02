@@ -12,6 +12,8 @@ import { useConfigState } from './config-state';
 import { Callout, NonIdealState, Spinner } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import logo from './assets/ddr-tools-256.png';
+import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorFallback } from './utils/error-fallback';
 
 const EligibleChartsList = lazy(() => import('./eligible-charts'));
 const DrawnSet = lazy(() => import('./drawn-set'));
@@ -29,16 +31,18 @@ const ScrollableDrawings = memo(() => {
 
 export function DrawingList() {
   const hasDrawings = useDeferredValue(
-    useDrawState((s) => !!s.drawings.length)
+    useDrawState((s) => !!s.drawings.length),
   );
   const showEligible = useDeferredValue(
-    useConfigState((cfg) => cfg.showEligibleCharts)
+    useConfigState((cfg) => cfg.showEligibleCharts),
   );
   if (showEligible) {
     return (
-      <Suspense fallback={<DelayedSpinner />}>
-        <EligibleChartsList />
-      </Suspense>
+      <ErrorBoundary fallback={<ErrorFallback />}>
+        <Suspense fallback={<DelayedSpinner />}>
+          <EligibleChartsList />
+        </Suspense>
+      </ErrorBoundary>
     );
   }
   if (!hasDrawings) {

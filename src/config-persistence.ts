@@ -92,7 +92,7 @@ export function loadConfig() {
 
 function buildPersistedConfig(): PersistedConfigV1 {
   const { ...configState } = useConfigState.getState();
-  const serialized = {
+  const serializedState: PersistedConfigV1["configState"] = {
     ...configState,
     categories: Array.from(configState.categories),
     difficulties: Array.from(configState.difficulties),
@@ -101,7 +101,7 @@ function buildPersistedConfig(): PersistedConfigV1 {
   const ret: PersistedConfigV1 = {
     version: 1,
     dataSetName: useDrawState.getState().dataSetName,
-    configState: serialized,
+    configState: serializedState,
   };
   return ret;
 }

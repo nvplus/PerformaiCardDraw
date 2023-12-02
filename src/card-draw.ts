@@ -1,10 +1,10 @@
-import { nanoid } from "nanoid";
-import { GameData, Song, Chart } from "./models/SongData";
-import { times } from "./utils";
-import { DrawnChart, EligibleChart, Drawing } from "./models/Drawing";
-import { ConfigState } from "./config-state";
-import { getDifficultyColor } from "./hooks/useDifficultyColor";
-import { getDiffAbbr } from "./game-data-utils";
+import { nanoid } from 'nanoid';
+import { GameData, Song, Chart } from './models/SongData';
+import { times } from './utils';
+import { DrawnChart, EligibleChart, Drawing } from './models/Drawing';
+import { ConfigState } from './config-state';
+import { getDifficultyColor } from './hooks/useDifficultyColor';
+import { getDiffAbbr } from './game-data-utils';
 import { getAvailableLevels } from './game-data-utils';
 
 export function getDrawnChart(
@@ -103,7 +103,7 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
   /** all charts we will consider to be valid for this draw */
   availableLevels.forEach((level) => {
     validCharts.set(level, []);
-  })
+  });
 
   for (const chart of eligibleCharts(configData, gameData)) {
     let levelMetric = chart.level;
@@ -221,7 +221,7 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
   return {
     id: `draw-${nanoid(10)}`,
     charts: shuffle(drawnCharts),
-    players: times(defaultPlayersPerDraw, () => ""),
+    players: times(defaultPlayersPerDraw, () => ''),
     bans: [],
     protects: [],
     pocketPicks: [],

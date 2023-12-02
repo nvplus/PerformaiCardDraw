@@ -1,4 +1,5 @@
 import { memo, useState } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import { SongCard } from './song-card';
 import styles from './drawn-set.css';
 import { Drawing } from './models/Drawing';
@@ -7,6 +8,7 @@ import { DrawingProvider, useDrawing } from './drawing-context';
 import { DrawingActions } from './tournament-mode/drawing-actions';
 import { SyncWithPeers } from './tournament-mode/sync-with-peers';
 import { useConfigState } from './config-state';
+import { ErrorFallback } from './utils/error-fallback';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const HUE_STEP = (255 / 8) * 3;
@@ -123,19 +125,36 @@ const DrawnSet = memo<Props>(function DrawnSet({ drawing }) {
 
   return (
     <DrawingProvider initialDrawing={drawing}>
-      <SyncWithPeers />
-      <div
-        key={drawing.id}
-        style={{ backgroundImage }}
-        className={styles.drawing}
+      <ErrorBoundary
+        fallback={
+          <div
+            className={styles.drawing}
+            style={{
+              backgroundImage,
+              padding: '2em',
+              minHeight: '15em',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
+            <ErrorFallback />
+          </div>
+        }
       >
-        <TournamentModeSpacer />
-        <div id={`drawing-${drawing.id}`}>
-          <SetLabels />
-          <ChartList />
+        <SyncWithPeers />
+        <div
+          key={drawing.id}
+          style={{ backgroundImage }}
+          className={styles.drawing}
+        >
+          <TournamentModeSpacer />
+          <div id={`drawing-${drawing.id}`}>
+            <SetLabels />
+            <ChartList />
+          </div>
+          <DrawingActions />
         </div>
-        <DrawingActions />
-      </div>
+      </ErrorBoundary>
     </DrawingProvider>
   );
 });

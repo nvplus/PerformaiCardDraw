@@ -36,6 +36,8 @@ import { WeightsControls } from './controls-weights';
 import styles from './controls.css';
 import { PlayerNamesControls } from './player-names';
 import { loadConfig, saveConfig } from '../config-persistence';
+import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorFallback } from '../utils/error-fallback';
 import { formatLevel } from '../game-data-utils';
 
 function getAvailableDifficulties(gameData: GameData) {
@@ -131,7 +133,9 @@ export function HeaderControls() {
           </>
         }
       >
-        <ControlsDrawer />
+        <ErrorBoundary fallback={<ErrorFallback />}>
+          <ControlsDrawer />
+        </ErrorBoundary>
       </Drawer>
       {!isNarrow && (
         <>
@@ -317,6 +321,8 @@ function GeneralSettings() {
           <NumericInput
             large
             fill
+            type="number"
+            inputMode="numeric"
             value={chartCount}
             min={1}
             clampValueOnBlur

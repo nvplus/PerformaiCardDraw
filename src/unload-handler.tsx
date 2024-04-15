@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface Props {
   confirmUnload: boolean;
@@ -9,8 +9,8 @@ export function UnloadHandler(props: Props) {
     if (!props.confirmUnload) {
       return;
     }
-    window.addEventListener("beforeunload", promptUnsaved);
-    return () => window.removeEventListener("beforeunload", promptUnsaved);
+    window.addEventListener('beforeunload', promptUnsaved);
+    return () => window.removeEventListener('beforeunload', promptUnsaved);
   }, [props.confirmUnload]);
 
   return null;

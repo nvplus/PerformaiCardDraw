@@ -51,7 +51,7 @@ function getAvailableDifficulties(gameData: GameData) {
 }
 
 function getAvailableCategories(gameData: GameData) {
-  let s = new Set<string>();
+  const s = new Set<string>();
   for (const f of gameData.songs) {
     s.add(f.category);
   }
@@ -59,7 +59,7 @@ function getAvailableCategories(gameData: GameData) {
 }
 
 function getAvailableLevels(gameData: GameData) {
-  let s = new Set<number>();
+  const s = new Set<number>();
   for (const f of gameData.songs) {
     for (const c of f.charts) {
       s.add(c.lvl);
@@ -250,11 +250,9 @@ function GeneralSettings() {
     upperBound,
     update: updateState,
     difficulties: selectedDifficulties,
-    categories: selectedCategories,
-    flags: selectedFlags,
     chartCount,
   } = configState;
-  const [availableDifficulties, availableCategories] = useMemo(() => {
+  const [availableDifficulties] = useMemo(() => {
     if (!gameData) {
       return [[], []];
     }

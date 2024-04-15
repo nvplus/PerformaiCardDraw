@@ -1,6 +1,6 @@
-import { shallow } from "zustand/shallow";
-import { useDrawState } from "../draw-state";
-import { availableGameData as available } from "../utils";
+import { shallow } from 'zustand/shallow';
+import { useDrawState } from '../draw-state';
+import { availableGameData as available } from '../utils';
 
 export function useDataSets() {
   const [dataSetName, loadGameData, dataIsLoaded] = useDrawState(

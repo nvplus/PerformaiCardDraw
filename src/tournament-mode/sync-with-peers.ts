@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { useDrawing, useDrawingStore } from "../drawing-context";
-import { syncStoreWithPeer } from "../zustand/shared-zustand";
-import { useRemotePeers } from "./remote-peers";
+import { useEffect } from 'react';
+import { useDrawing, useDrawingStore } from '../drawing-context';
+import { syncStoreWithPeer } from '../zustand/shared-zustand';
+import { useRemotePeers } from './remote-peers';
 
 export function SyncWithPeers() {
   const drawing = useDrawing();

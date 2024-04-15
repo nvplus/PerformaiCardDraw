@@ -1,15 +1,15 @@
-import { DataConnection } from "peerjs";
-import type { StoreApi } from "zustand";
+import { DataConnection } from 'peerjs';
+import type { StoreApi } from 'zustand';
 
 export interface SerializibleStore<ReducedState> {
   id: string;
   serializeSyncFields(): ReducedState;
 }
 
-type SyncMessages<T> = InitSync<T> | StateUpdate<T> | { type: "other" };
+type SyncMessages<T> = InitSync<T> | StateUpdate<T> | { type: 'other' };
 
 interface InitSync<State> {
-  type: "syncedStore.init";
+  type: 'syncedStore.init';
   storeType: string;
   storeId: string;
   timestamp: number;
@@ -17,7 +17,7 @@ interface InitSync<State> {
 }
 
 interface StateUpdate<State> {
-  type: "syncedStore.stateUpdate";
+  type: 'syncedStore.stateUpdate';
   storeId: string;
   timestamp: number;
   state: State;
@@ -29,7 +29,7 @@ export function acceptIncomingSyncedStores<SharedState>(
   handleNewStore: (initialState: SharedState) => void,
 ) {
   const handlePeerMessage = (evt: SyncMessages<SharedState>) => {
-    if (evt.type !== "syncedStore.init") {
+    if (evt.type !== 'syncedStore.init') {
       return;
     }
     if (evt.storeType !== storeType) {
@@ -38,10 +38,10 @@ export function acceptIncomingSyncedStores<SharedState>(
     handleNewStore(evt.state);
   };
 
-  peer.on("data", handlePeerMessage);
+  peer.on('data', handlePeerMessage);
 
   return () => {
-    peer.off("data", handlePeerMessage);
+    peer.off('data', handlePeerMessage);
   };
 }
 
@@ -52,7 +52,7 @@ export function initShareWithPeer(
 ) {
   const state = store.getState();
   sendMessage(peer, {
-    type: "syncedStore.init",
+    type: 'syncedStore.init',
     storeType,
     storeId: state.id,
     state: state.serializeSyncFields(),
@@ -80,7 +80,7 @@ export function syncStoreWithPeer<State extends SerializibleStore<unknown>>(
     if (!externalUpdate) {
       timestamp = Date.now();
       sendMessage(peer, {
-        type: "syncedStore.stateUpdate",
+        type: 'syncedStore.stateUpdate',
         storeId: state.id,
         timestamp,
         state: state.serializeSyncFields(),
@@ -91,7 +91,7 @@ export function syncStoreWithPeer<State extends SerializibleStore<unknown>>(
 
   const handlePeerMessage = (evt: SyncMessages<State>) => {
     switch (evt.type) {
-      case "syncedStore.stateUpdate":
+      case 'syncedStore.stateUpdate':
         if (evt.storeId !== storeId) {
           return;
         }
@@ -109,10 +109,10 @@ export function syncStoreWithPeer<State extends SerializibleStore<unknown>>(
   };
 
   const unsubscribeFromStore = store.subscribe(handleStoreUpdate);
-  peer.on("data", handlePeerMessage);
+  peer.on('data', handlePeerMessage);
 
   return () => {
-    peer.off("data", handlePeerMessage);
+    peer.off('data', handlePeerMessage);
     unsubscribeFromStore();
   };
 }

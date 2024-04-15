@@ -1,8 +1,8 @@
-import { MenuItem } from "@blueprintjs/core";
-import { ItemPredicate, ItemRenderer } from "@blueprintjs/select";
-import { ReactNode } from "react";
-import FuzzySearch from "fuzzy-search";
-import { BlueprintIcons_16Id } from "@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16";
+import { MenuItem } from '@blueprintjs/core';
+import { ItemPredicate, ItemRenderer } from '@blueprintjs/select';
+import { ReactNode } from 'react';
+import FuzzySearch from 'fuzzy-search';
+import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 
 export const renderRoundLabel: ItemRenderer<string> = (
   roundLabel,
@@ -13,9 +13,9 @@ export const renderRoundLabel: ItemRenderer<string> = (
   }
   let icon: BlueprintIcons_16Id | null = null;
   let text = roundLabel;
-  if (roundLabel === "") {
-    icon = "delete";
-    text = "No label";
+  if (roundLabel === '') {
+    icon = 'delete';
+    text = 'No label';
   }
   return (
     <MenuItem
@@ -48,7 +48,7 @@ function highlightText(text: string, query: string) {
   if (words.length === 0) {
     return [text];
   }
-  const regexp = new RegExp(words.join("|"), "gi");
+  const regexp = new RegExp(words.join('|'), 'gi');
   const tokens: ReactNode[] = [];
   while (true) {
     const match = regexp.exec(text);
@@ -71,5 +71,5 @@ function highlightText(text: string, query: string) {
 }
 
 function escapeRegExpChars(text: string) {
-  return text.replace(/([.*+?^=!:${}()|[\]/\\])/g, "\\$1");
+  return text.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
 }

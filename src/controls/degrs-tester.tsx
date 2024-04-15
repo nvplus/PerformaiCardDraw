@@ -4,20 +4,20 @@ import {
   Dialog,
   DialogBody,
   ProgressBar,
-} from "@blueprintjs/core";
-import { draw } from "../card-draw";
-import { useDrawState } from "../draw-state";
-import { useAtom } from "jotai";
-import { useConfigState } from "../config-state";
+} from '@blueprintjs/core';
+import { draw } from '../card-draw';
+import { useDrawState } from '../draw-state';
+import { useAtom } from 'jotai';
+import { useConfigState } from '../config-state';
 import {
   TEST_SIZE,
   REPORT_FREQUENCY,
   degrsIsTesting,
   degrsTestProgress,
   degrsTestResults,
-} from "./degrs-state";
-import { SongCard, SongCardProps } from "../song-card/song-card";
-import { useState } from "react";
+} from './degrs-state';
+import { SongCard, SongCardProps } from '../song-card/song-card';
+import { useState } from 'react';
 
 export function isDegrs(thing: { name: string; artist: string }) {
   return thing.name.startsWith('DEAD END("GROOVE');
@@ -79,7 +79,7 @@ export function DegrsTestButton() {
     setResults(report.value);
   }
 
-  const hasResults = typeof results === "number";
+  const hasResults = typeof results === 'number';
 
   return (
     <>
@@ -87,14 +87,14 @@ export function DegrsTestButton() {
         <Button
           onClick={startTest}
           intent="danger"
-          icon={hasResults ? "repeat" : "warning-sign"}
+          icon={hasResults ? 'repeat' : 'warning-sign'}
         >
-          {hasResults ? "Recompute" : "Compute"} DEGRS Forecast
+          {hasResults ? 'Recompute' : 'Compute'} DEGRS Forecast
         </Button>
       )}
       {isTesting && (
         <p>
-          Calculating DEGRS ratio...{" "}
+          Calculating DEGRS ratio...{' '}
           <ProgressBar value={progress} intent="danger" />
         </p>
       )}

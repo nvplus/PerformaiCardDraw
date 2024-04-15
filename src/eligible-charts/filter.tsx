@@ -1,9 +1,9 @@
-import { HTMLSelect } from "@blueprintjs/core";
-import { atom, useAtom } from "jotai";
-import { useConfigState } from "../config-state";
-import { useIntl } from "../hooks/useIntl";
+import { HTMLSelect } from '@blueprintjs/core';
+import { atom, useAtom } from 'jotai';
+import { useConfigState } from '../config-state';
+import { useIntl } from '../hooks/useIntl';
 
-export const currentTabAtom = atom("all");
+export const currentTabAtom = atom('all');
 
 export function EligibleChartsListFilter() {
   const { t } = useIntl();
@@ -14,7 +14,7 @@ export function EligibleChartsListFilter() {
     return null;
   }
 
-  selectedFlags.unshift("all");
+  selectedFlags.unshift('all');
 
   return (
     <HTMLSelect
@@ -22,7 +22,7 @@ export function EligibleChartsListFilter() {
       onChange={(e) => setCurrentTab(e.currentTarget.value)}
       options={Array.from(selectedFlags).map((flag) => ({
         value: flag,
-        label: flag === "all" ? "All charts" : t(`meta.${flag}`),
+        label: flag === 'all' ? 'All charts' : t(`meta.${flag}`),
       }))}
     />
   );

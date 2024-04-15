@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { useIntl as useReactIntl } from "react-intl";
+import { useMemo } from 'react';
+import { useIntl as useReactIntl } from 'react-intl';
 
 type Primitive = string | number | Date | boolean | undefined | null;
 

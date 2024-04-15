@@ -5,8 +5,8 @@ import {
   useState,
   createElement,
   useEffect,
-} from "react";
-import { StoreApi, useStore, createStore } from "zustand";
+} from 'react';
+import { StoreApi, useStore, createStore } from 'zustand';
 
 export function createContextualStore<
   StoreValue,
@@ -15,8 +15,8 @@ export function createContextualStore<
   /** returns initial store state for given props */
   creator: (
     p: ProviderProps,
-    set: StoreApi<StoreValue>["setState"],
-    get: StoreApi<StoreValue>["getState"],
+    set: StoreApi<StoreValue>['setState'],
+    get: StoreApi<StoreValue>['getState'],
   ) => StoreValue,
   /** returns a unique id for a given set of props */
   getUniqueId: (p: ProviderProps) => string,

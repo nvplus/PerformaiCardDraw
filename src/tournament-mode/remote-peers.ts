@@ -1,24 +1,24 @@
-import { create, StoreApi } from "zustand";
-import type { Peer, DataConnection } from "peerjs";
-import { Drawing } from "../models/Drawing";
-import { useDrawState } from "../draw-state";
-import { toaster } from "../toaster";
-import { Intent } from "@blueprintjs/core";
+import { create, StoreApi } from 'zustand';
+import type { Peer, DataConnection } from 'peerjs';
+import { Drawing } from '../models/Drawing';
+import { useDrawState } from '../draw-state';
+import { toaster } from '../toaster';
+import { Intent } from '@blueprintjs/core';
 import {
   acceptIncomingSyncedStores,
   initShareWithPeer,
-} from "../zustand/shared-zustand";
-import type { DrawingContext } from "../drawing-context";
-import { firstOf } from "../utils";
+} from '../zustand/shared-zustand';
+import type { DrawingContext } from '../drawing-context';
+import { firstOf } from '../utils';
 
 interface SharedDrawingMessage {
-  type: "drawing";
+  type: 'drawing';
   body: Drawing;
 }
 
 type PeerMessages = SharedDrawingMessage;
 
-const REMOTE_STORE_TYPE = "DRAWING";
+const REMOTE_STORE_TYPE = 'DRAWING';
 
 interface RemotePeerStore {
   instanceName: string;
@@ -36,20 +36,20 @@ interface RemotePeerStore {
 function genPin() {
   let pin = Math.floor(Math.random() * 10000).toString(10);
   while (pin.length < 4) {
-    pin = "0" + pin;
+    pin = '0' + pin;
   }
   return pin;
 }
 
 function peerIdFromDisplay(display: string) {
-  return `ddr-tools ${display.replace("#", "_")}`;
+  return `ddr-tools ${display.replace('#', '_')}`;
 }
 
 export function displayFromPeerId(id: string) {
   if (!id) {
-    return "ERROR?!";
+    return 'ERROR?!';
   }
-  return id.replace("ddr-tools ", "").replace("_", "#");
+  return id.replace('ddr-tools ', '').replace('_', '#');
 }
 
 function peerId(name: string, pin: string) {
@@ -57,34 +57,34 @@ function peerId(name: string, pin: string) {
 }
 
 function bindPeer(peer: Peer, resolve: () => void, reject: () => void) {
-  peer.on("open", (id) => {
-    console.log("connected to peer signaling server with id", id);
+  peer.on('open', (id) => {
+    console.log('connected to peer signaling server with id', id);
     toaster.show({
       message: `Available for connections as ${displayFromPeerId(id)}`,
       intent: Intent.SUCCESS,
     });
     resolve();
   });
-  peer.on("close", () => {
-    console.log("peer has been closed");
+  peer.on('close', () => {
+    console.log('peer has been closed');
     cleanup();
   });
-  peer.on("disconnected", () => {
-    console.log("disconnected from signaling server, reconnecting in 1s");
+  peer.on('disconnected', () => {
+    console.log('disconnected from signaling server, reconnecting in 1s');
     setTimeout(() => {
       if (peer.disconnected && !peer.destroyed) {
         peer.reconnect();
       }
     }, 1000);
   });
-  peer.on("error", (err) => {
-    console.log("likely fatal error from peerjs", err);
+  peer.on('error', (err) => {
+    console.log('likely fatal error from peerjs', err);
     cleanup();
     reject();
   });
 
-  peer.on("connection", (conn) => {
-    console.log("new connection from peer", conn.peer, conn.metadata);
+  peer.on('connection', (conn) => {
+    console.log('new connection from peer', conn.peer, conn.metadata);
     toaster.show({
       message: `Remote peer ${displayFromPeerId(conn.peer)} connected`,
       intent: Intent.SUCCESS,
@@ -104,23 +104,23 @@ function bindPeer(peer: Peer, resolve: () => void, reject: () => void) {
 }
 
 function bindPeerConn(conn: DataConnection) {
-  conn.on("close", () => {
-    console.log("remote peer connection closed", conn.peer);
+  conn.on('close', () => {
+    console.log('remote peer connection closed', conn.peer);
     removePeer();
   });
-  conn.on("error", (err) => {
-    console.log("likely fatal error from remote peer", err, conn.peer);
+  conn.on('error', (err) => {
+    console.log('likely fatal error from remote peer', err, conn.peer);
     removePeer();
   });
 
-  conn.on("data", (data: PeerMessages) => {
+  conn.on('data', (data: PeerMessages) => {
     switch (data.type) {
-      case "drawing":
-        console.log("received drawing from peer", data.body);
+      case 'drawing':
+        console.log('received drawing from peer', data.body);
         useDrawState.getState().injectRemoteDrawing(data.body);
         break;
       default:
-        console.log("received unknown data from remote peer", data, conn.peer);
+        console.log('received unknown data from remote peer', data, conn.peer);
     }
   });
 
@@ -146,7 +146,7 @@ function bindPeerConn(conn: DataConnection) {
         message: `Remote peer ${displayFromPeerId(conn.peer)} disconnected`,
         intent: Intent.WARNING,
       },
-      "removePeer",
+      'removePeer',
     );
     const rp = new Map(useRemotePeers.getState().remotePeers);
     if (rp.delete(conn.peer)) {
@@ -158,21 +158,21 @@ function bindPeerConn(conn: DataConnection) {
 }
 
 export const useRemotePeers = create<RemotePeerStore>((set, get) => ({
-  instanceName: "",
-  instancePin: "",
+  instanceName: '',
+  instancePin: '',
   thisPeer: null,
   remotePeers: new Map(),
   connect(peerId) {
     const { thisPeer } = get();
     if (!thisPeer) {
-      return Promise.reject("connection to server not established");
+      return Promise.reject('connection to server not established');
     }
     if (!peerId) {
-      return Promise.reject("invalid peer id");
+      return Promise.reject('invalid peer id');
     }
     return new Promise((res) => {
       const conn = thisPeer.connect(peerIdFromDisplay(peerId));
-      conn.on("open", () => {
+      conn.on('open', () => {
         bindPeerConn(conn);
         toaster.show({
           message: `Connected to remote peer ${displayFromPeerId(conn.peer)}`,
@@ -190,38 +190,38 @@ export const useRemotePeers = create<RemotePeerStore>((set, get) => ({
       }
       set({
         thisPeer: null,
-        instanceName: "",
+        instanceName: '',
       });
     } else {
-      const peerLib = await import("peerjs");
+      const peerLib = await import('peerjs');
       const ret = new Promise<void>((res, rej) => {
         const newPin = genPin();
         const peer = new peerLib.Peer(peerId(newName, newPin), {
-          host: "peering.ddr.tools",
+          host: 'peering.ddr.tools',
           config: {
             iceServers: [
               {
-                urls: "stun:stun.relay.metered.ca:80",
+                urls: 'stun:stun.relay.metered.ca:80',
               },
               {
-                urls: "turn:a.relay.metered.ca:80",
-                username: "715941586bb093eb00e8c157",
-                credential: "vjDASx0W340EwkUY",
+                urls: 'turn:a.relay.metered.ca:80',
+                username: '715941586bb093eb00e8c157',
+                credential: 'vjDASx0W340EwkUY',
               },
               {
-                urls: "turn:a.relay.metered.ca:80?transport=tcp",
-                username: "715941586bb093eb00e8c157",
-                credential: "vjDASx0W340EwkUY",
+                urls: 'turn:a.relay.metered.ca:80?transport=tcp',
+                username: '715941586bb093eb00e8c157',
+                credential: 'vjDASx0W340EwkUY',
               },
               {
-                urls: "turn:a.relay.metered.ca:443",
-                username: "715941586bb093eb00e8c157",
-                credential: "vjDASx0W340EwkUY",
+                urls: 'turn:a.relay.metered.ca:443',
+                username: '715941586bb093eb00e8c157',
+                credential: 'vjDASx0W340EwkUY',
               },
               {
-                urls: "turn:a.relay.metered.ca:443?transport=tcp",
-                username: "715941586bb093eb00e8c157",
-                credential: "vjDASx0W340EwkUY",
+                urls: 'turn:a.relay.metered.ca:443?transport=tcp',
+                username: '715941586bb093eb00e8c157',
+                credential: 'vjDASx0W340EwkUY',
               },
             ],
           },
@@ -234,7 +234,7 @@ export const useRemotePeers = create<RemotePeerStore>((set, get) => ({
         });
       });
       ret.catch((reason) => {
-        console.error("setName promise rejected", reason);
+        console.error('setName promise rejected', reason);
       });
       return ret;
     }
@@ -245,20 +245,20 @@ export const useRemotePeers = create<RemotePeerStore>((set, get) => ({
     if (!peerId) {
       const result = firstOf(state.remotePeers.values());
       if (!result) {
-        console.error("tried to send drawing when no peers are connected");
+        console.error('tried to send drawing when no peers are connected');
         return;
       }
       targetPeer = result;
     } else {
       const foundPeer = state.remotePeers.get(peerId);
       if (!foundPeer) {
-        console.error("tried to send to non-existent peer");
+        console.error('tried to send to non-existent peer');
         return;
       }
       targetPeer = foundPeer;
     }
     targetPeer.send(<SharedDrawingMessage>{
-      type: "drawing",
+      type: 'drawing',
       body: drawing,
     });
   },
@@ -268,14 +268,14 @@ export const useRemotePeers = create<RemotePeerStore>((set, get) => ({
     if (!peerId) {
       const result = firstOf(state.remotePeers.values());
       if (!result) {
-        console.error("tried to send drawing when no peers are connected");
+        console.error('tried to send drawing when no peers are connected');
         return;
       }
       targetPeer = result;
     } else {
       const foundPeer = state.remotePeers.get(peerId);
       if (!foundPeer) {
-        console.error("tried to send to non-existent peer");
+        console.error('tried to send to non-existent peer');
         return;
       }
       targetPeer = foundPeer;

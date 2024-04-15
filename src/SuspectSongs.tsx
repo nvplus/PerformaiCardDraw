@@ -1,7 +1,6 @@
-import { useDrawState } from "./draw-state";
-import styles from "./SuspectSongs.css";
+import { useDrawState } from './draw-state';
+import styles from './SuspectSongs.css';
 
-const allAscii = /^[a-zA-Z .'?&!-_0-9]+$/;
 const anyAscii = /[a-zA-Z]/;
 
 export function SuspectSongs() {
@@ -25,10 +24,7 @@ export function SuspectSongs() {
     <div className={styles.suspectSongs}>
       {suspectSongs.map((song) => (
         <div className={styles.song}>
-          <img
-            src={`jackets/${song.jacket}`}
-            className={styles.img}
-          />
+          <img src={`jackets/${song.jacket}`} className={styles.img} />
           <p>{song.name}</p>
           <p>{song.name_translation}</p>
         </div>

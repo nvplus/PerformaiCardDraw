@@ -1,7 +1,7 @@
-import { useIntl } from "../hooks/useIntl";
-import { IconNames, IconName } from "@blueprintjs/icons";
-import { Menu, MenuItem, MenuDivider } from "@blueprintjs/core";
-import { useDrawing } from "../drawing-context";
+import { useIntl } from '../hooks/useIntl';
+import { IconNames, IconName } from '@blueprintjs/icons';
+import { Menu, MenuItem, MenuDivider } from '@blueprintjs/core';
+import { useDrawing } from '../drawing-context';
 
 interface Props {
   onStartPocketPick?: (p: number) => void;
@@ -21,28 +21,28 @@ export function IconMenu(props: Props) {
       {onProtect && (
         <PlayerList
           icon={IconNames.LOCK}
-          text={t("songAction.lock")}
+          text={t('songAction.lock')}
           onClick={onProtect}
         />
       )}
       {onStartPocketPick && (
         <PlayerList
           icon={IconNames.INHERITANCE}
-          text={t("songAction.pocketPick")}
+          text={t('songAction.pocketPick')}
           onClick={onStartPocketPick}
         />
       )}
       {onVeto && (
         <PlayerList
           icon={IconNames.BAN_CIRCLE}
-          text={t("songAction.ban")}
+          text={t('songAction.ban')}
           onClick={onVeto}
         />
       )}
       {onSetWinner && (
         <PlayerList
           icon={IconNames.CROWN}
-          text={t("songAction.winner")}
+          text={t('songAction.winner')}
           onClick={onSetWinner}
         />
       )}
@@ -50,7 +50,7 @@ export function IconMenu(props: Props) {
         <>
           <MenuDivider />
           <MenuItem
-            text={t("songAction.redraw")}
+            text={t('songAction.redraw')}
             icon={IconNames.REFRESH}
             onClick={onRedraw}
           />

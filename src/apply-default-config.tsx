@@ -1,9 +1,9 @@
-import { GameData } from "./models/SongData";
-import { useEffect } from "react";
-import { useConfigState } from "./config-state";
+import { GameData } from './models/SongData';
+import { useEffect } from 'react';
+import { useConfigState } from './config-state';
 
 interface Props {
-  defaults?: GameData["defaults"];
+  defaults?: GameData['defaults'];
 }
 
 export function ApplyDefaultConfig({ defaults }: Props) {

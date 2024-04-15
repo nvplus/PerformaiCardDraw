@@ -1,29 +1,29 @@
-import { useEffect } from "react";
-import { Classes, MenuItem } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import { FormattedMessage } from "react-intl";
-import { create } from "zustand";
-import { useMediaQuery } from "./hooks/useMediaQuery";
+import { useEffect } from 'react';
+import { Classes, MenuItem } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
+import { FormattedMessage } from 'react-intl';
+import { create } from 'zustand';
+import { useMediaQuery } from './hooks/useMediaQuery';
 
-export const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+export const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 export enum Theme {
-  Light = "light",
-  Dark = "dark",
+  Light = 'light',
+  Dark = 'dark',
 }
 
 /**
  * Returns true if user prefers dark theme
  */
 export function useThemePref() {
-  return useMediaQuery("(prefers-color-scheme: dark)")
+  return useMediaQuery('(prefers-color-scheme: dark)')
     ? Theme.Dark
     : Theme.Light;
 }
 
 function applyThemeBodyClass(theme: Theme, isObsLayer: boolean) {
   document.body.classList.toggle(Classes.DARK, theme === Theme.Dark);
-  document.body.classList.toggle("obs-layer", isObsLayer);
+  document.body.classList.toggle('obs-layer', isObsLayer);
 }
 
 interface ThemeContext {
@@ -48,7 +48,7 @@ declare global {
 }
 
 const useThemeStore = create<ThemeContext>((set, get) => ({
-  obsLayer: typeof window.obsstudio !== "undefined",
+  obsLayer: typeof window.obsstudio !== 'undefined',
   setObsLayer(next) {
     set({ obsLayer: next });
   },

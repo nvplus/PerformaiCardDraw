@@ -1,7 +1,7 @@
-import { ConfigState, useConfigState } from "./config-state";
-import { useDrawState } from "./draw-state";
-import { toaster } from "./toaster";
-import { shareData } from "./utils/share";
+import { ConfigState, useConfigState } from './config-state';
+import { useDrawState } from './draw-state';
+import { toaster } from './toaster';
+import { shareData } from './utils/share';
 
 interface PersistedConfigV1 {
   version: 1;
@@ -35,17 +35,17 @@ export function saveConfig() {
   return shareData(dataUri, {
     filename: `card-draw-config-${persistedObj.dataSetName}.json`,
     methods: [
-      { type: "nativeShare", allowDesktop: true },
-      { type: "download" },
+      { type: 'nativeShare', allowDesktop: true },
+      { type: 'download' },
     ],
   });
 }
 
 export function loadConfig() {
-  const fileInput = document.createElement("input");
-  fileInput.type = "file";
-  fileInput.accept = ".json,application/json";
-  fileInput.style.visibility = "hidden";
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = '.json,application/json';
+  fileInput.style.visibility = 'hidden';
   document.body.appendChild(fileInput);
   const resolution = new Promise<void>((resolve, reject) => {
     async function changeHandler() {
@@ -53,38 +53,38 @@ export function loadConfig() {
         const files = fileInput.files;
         if (!files) {
           reject();
-          throw new Error("no file selected");
+          throw new Error('no file selected');
         }
         const f = files.item(0);
         if (!f) {
           reject();
-          throw new Error("no file selected");
+          throw new Error('no file selected');
         }
-        if (f.type !== "application/json") {
+        if (f.type !== 'application/json') {
           reject();
-          throw new Error("file type is " + f.type);
+          throw new Error('file type is ' + f.type);
         }
         const contents: PersistedConfigV1 = JSON.parse(await f.text());
         await loadPersistedConfig(contents);
         resolve();
         toaster.show({
-          message: "Successfully loaded draw settings",
-          icon: "import",
-          intent: "success",
+          message: 'Successfully loaded draw settings',
+          icon: 'import',
+          intent: 'success',
         });
       } catch (e) {
         toaster.show({
-          message: "Failed to load settings file",
-          icon: "error",
-          intent: "danger",
+          message: 'Failed to load settings file',
+          icon: 'error',
+          intent: 'danger',
         });
-        console.error("Settings load message: ", (e as Error).message);
+        console.error('Settings load message: ', (e as Error).message);
       } finally {
-        fileInput.removeEventListener("change", changeHandler);
+        fileInput.removeEventListener('change', changeHandler);
         document.body.removeChild(fileInput);
       }
     }
-    fileInput.addEventListener("change", changeHandler);
+    fileInput.addEventListener('change', changeHandler);
   });
   fileInput.click();
   return resolution;
@@ -92,7 +92,7 @@ export function loadConfig() {
 
 function buildPersistedConfig(): PersistedConfigV1 {
   const { ...configState } = useConfigState.getState();
-  const serializedState: PersistedConfigV1["configState"] = {
+  const serializedState: PersistedConfigV1['configState'] = {
     ...configState,
     categories: Array.from(configState.categories),
     difficulties: Array.from(configState.difficulties),
@@ -141,7 +141,7 @@ interface OldSettings {
 }
 
 function migrateOldNames(
-  config: PersistedConfigV1["configState"],
+  config: PersistedConfigV1['configState'],
 ): Serialized<ConfigState> {
   const { showPool, showLabels, ...modernConfig } = config;
 

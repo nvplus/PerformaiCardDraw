@@ -88,12 +88,10 @@ export function SongCard(props: Props) {
     nameTranslation,
     artist,
     artistTranslation,
-    bpm,
     diffAbbr,
     diffColor,
     level,
     jacket,
-    flags,
   } = replacedWith || chart;
 
   const hasLabel = !!(vetoedBy || protectedBy || replacedBy);

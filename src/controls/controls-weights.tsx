@@ -37,7 +37,7 @@ export function WeightsControls({ usesTiers, high, low }: Props) {
   const groups = useMemo(
     () =>
       getAvailableLevels(gameData).filter((lvl) => lvl >= low && lvl <= high),
-    [high, low],
+    [high, low, gameData],
   );
 
   function toggleForceDistribution() {

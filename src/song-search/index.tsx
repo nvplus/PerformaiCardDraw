@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { chartIsValid, getDrawnChart, songIsValid } from "../card-draw";
-import { useConfigState } from "../config-state";
-import { useDrawState } from "../draw-state";
-import { EligibleChart } from "../models/Drawing";
-import { Song } from "../models/SongData";
-import { SearchResult, SearchResultData } from "./search-result";
-import { Omnibar } from "@blueprintjs/select";
-import styles from "./song-search.css";
+import { useState } from 'react';
+import { chartIsValid, getDrawnChart, songIsValid } from '../card-draw';
+import { useConfigState } from '../config-state';
+import { useDrawState } from '../draw-state';
+import { EligibleChart } from '../models/Drawing';
+import { Song } from '../models/SongData';
+import { SearchResult, SearchResultData } from './search-result';
+import { Omnibar } from '@blueprintjs/select';
+import styles from './song-search.css';
 
 interface Props {
   isOpen: boolean;
@@ -16,7 +16,7 @@ interface Props {
 
 export function SongSearch(props: Props) {
   const { isOpen, onSongSelect, onCancel } = props;
-  const [searchTerm, updateSearchTerm] = useState("");
+  const [searchTerm, updateSearchTerm] = useState('');
   const config = useConfigState();
   const fuzzySearch = useDrawState((s) => s.fuzzySearch);
 
@@ -34,7 +34,7 @@ export function SongSearch(props: Props) {
         items.push({ song, chart });
       }
       if (!validCharts.length) {
-        items.push({ song, chart: "none" });
+        items.push({ song, chart: 'none' });
       }
     }
     items = items.slice(0, config.constrainPocketPicks ? 30 : 15);
@@ -49,7 +49,7 @@ export function SongSearch(props: Props) {
       onItemSelect={(item) =>
         onSongSelect(
           item.song,
-          item.chart === "none" || !item.chart
+          item.chart === 'none' || !item.chart
             ? undefined
             : getDrawnChart(
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -61,13 +61,13 @@ export function SongSearch(props: Props) {
       }
       items={items}
       inputProps={{
-        placeholder: "Find a song...",
+        placeholder: 'Find a song...',
       }}
       className={styles.songSearch}
       itemRenderer={(data, itemProps) => (
         <SearchResult
           key={`${data.song.name}-${
-            typeof data.chart === "string" ? data.chart : data.chart.diffClass
+            typeof data.chart === 'string' ? data.chart : data.chart.diffClass
           }`}
           data={data}
           selected={itemProps.modifiers.active}

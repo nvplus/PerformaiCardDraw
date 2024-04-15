@@ -5,19 +5,19 @@ import {
   MenuItem,
   Popover,
   Tooltip,
-} from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import { useDrawing, useDrawingStore } from "../drawing-context";
-import styles from "./drawing-actions.css";
-import { CurrentPeersMenu } from "./remote-peer-menu";
-import { displayFromPeerId, useRemotePeers } from "./remote-peers";
-import { domToPng } from "modern-screenshot";
-import { shareImage } from "../utils/share";
-import { firstOf } from "../utils";
-import { useConfigState } from "../config-state";
-import { useErrorBoundary } from "react-error-boundary";
+} from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
+import { useDrawing, useDrawingStore } from '../drawing-context';
+import styles from './drawing-actions.css';
+import { CurrentPeersMenu } from './remote-peer-menu';
+import { displayFromPeerId, useRemotePeers } from './remote-peers';
+import { domToPng } from 'modern-screenshot';
+import { shareImage } from '../utils/share';
+import { firstOf } from '../utils';
+import { useConfigState } from '../config-state';
+import { useErrorBoundary } from 'react-error-boundary';
 
-const DEFAULT_FILENAME = "card-draw.png";
+const DEFAULT_FILENAME = 'card-draw.png';
 
 export function DrawingActions() {
   const getDrawing = useDrawing((s) => s.serializeSyncFields);
@@ -97,7 +97,7 @@ export function DrawingActions() {
             onClick={async () => {
               const drawingId = getDrawing().id;
               const drawingElement = document.querySelector(
-                "#drawing-" + drawingId,
+                '#drawing-' + drawingId,
               );
               if (drawingElement) {
                 shareImage(
@@ -116,12 +116,12 @@ export function DrawingActions() {
             icon={IconNames.Refresh}
             onClick={() =>
               confirm(
-                "This will replace everything besides protects and pocket picks!",
+                'This will replace everything besides protects and pocket picks!',
               ) && redrawAllCharts()
             }
           />
         </Tooltip>
-        {process.env.NODE_ENV === "production" ? null : (
+        {process.env.NODE_ENV === 'production' ? null : (
           <Tooltip content="Cause Error">
             <Button minimal icon={IconNames.Error} onClick={showBoundary} />
           </Tooltip>
@@ -135,7 +135,7 @@ export function DrawingActions() {
                 onClick={() => {
                   updateDrawing((drawing) => {
                     const next = drawing.players.slice();
-                    next.push("");
+                    next.push('');
                     return { players: next };
                   });
                 }}

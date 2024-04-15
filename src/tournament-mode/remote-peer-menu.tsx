@@ -6,16 +6,16 @@ import {
   Collapse,
   Button,
   Intent,
-} from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
-import { InputButtonPair } from "../controls/input-button-pair";
-import { toaster } from "../toaster";
-import { displayFromPeerId, useRemotePeers } from "./remote-peers";
+} from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
+import { InputButtonPair } from '../controls/input-button-pair';
+import { toaster } from '../toaster';
+import { displayFromPeerId, useRemotePeers } from './remote-peers';
 
 export function RemotePeerControls() {
   const peers = useRemotePeers();
 
-  let displayName = "(no name set)";
+  let displayName = '(no name set)';
   if (peers.thisPeer) {
     displayName = displayFromPeerId(peers.thisPeer.id);
   }
@@ -25,7 +25,7 @@ export function RemotePeerControls() {
   function copyToaster() {
     navigator.clipboard.writeText(displayName);
     toaster.show({
-      message: "Hostname copied to clipboard",
+      message: 'Hostname copied to clipboard',
       intent: Intent.SUCCESS,
       icon: IconNames.Clipboard,
     });
@@ -49,7 +49,7 @@ export function RemotePeerControls() {
         value={displayFromPeerId(peers.thisPeer.id)}
         rightElement={copyButton}
         buttonLabel="Disconnect"
-        onClick={() => peers.setName("")}
+        onClick={() => peers.setName('')}
       />
     );
   } else {
@@ -79,7 +79,7 @@ export function RemotePeerControls() {
             enterKeyHint="go"
             onClick={(v, input) => {
               peers.connect(v);
-              input.value = "";
+              input.value = '';
               input.blur();
             }}
           />

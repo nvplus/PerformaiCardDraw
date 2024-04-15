@@ -1,4 +1,4 @@
-import type { I18NDict } from "../models/SongData";
+import type { I18NDict } from '../models/SongData';
 
 // add some old odd browser properties
 declare const navigator: Navigator & {
@@ -11,14 +11,14 @@ const browserLanguage: string =
   navigator.language ||
   navigator.userLanguage ||
   navigator.browserLanguage ||
-  "en";
+  'en';
 
 export const detectedLanguage = browserLanguage.slice(0, 2);
 
 export function zeroPad(n: number, digits: number) {
   let ret = n.toString();
   while (ret.length < digits) {
-    ret = "0" + ret;
+    ret = '0' + ret;
   }
   return ret;
 }
@@ -46,7 +46,7 @@ export function* flattenedKeys(
 ): Generator<[string, string], void> {
   for (const key in input) {
     const value = input[key];
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
       yield [key, value];
     } else {
       for (const flattenedValue of flattenedKeys(value)) {
@@ -57,7 +57,7 @@ export function* flattenedKeys(
 }
 
 interface AvailableGameData {
-  type: "game";
+  type: 'game';
   index: number;
   name: string;
   display: string;
@@ -65,7 +65,7 @@ interface AvailableGameData {
 }
 
 interface GameDataParent {
-  type: "parent";
+  type: 'parent';
   name: string;
   games: Array<AvailableGameData>;
 }
@@ -73,7 +73,7 @@ interface GameDataParent {
 /** ordered list of all available game data files */
 export const availableGameData = (
   process.env.DATA_FILES as unknown as Array<
-    Omit<AvailableGameData, "type" | "index">
+    Omit<AvailableGameData, 'type' | 'index'>
   >
 ).sort((a, b) => {
   const parentDiff = a.parent.localeCompare(b.parent);
@@ -87,7 +87,7 @@ export function groupGameData(gd: typeof availableGameData) {
   return gd.reduce<Array<AvailableGameData | GameDataParent>>(
     (acc, curr, index) => {
       const asGame: AvailableGameData = {
-        type: "game",
+        type: 'game',
         index,
         ...curr,
       };
@@ -96,11 +96,11 @@ export function groupGameData(gd: typeof availableGameData) {
         return acc;
       }
       const latest = acc.length ? acc[acc.length - 1] : undefined;
-      if (latest && latest.type === "parent" && latest.name === curr.parent) {
+      if (latest && latest.type === 'parent' && latest.name === curr.parent) {
         latest.games.push(asGame);
       } else {
         acc.push({
-          type: "parent",
+          type: 'parent',
           name: curr.parent,
           games: [asGame],
         });

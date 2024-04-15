@@ -1,13 +1,13 @@
-import { AbbrDifficulty, formatLevel } from "../game-data-utils";
-import { useIntl } from "../hooks/useIntl";
-import { Song, Chart } from "../models/SongData";
-import { SongJacket } from "../song-jacket";
-import styles from "./song-search.css";
-import { MenuItem } from "@blueprintjs/core";
+import { AbbrDifficulty, formatLevel } from '../game-data-utils';
+import { useIntl } from '../hooks/useIntl';
+import { Song, Chart } from '../models/SongData';
+import { SongJacket } from '../song-jacket';
+import styles from './song-search.css';
+import { MenuItem } from '@blueprintjs/core';
 
 export interface SearchResultData {
   song: Song;
-  chart: Chart | "none";
+  chart: Chart | 'none';
 }
 
 interface ResultsProps {
@@ -21,15 +21,15 @@ export function SearchResult({ data, selected, handleClick }: ResultsProps) {
   const { t } = useIntl();
   let label: string | JSX.Element;
   let disabled = false;
-  if (typeof data.chart === "object") {
+  if (typeof data.chart === 'object') {
     label = (
       <>
-        <AbbrDifficulty diffClass={data.chart.diffClass} />{" "}
+        <AbbrDifficulty diffClass={data.chart.diffClass} />{' '}
         {formatLevel(data.chart.lvl)}
       </>
     );
-  } else if (typeof data.chart === "string") {
-    label = t("noMatchingCharts");
+  } else if (typeof data.chart === 'string') {
+    label = t('noMatchingCharts');
     disabled = true;
   } else {
     label = song.artist_translation || song.artist;

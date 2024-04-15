@@ -1,9 +1,9 @@
-import { IntlProvider as UpstreamProvider } from "react-intl";
-import { PropsWithChildren, useMemo } from "react";
-import { flattenedKeys } from "./utils";
-import { I18NDict } from "./models/SongData";
+import { IntlProvider as UpstreamProvider } from 'react-intl';
+import { PropsWithChildren, useMemo } from 'react';
+import { flattenedKeys } from './utils';
+import { I18NDict } from './models/SongData';
 
-const FALLBACK_LOCALE = "en";
+const FALLBACK_LOCALE = 'en';
 
 interface Props {
   locale: string;

@@ -1,5 +1,5 @@
-import { ControlGroup, InputGroup, Button } from "@blueprintjs/core";
-import { InputHTMLAttributes, ReactNode, useCallback, useRef } from "react";
+import { ControlGroup, InputGroup, Button } from '@blueprintjs/core';
+import { InputHTMLAttributes, ReactNode, useCallback, useRef } from 'react';
 
 interface Props {
   placeholder?: string;
@@ -10,7 +10,7 @@ interface Props {
   /** called when the user clicks the button or presses the enter key */
   onClick(value: string, element: HTMLInputElement): void;
   buttonLabel: ReactNode;
-  enterKeyHint?: InputHTMLAttributes<unknown>["enterKeyHint"];
+  enterKeyHint?: InputHTMLAttributes<unknown>['enterKeyHint'];
 }
 
 export function InputButtonPair({ onClick, ...props }: Props) {
@@ -29,7 +29,7 @@ export function InputButtonPair({ onClick, ...props }: Props) {
         value={props.value}
         rightElement={props.rightElement}
         onKeyDown={(e) => {
-          if (e.code === "Enter") {
+          if (e.code === 'Enter') {
             handleClick();
           }
         }}

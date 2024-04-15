@@ -1,10 +1,10 @@
-import { useCallback } from "react";
-import { useConfigState } from "../config-state";
-import { useDrawing } from "../drawing-context";
-import styles from "./drawing-labels.css";
-import { AutoCompleteSelect, RoundSelect } from "./round-select";
-import { Icon } from "@blueprintjs/core";
-import { IconNames } from "@blueprintjs/icons";
+import { useCallback } from 'react';
+import { useConfigState } from '../config-state';
+import { useDrawing } from '../drawing-context';
+import styles from './drawing-labels.css';
+import { AutoCompleteSelect, RoundSelect } from './round-select';
+import { Icon } from '@blueprintjs/core';
+import { IconNames } from '@blueprintjs/icons';
 
 export function SetLabels() {
   const showLabels = useConfigState((s) => s.showPlayerAndRoundLabels);
@@ -43,16 +43,16 @@ function Versus() {
       <Icon
         icon={IconNames.CaretLeft}
         style={{
-          visibility: priorityPlayer === 1 ? "visible" : "hidden",
-          verticalAlign: "middle",
+          visibility: priorityPlayer === 1 ? 'visible' : 'hidden',
+          verticalAlign: 'middle',
         }}
       />
-      {" vs "}
+      {' vs '}
       <Icon
         icon={IconNames.CaretRight}
         style={{
-          visibility: priorityPlayer === 2 ? "visible" : "hidden",
-          verticalAlign: "middle",
+          visibility: priorityPlayer === 2 ? 'visible' : 'hidden',
+          verticalAlign: 'middle',
         }}
       />
     </div>

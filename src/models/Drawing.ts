@@ -1,5 +1,5 @@
-import { DataConnection } from "peerjs";
-import { Song } from "./SongData";
+import { DataConnection } from 'peerjs';
+import { Song } from './SongData';
 
 export interface EligibleChart {
   name: string;

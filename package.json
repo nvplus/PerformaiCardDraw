@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "webpack serve --env dev=true",
-    "build": "npm run validate && webpack",
-    "build:zip": "npm run validate && webpack --env zip",
+    "build": "yarn validate && webpack",
+    "build:zip": "yarn validate && webpack --env zip",
     "import:maimai": "ts-node scripts/maimai/import-maimai.ts",
     "import:maimai-jackets": "ts-node scripts/maimai/import-maimai-jackets.ts",
     "import:chunithm": "ts-node scripts/chunithm/import-chunithm.ts",
@@ -17,8 +17,8 @@
     "import:wacca": "ts-node scripts/wacca/import-wacca.ts",
     "import:wacca-jackets": "ts-node scripts/wacca/import-wacca-jackets.ts",
     "import:wacca-constants": "ts-node scripts/wacca/import-wacca-constants.ts",
-    "validate": "npm run validate:json && npm run validate:ts && eslint src",
-    "validate:json": "node scripts/validate.mjs",
+    "validate": "yarn validate:json && yarn validate:ts && eslint src",
+    "validate:json": "ts-node scripts/validate.ts",
     "validate:ts": "tsc --noemit"
   },
   "author": "Noah Manneschmidt",

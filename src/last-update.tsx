@@ -1,9 +1,9 @@
-import { Classes, Text } from "@blueprintjs/core";
-import cn from "classnames";
-import { FormattedMessage } from "react-intl";
-import { shallow } from "zustand/shallow";
-import { useDrawState } from "./draw-state";
-import { detectedLanguage } from "./utils";
+import { Classes, Text } from '@blueprintjs/core';
+import cn from 'classnames';
+import { FormattedMessage } from 'react-intl';
+import { shallow } from 'zustand/shallow';
+import { useDrawState } from './draw-state';
+import { detectedLanguage } from './utils';
 
 export function LastUpdate() {
   const [dataSetName, gameData] = useDrawState(
@@ -17,7 +17,7 @@ export function LastUpdate() {
   return (
     <Text
       className={cn(Classes.TEXT_MUTED, Classes.TEXT_SMALL)}
-      style={{ padding: "10px", margin: 0 }}
+      style={{ padding: '10px', margin: 0 }}
     >
       <FormattedMessage
         id="lastUpdate"

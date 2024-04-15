@@ -1,7 +1,7 @@
-import { Checkbox, FormGroup, NumericInput, TagInput } from "@blueprintjs/core";
-import { ReactNode } from "react";
-import { useConfigState } from "../config-state";
-import { useIntl } from "../hooks/useIntl";
+import { Checkbox, FormGroup, NumericInput, TagInput } from '@blueprintjs/core';
+import { ReactNode } from 'react';
+import { useConfigState } from '../config-state';
+import { useIntl } from '../hooks/useIntl';
 
 export function PlayerNamesControls() {
   const { t } = useIntl();
@@ -34,7 +34,7 @@ export function PlayerNamesControls() {
     <>
       <ShowLabelsToggle />
       <PlayersPerDraw />
-      <FormGroup label={t("controls.addPlayerLabel")}>
+      <FormGroup label={t('controls.addPlayerLabel')}>
         <TagInput
           values={playerNames}
           fill
@@ -60,7 +60,7 @@ function ShowLabelsToggle() {
       onChange={(e) =>
         update({ showPlayerAndRoundLabels: e.currentTarget.checked })
       }
-      label={t("controls.playerLabels")}
+      label={t('controls.playerLabels')}
     />
   );
 }
@@ -71,14 +71,14 @@ function PlayersPerDraw() {
   const { t } = useIntl();
 
   return (
-    <FormGroup label={t("controls.playersPerDraw")}>
+    <FormGroup label={t('controls.playersPerDraw')}>
       <NumericInput
         type="number"
         inputMode="numeric"
         value={ppd}
         large
         min={0}
-        style={{ width: "58px" }}
+        style={{ width: '58px' }}
         onValueChange={(next) => update({ defaultPlayersPerDraw: next })}
       />
     </FormGroup>
@@ -112,7 +112,7 @@ function TournamentLabelEditor() {
     });
   }
   return (
-    <FormGroup label={t("controls.tournamentLabelEdit")}>
+    <FormGroup label={t('controls.tournamentLabelEdit')}>
       <TagInput
         values={tournamentRounds}
         fill

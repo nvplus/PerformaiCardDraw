@@ -1,4 +1,4 @@
-import { atom } from "jotai";
+import { atom } from 'jotai';
 
 export const degrsIsTesting = atom(false);
 export const degrsTestProgress = atom(0);

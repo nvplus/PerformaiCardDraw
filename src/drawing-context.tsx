@@ -1,19 +1,19 @@
-import { ReactNode } from "react";
-import { StoreApi } from "zustand";
-import { draw } from "./card-draw";
-import { useConfigState } from "./config-state";
-import { createContextualStore } from "./zustand/contextual-zustand";
-import { useDrawState } from "./draw-state";
+import { ReactNode } from 'react';
+import { StoreApi } from 'zustand';
+import { draw } from './card-draw';
+import { useConfigState } from './config-state';
+import { createContextualStore } from './zustand/contextual-zustand';
+import { useDrawState } from './draw-state';
 import {
   Drawing,
   EligibleChart,
   PlayerActionOnChart,
   PocketPick,
-} from "./models/Drawing";
-import { SerializibleStore } from "./zustand/shared-zustand";
+} from './models/Drawing';
+import { SerializibleStore } from './zustand/shared-zustand';
 
 const stubDrawing: Drawing = {
-  id: "stub",
+  id: 'stub',
   players: [],
   charts: [],
   bans: [],
@@ -28,7 +28,7 @@ interface DrawingProviderProps {
 }
 
 export interface DrawingContext extends Drawing, SerializibleStore<Drawing> {
-  updateDrawing: StoreApi<Drawing>["setState"];
+  updateDrawing: StoreApi<Drawing>['setState'];
   incrementPriorityPlayer(): void;
   redrawAllCharts(): void;
   redrawChart(chartId: string): void;
@@ -41,7 +41,7 @@ export interface DrawingContext extends Drawing, SerializibleStore<Drawing> {
    * @param chart new chart being pocket picked, if this is a pocket pick action
    */
   handleBanProtectReplace(
-    action: "ban" | "protect" | "pocket",
+    action: 'ban' | 'protect' | 'pocket',
     chartId: string,
     player: number,
     chart?: EligibleChart,
@@ -49,14 +49,14 @@ export interface DrawingContext extends Drawing, SerializibleStore<Drawing> {
   setWinner(chartId: string, p: number | null): void;
 }
 
-function keyFromAction(action: "ban" | "protect" | "pocket") {
+function keyFromAction(action: 'ban' | 'protect' | 'pocket') {
   switch (action) {
-    case "ban":
-      return "bans";
-    case "protect":
-      return "protects";
-    case "pocket":
-      return "pocketPicks";
+    case 'ban':
+      return 'bans';
+    case 'protect':
+      return 'protects';
+    case 'pocket':
+      return 'pocketPicks';
   }
 }
 
@@ -134,7 +134,7 @@ const {
       if (useConfigState.getState().orderByAction) {
         const indexToCut = charts.findIndex((chart) => chart.id === chartId);
         const [shiftedChart] = charts.splice(indexToCut, 1);
-        if (action === "ban") {
+        if (action === 'ban') {
           // insert at tail of list
           const insertPoint = charts.length;
           charts.splice(insertPoint, 0, shiftedChart);
@@ -162,10 +162,10 @@ const {
     },
     serializeSyncFields() {
       return Object.entries(get()).reduce((ret: Partial<Drawing>, [k, v]) => {
-        if (typeof v === "function") {
+        if (typeof v === 'function') {
           return ret;
         }
-        if (k.startsWith("__")) {
+        if (k.startsWith('__')) {
           return ret;
         }
         ret[k as keyof Drawing] = v;

@@ -4,8 +4,8 @@ import { writeJsonData } from '../utils';
 const fetch = require('node-fetch');
 
 const DATA_URL =
-  'https://web.archive.org/web/20211029111453/https://chunithm.sega.jp/data/common.json';
-const OUTFILE = 'src/songs/chunithm_paradise_lost.json';
+  'https://web.archive.org/web/20220412150940if_/https://chunithm.sega.jp/storage/json/music.json';
+const OUTFILE = 'src/songs/chunithm_new.json';
 
 function extractSong(rawSong: Record<string, any>) {
   return {
@@ -13,8 +13,8 @@ function extractSong(rawSong: Record<string, any>) {
     name: rawSong.title,
     artist: rawSong.artist.trim(),
     folder: '',
-    category: rawSong.catcode,
-    jacket: `chunithm/${rawSong.image}`,
+    category: rawSong?.catcode ?? rawSong.catname,
+    jacket: `chunithm/${rawSong.id}.png`,
     charts: extractSheets(rawSong),
   };
 }
@@ -25,7 +25,7 @@ function extractSheets(rawSong: Record<string, any>) {
     { flags: [], diffClass: 'advanced', lvl: rawSong.lev_adv },
     { flags: [], diffClass: 'expert', lvl: rawSong.lev_exp },
     { flags: [], diffClass: 'master', lvl: rawSong.lev_mas },
-    // Post-NEW { type: 'std', difficulty: 'ultima', level: rawSong.lev_ult },
+    { flags: [], diffClass: 'ultima', lvl: rawSong.lev_ult },
     {
       flags: [rawSong.we_tex, rawSong.lev_we],
       diffClass: 'worldsend',

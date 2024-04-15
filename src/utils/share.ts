@@ -1,18 +1,18 @@
-import { toaster } from "../toaster";
+import { toaster } from '../toaster';
 
 interface NativeShare {
-  type: "nativeShare";
+  type: 'nativeShare';
   allowDesktop?: boolean;
   title?: string;
 }
 
 interface Clipboard {
-  type: "clipboard";
+  type: 'clipboard';
   toastMessage?: string;
 }
 
 interface Download {
-  type: "download";
+  type: 'download';
 }
 
 type ShareMethod = NativeShare | Clipboard | Download;
@@ -21,9 +21,9 @@ export async function shareImage(dataUrl: string, filename: string) {
   shareData(dataUrl, {
     filename,
     methods: [
-      { type: "nativeShare" },
-      { type: "clipboard", toastMessage: "Image copied to clipboard" },
-      { type: "download" },
+      { type: 'nativeShare' },
+      { type: 'clipboard', toastMessage: 'Image copied to clipboard' },
+      { type: 'download' },
     ],
   });
 }
@@ -39,7 +39,7 @@ export async function shareData(
   let blob: Blob | undefined;
   for (const method of opts.methods) {
     switch (method.type) {
-      case "nativeShare":
+      case 'nativeShare':
         if (!blob) {
           blob = dataUriToBlob(dataUri);
         }
@@ -55,7 +55,7 @@ export async function shareData(
         }
         break;
 
-      case "clipboard":
+      case 'clipboard':
         if (!blob) {
           blob = dataUriToBlob(dataUri);
         }
@@ -64,15 +64,15 @@ export async function shareData(
           toaster.show(
             {
               message: method.toastMessage,
-              icon: "paperclip",
+              icon: 'paperclip',
             },
-            "copied-data",
+            'copied-data',
           );
           return;
         } catch {
           break;
         }
-      case "download":
+      case 'download':
         downloadDataUrl(dataUri, opts.filename);
         break;
     }
@@ -88,8 +88,8 @@ export function mobileShare(shareData: ShareData, allowDesktop = false) {
   const agent: string =
     navigator.userAgent || navigator.vendor || (window as any).opera;
   if (
-    typeof navigator.share !== "undefined" &&
-    typeof navigator.canShare === "function" &&
+    typeof navigator.share !== 'undefined' &&
+    typeof navigator.canShare === 'function' &&
     (allowDesktop || isMobile(agent))
   ) {
     if (navigator.canShare(shareData)) {
@@ -110,7 +110,7 @@ function isMobile(agent: string) {
 }
 
 export function downloadDataUrl(dataUrl: string, filename: string) {
-  const link = document.createElement("a");
+  const link = document.createElement('a');
   link.download = filename;
   link.href = dataUrl;
   link.click();
@@ -125,12 +125,12 @@ export function copyToClipboard(blob: Blob) {
 }
 
 function dataUriToBlob(dataUri: string) {
-  const headerIndex = dataUri.indexOf(",");
+  const headerIndex = dataUri.indexOf(',');
   const header = dataUri.slice(0, headerIndex);
   const body = dataUri.slice(headerIndex + 1);
   const match = header.match(/data:(.+)(;base64)?$/);
   if (!match) {
-    throw new Error("data uri is not well-formed");
+    throw new Error('data uri is not well-formed');
   }
   const type = match[1] ?? undefined;
   const isBase64 = !!match[2];

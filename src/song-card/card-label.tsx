@@ -1,9 +1,9 @@
-import classNames from "classnames";
-import React from "react";
-import { Intent, Tag } from "@blueprintjs/core";
-import styles from "./card-label.css";
-import { IconNames } from "@blueprintjs/icons";
-import { usePlayerLabel } from "./use-player-label";
+import classNames from 'classnames';
+import React from 'react';
+import { Intent, Tag } from '@blueprintjs/core';
+import styles from './card-label.css';
+import { IconNames } from '@blueprintjs/icons';
+import { usePlayerLabel } from './use-player-label';
 
 export enum LabelType {
   Protect = 1,

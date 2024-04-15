@@ -1,5 +1,5 @@
-import React, { CSSProperties, ReactNode } from "react";
-import styles from "./app.css";
+import React, { CSSProperties, ReactNode } from 'react';
+import styles from './app.css';
 
 interface ContainerProps {
   className?: string;

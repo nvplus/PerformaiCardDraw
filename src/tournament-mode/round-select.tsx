@@ -1,11 +1,11 @@
-import { Classes, MenuItem } from "@blueprintjs/core";
-import { Suggest } from "@blueprintjs/select";
+import { Classes, MenuItem } from '@blueprintjs/core';
+import { Suggest } from '@blueprintjs/select';
 
-import { filterRoundLabel, renderRoundLabel } from "./round-label";
-import { useDrawing } from "../drawing-context";
-import { useIntl } from "../hooks/useIntl";
-import { useMemo } from "react";
-import { useConfigState } from "../config-state";
+import { filterRoundLabel, renderRoundLabel } from './round-label';
+import { useDrawing } from '../drawing-context';
+import { useIntl } from '../hooks/useIntl';
+import { useMemo } from 'react';
+import { useConfigState } from '../config-state';
 
 function identity<T>(i: T) {
   return i;
@@ -19,7 +19,7 @@ export function RoundSelect() {
   return (
     <AutoCompleteSelect
       size="medium"
-      placeholder={t("tournamentRoundPlaceholder")}
+      placeholder={t('tournamentRoundPlaceholder')}
       itemList={roundLabels}
       value={tournamentTitle || null}
       onSelect={(title) => updateDrawing({ title })}
@@ -30,7 +30,7 @@ export function RoundSelect() {
 interface Props {
   /** remove empty autocomplete item */
   noEmpty?: boolean;
-  size: "medium" | "large";
+  size: 'medium' | 'large';
   itemList: Array<string>;
   placeholder: string;
   value: string | null;
@@ -43,7 +43,7 @@ export function AutoCompleteSelect(props: Props) {
   const items = useMemo(() => {
     const list = props.itemList.slice();
     if (!props.noEmpty) {
-      list.unshift("");
+      list.unshift('');
     }
 
     return list;
@@ -53,12 +53,12 @@ export function AutoCompleteSelect(props: Props) {
     <Suggest<string>
       inputProps={{
         style: {
-          boxShadow: "none",
-          textAlign: "center",
-          background: "transparent",
-          height: "36px",
-          lineHeight: "36px",
-          fontSize: props.size === "medium" ? "26px" : "32px",
+          boxShadow: 'none',
+          textAlign: 'center',
+          background: 'transparent',
+          height: '36px',
+          lineHeight: '36px',
+          fontSize: props.size === 'medium' ? '26px' : '32px',
         },
         placeholder: props.placeholder,
       }}
@@ -74,7 +74,7 @@ export function AutoCompleteSelect(props: Props) {
           active={active}
           key={query}
           onClick={handleClick}
-          text={t("tournamentRoundAdd", { round: query })}
+          text={t('tournamentRoundAdd', { round: query })}
           icon="add"
           roleStructure="listoption"
         />
@@ -84,7 +84,7 @@ export function AutoCompleteSelect(props: Props) {
       noResults={
         <MenuItem
           disabled={true}
-          text={t("noResults")}
+          text={t('noResults')}
           roleStructure="listoption"
         />
       }

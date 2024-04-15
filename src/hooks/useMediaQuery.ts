@@ -1,7 +1,7 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from 'react';
 
 export const prefersDarkQuery = window.matchMedia(
-  "(prefers-color-scheme: dark)",
+  '(prefers-color-scheme: dark)',
 );
 
 /**
@@ -22,14 +22,14 @@ export function useMediaQuery(query: string) {
       setMatching(mq.matches);
     }
     if (mq.addEventListener) {
-      mq.addEventListener("change", handleChange);
+      mq.addEventListener('change', handleChange);
     } else {
       // for old safari e.g. iOS 12
       mq.addListener(handleChange);
     }
     return () => {
       if (mq.removeEventListener) {
-        mq.removeEventListener("change", handleChange);
+        mq.removeEventListener('change', handleChange);
       } else {
         // for old safari e.g. iOS 12
         mq.removeListener(handleChange);
@@ -41,5 +41,5 @@ export function useMediaQuery(query: string) {
 }
 
 export function useIsNarrow() {
-  return useMediaQuery("(max-width: 600px)");
+  return useMediaQuery('(max-width: 600px)');
 }

@@ -2974,8 +2974,8 @@
         },
         {
           "diffClass": "expert",
-          "lvl": 12,
-          "levelConstant": 12.5,
+          "lvl": 12.5,
+          "levelConstant": 12.6,
           "flags": ["std"]
         },
         {
@@ -42116,7 +42116,7 @@
         {
           "diffClass": "master",
           "lvl": 14,
-          "levelConstant": 14.2,
+          "levelConstant": 14.1,
           "flags": ["dx"]
         }
       ]
@@ -42314,7 +42314,7 @@
         {
           "diffClass": "master",
           "lvl": 13.5,
-          "levelConstant": 13.8,
+          "levelConstant": 13.6,
           "flags": ["dx"]
         }
       ]
@@ -42347,7 +42347,7 @@
         {
           "diffClass": "master",
           "lvl": 13.5,
-          "levelConstant": 13.8,
+          "levelConstant": 13.7,
           "flags": ["dx"]
         }
       ]
@@ -42446,7 +42446,7 @@
         {
           "diffClass": "master",
           "lvl": 14.5,
-          "levelConstant": 14.7,
+          "levelConstant": 14.6,
           "flags": ["dx"]
         }
       ]
@@ -42578,7 +42578,7 @@
         {
           "diffClass": "master",
           "lvl": 14.5,
-          "levelConstant": 14.8,
+          "levelConstant": 14.7,
           "flags": ["dx"]
         }
       ]
@@ -43282,8 +43282,8 @@
         },
         {
           "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
+          "lvl": 9,
+          "levelConstant": 9.5,
           "flags": ["dx"]
         },
         {
@@ -43685,7 +43685,7 @@
         {
           "diffClass": "master",
           "lvl": 13.5,
-          "levelConstant": 13.7,
+          "levelConstant": 13.6,
           "flags": ["dx"]
         }
       ]
@@ -43750,8 +43750,8 @@
         },
         {
           "diffClass": "master",
-          "lvl": 13.5,
-          "levelConstant": 13.7,
+          "lvl": 13,
+          "levelConstant": 13.3,
           "flags": ["dx"]
         }
       ]
@@ -44015,7 +44015,7 @@
         {
           "diffClass": "master",
           "lvl": 14,
-          "levelConstant": 14.1,
+          "levelConstant": 14.2,
           "flags": ["dx"]
         }
       ]
@@ -44041,14 +44041,14 @@
         },
         {
           "diffClass": "expert",
-          "lvl": 12,
-          "levelConstant": 12.5,
+          "lvl": 12.5,
+          "levelConstant": 12.6,
           "flags": ["dx"]
         },
         {
           "diffClass": "master",
           "lvl": 14,
-          "levelConstant": 14.1,
+          "levelConstant": 14.0,
           "flags": ["dx"]
         }
       ]
@@ -44147,7 +44147,7 @@
         {
           "diffClass": "master",
           "lvl": 12.5,
-          "levelConstant": 12.8,
+          "levelConstant": 12.7,
           "flags": ["dx"]
         }
       ]
@@ -44278,8 +44278,8 @@
         },
         {
           "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
+          "lvl": 12,
+          "levelConstant": 12.5,
           "flags": ["dx"]
         }
       ]
@@ -44576,7 +44576,7 @@
         {
           "diffClass": "master",
           "lvl": 14.5,
-          "levelConstant": 14.8,
+          "levelConstant": 14.9,
           "flags": ["dx"]
         }
       ]
@@ -44675,7 +44675,7 @@
         {
           "diffClass": "master",
           "lvl": 13,
-          "levelConstant": 13.4,
+          "levelConstant": 13.5,
           "flags": ["dx"]
         }
       ]
@@ -44741,7 +44741,7 @@
         {
           "diffClass": "master",
           "lvl": 13.5,
-          "levelConstant": 13.8,
+          "levelConstant": 13.9,
           "flags": ["dx"]
         }
       ]
@@ -45610,8 +45610,8 @@
         },
         {
           "diffClass": "expert",
-          "lvl": 12,
-          "levelConstant": 12.5,
+          "lvl": 12.5,
+          "levelConstant": 12.6,
           "flags": ["dx"]
         },
         {

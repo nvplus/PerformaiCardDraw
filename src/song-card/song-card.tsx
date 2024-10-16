@@ -91,6 +91,7 @@ export function SongCard(props: Props) {
     diffAbbr,
     diffColor,
     level,
+    levelConstant,
     jacket,
   } = replacedWith || chart;
 
@@ -212,7 +213,9 @@ export function SongCard(props: Props) {
           </div>
 
           <div className={styles.difficulty}>
-            {diffAbbr} {formatLevel(level)}
+            {`${diffAbbr} ${formatLevel(level)} ${
+              levelConstant ? ` (${levelConstant.toFixed(1)})` : ''
+            }`}
           </div>
         </div>
       </Popover>

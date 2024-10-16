@@ -128,111 +128,6 @@
       ]
     },
     {
-      "name": "LOVE & JOY",
-      "artist": "木村由姬 [cover]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/10.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "じょいふる",
-      "artist": "生物股长 [cover]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/11.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Everyday、カチューシャ",
-      "artist": "AKB48 [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/15.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 13,
-          "levelConstant": 13.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "Future",
       "artist": "★STAR GUiTAR [cover]",
       "category": "POPS＆アニメ",
@@ -300,72 +195,6 @@
           "diffClass": "master",
           "lvl": 11.5,
           "levelConstant": 11.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "恋愛サーキュレーション",
-      "artist": "「化物語」[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/20.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "コネクト",
-      "artist": "ClariS　「魔法少女まどか☆マギカ」",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/21.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
           "flags": ["std"]
         }
       ]
@@ -554,39 +383,6 @@
       ]
     },
     {
-      "name": "VICTORY",
-      "artist": "EXILE",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/29.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "ネコ日和。",
       "artist": "Kai/能登有沙",
       "category": "maimai",
@@ -648,39 +444,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Garden",
-      "artist": "May J. [cover]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/34.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 8,
-          "levelConstant": 8.0,
           "flags": ["std"]
         }
       ]
@@ -785,39 +548,6 @@
       ]
     },
     {
-      "name": "Chu Chu",
-      "artist": "moumoon 沐月 [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/41.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "jelly",
       "artist": "capsule [cover]",
       "category": "POPS＆アニメ",
@@ -851,39 +581,6 @@
       ]
     },
     {
-      "name": "愛を止めないで ",
-      "artist": "倖田來未 [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/43.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "ハッピーシンセサイザ",
       "artist": "EasyPop",
       "category": "niconico&ボーカロイド",
@@ -912,39 +609,6 @@
           "diffClass": "master",
           "lvl": 12,
           "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Choo Choo Train",
-      "artist": "EXILE [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/45.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
           "flags": ["std"]
         }
       ]
@@ -1022,39 +686,6 @@
       ]
     },
     {
-      "name": "アイデンティティ",
-      "artist": "Sakanaction [cover]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/49.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "美しく燃える森",
       "artist": "東京スカパラダイスオーケストラ [cover]",
       "category": "POPS＆アニメ",
@@ -1083,72 +714,6 @@
           "diffClass": "master",
           "lvl": 10.5,
           "levelConstant": 10.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ヘビーローテーション ",
-      "artist": "AKB48 [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/54.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "CAN'T GET BACK ",
-      "artist": "w-inds. [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/55.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
           "flags": ["std"]
         }
       ]
@@ -1221,72 +786,6 @@
           "diffClass": "remaster",
           "lvl": 13,
           "levelConstant": 13.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "PON PON PON ",
-      "artist": "Kyarypamyupamyu [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/59.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "New World",
-      "artist": "w-inds. [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai",
-      "jacket": "maimai/60.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
           "flags": ["std"]
         }
       ]
@@ -2822,72 +2321,6 @@
       ]
     },
     {
-      "name": "つけまつける",
-      "artist": "Kyarypamyupamyu [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai PLUS",
-      "jacket": "maimai/126.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Get Off of My Way",
-      "artist": "MAN WITH A MISSION[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai PLUS",
-      "jacket": "maimai/127.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "御旗のもとに",
       "artist": "「サクラ大戦」",
       "category": "ゲーム＆バラエティ",
@@ -3557,72 +2990,6 @@
       ]
     },
     {
-      "name": "サブリナ",
-      "artist": "家入レオ[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai PLUS",
-      "jacket": "maimai/148.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "SPELL MAGIC",
-      "artist": "Acid Black Cherry [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai PLUS",
-      "jacket": "maimai/149.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "超絶！Superlative",
       "artist": "Keitarou Hanada「戦国大戦」",
       "category": "ゲーム＆バラエティ",
@@ -3822,435 +3189,6 @@
           "diffClass": "master",
           "lvl": 12,
           "levelConstant": 12.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "CANDY CANDY",
-      "artist": "Kyarypamyupamyu [PV]",
-      "category": "POPS＆アニメ",
-      "folder": "maimai PLUS",
-      "jacket": "maimai/161.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "READY STEADY GO",
-      "artist": "L'Arc～en～Ciel[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/164.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "リライト",
-      "artist": "ASIAN KUNG-FU GENERATION[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/165.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "カルマ",
-      "artist": "BUMP OF CHICKEN[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/166.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "GO!!!",
-      "artist": "FLOW/「NARUTO」[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/167.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "LOVEドッきゅん♥",
-      "artist": "club Prince[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/168.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "galaxias!",
-      "artist": "galaxias![PV]",
-      "category": "niconico&ボーカロイド",
-      "folder": "GreeN",
-      "jacket": "maimai/169.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "女々しくて",
-      "artist": "ゴールデンボンバー[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/172.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "サラバ、愛しき悲しみたちよ",
-      "artist": "ももいろクローバーZ[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/173.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "創聖のアクエリオン",
-      "artist": "AKINO[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/174.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Butter-Fly",
-      "artist": "和田光司[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/176.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "君の知らない物語",
-      "artist": "supercell「化物語」",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/181.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.6,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "残酷な天使のテーゼ",
-      "artist": "高橋洋子[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN",
-      "jacket": "maimai/182.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
           "flags": ["std"]
         }
       ]
@@ -6833,72 +5771,6 @@
       ]
     },
     {
-      "name": "RPG",
-      "artist": "SEKAI NO OWARI",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/274.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Tachyon",
-      "artist": "mamenoi(MANYO & やなぎなぎ)",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/277.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.9,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "レッツゴー!陰陽師",
       "artist": "「新豪血寺一族 -煩悩解放-」",
       "category": "ゲーム＆バラエティ",
@@ -7263,39 +6135,6 @@
           "diffClass": "master",
           "lvl": 12,
           "levelConstant": 12.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Our Fighting",
-      "artist": "クーナ(CV 喜多村英梨)「PHANTASY STAR ONLINE 2」",
-      "category": "ゲーム＆バラエティ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/293.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.6,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
           "flags": ["std"]
         }
       ]
@@ -8465,138 +7304,6 @@
       ]
     },
     {
-      "name": "GO MY WAY!!",
-      "artist": "ナムコエンジェル「アイドルマスター」",
-      "category": "バラエティ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/333.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "THE IDOLM@STER 2nd-mix",
-      "artist": "ナムコエンジェル「アイドルマスター」",
-      "category": "バラエティ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/334.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "The world is all one !!",
-      "artist": "ナムコエンジェル「アイドルマスター」",
-      "category": "バラエティ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/335.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "紅蓮の弓矢",
-      "artist": "Linked Horizon「進撃の巨人」 [アニメPV]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/336.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "鼓動",
       "artist": "青木 千紘「龍が如く 維新！」",
       "category": "ゲーム＆バラエティ",
@@ -8630,39 +7337,6 @@
       ]
     },
     {
-      "name": "リクライム",
-      "artist": "ROOKiEZ is PUNK'D「弱虫ペダル」[アニメPV]",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/338.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "DRAGONLADY",
       "artist": "Nankumo/CUBE3",
       "category": "ゲーム＆バラエティ",
@@ -8691,39 +7365,6 @@
           "diffClass": "master",
           "lvl": 14,
           "levelConstant": 14.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "恋のヒメヒメぺったんこ",
-      "artist": "姫野湖鳥(CV 田村ゆかり)「弱虫ペダル」",
-      "category": "POPS＆アニメ",
-      "folder": "GreeN PLUS",
-      "jacket": "maimai/340.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
           "flags": ["std"]
         }
       ]
@@ -9125,105 +7766,6 @@
       ]
     },
     {
-      "name": "1/3の純情な感情",
-      "artist": "SIAM SHADE [covered by 湯毛]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/356.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "みかんのうた",
-      "artist": "SEX MACHINEGUNS[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/357.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "毒占欲",
-      "artist": "DECO*27",
-      "category": "niconico&ボーカロイド",
-      "folder": "ORANGE",
-      "jacket": "maimai/358.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13.5,
-          "levelConstant": 13.6,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "YU-MU",
       "artist": "岸田教団＆THE明星ロケッツ",
       "category": "東方Project",
@@ -9506,171 +8048,6 @@
       ]
     },
     {
-      "name": "シリウス",
-      "artist": "藍井エイル「キルラキル」[アニメPV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/368.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ほとんど違法行為",
-      "artist": "ネコネコカワイイ「ニンジャスレイヤー」",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/369.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "naraku within",
-      "artist": "藤澤健至(Team-MAX)「ニンジャスレイヤー」",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/370.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Stand Up!!!!",
-      "artist": "鈴木結愛(CV:西 明日香)/佐藤陽菜(CV:明坂聡美)/高橋 葵(CV:荻野可鈴)/田中心春(CV:大橋彩香)/「てさぐれ！部活もの」 [アニメPV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/371.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ファミリーパーティー",
-      "artist": "きゃりーぱみゅぱみゅ[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/372.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "アンハッピーリフレイン",
       "artist": "wowaka",
       "category": "niconico&ボーカロイド",
@@ -9765,39 +8142,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "おいでよ！妖精の森",
-      "artist": "「gdgd妖精s」",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE",
-      "jacket": "maimai/377.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
           "flags": ["std"]
         }
       ]
@@ -10244,72 +8588,6 @@
       ]
     },
     {
-      "name": "Can Do",
-      "artist": "GRANRODEO[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/397.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "The Other self",
-      "artist": "GRANRODEO[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/398.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "不毛！",
       "artist": "ぽてんしゃる0",
       "category": "niconico&ボーカロイド",
@@ -10409,39 +8687,6 @@
       ]
     },
     {
-      "name": "ニブンノイチ",
-      "artist": "BACK-ON[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/402.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "悪戯",
       "artist": "ろん×田中秀和(MONACA)",
       "category": "maimai",
@@ -10503,72 +8748,6 @@
           "diffClass": "master",
           "lvl": 13,
           "levelConstant": 13.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "カノン",
-      "artist": "宮野真守[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/405.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "オルフェ",
-      "artist": "宮野真守[PV]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/406.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
           "flags": ["std"]
         }
       ]
@@ -10844,39 +9023,6 @@
       ]
     },
     {
-      "name": "ココロオドル",
-      "artist": "nobodyknows+[cover]",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/416.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.9,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "ウミユリ海底譚",
       "artist": "n-buna",
       "category": "niconico&ボーカロイド",
@@ -11070,39 +9216,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "SAVIOR OF SONG",
-      "artist": "ナノ feat.MY FIRST STORY",
-      "category": "POPS＆アニメ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/423.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.1,
           "flags": ["std"]
         }
       ]
@@ -11372,39 +9485,6 @@
       ]
     },
     {
-      "name": "おじゃま虫",
-      "artist": "DECO*27",
-      "category": "niconico&ボーカロイド",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/436.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "Yet Another ”drizzly rain”",
       "artist": "myu314 feat.あまね(COOL&CREATE)",
       "category": "東方Project",
@@ -11499,204 +9579,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "はじめまして地球人さん",
-      "artist": "ピノキオピー",
-      "category": "niconico&ボーカロイド",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/440.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Pursuing My True Self",
-      "artist": "目黒 将司",
-      "category": "ゲーム＆バラエティ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/441.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Signs Of Love (“Never More” ver.)",
-      "artist": "目黒 将司",
-      "category": "ゲーム＆バラエティ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/442.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "specialist (“Never More” ver.)",
-      "artist": "目黒 将司",
-      "category": "ゲーム＆バラエティ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/443.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Time To Make History (AKIRA YAMAOKA Remix)",
-      "artist": "目黒 将司 Remixed by 山岡 晃",
-      "category": "ゲーム＆バラエティ",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/444.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "シャープの洗濯機を",
-      "artist": "Hiro feat. しゃべる洗濯機 ES-Z200",
-      "category": "オリジナル",
-      "folder": "ORANGE PLUS",
-      "jacket": "maimai/445.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
           "flags": ["std"]
         }
       ]
@@ -11829,39 +9711,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "絵の上手かった友達",
-      "artist": "ピノキオピー",
-      "category": "niconico&ボーカロイド",
-      "folder": "PiNK",
-      "jacket": "maimai/450.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.9,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
           "flags": ["std"]
         }
       ]
@@ -12440,72 +10289,6 @@
       ]
     },
     {
-      "name": "ひみつをちょーだい",
-      "artist": "アルスマグナ",
-      "category": "niconico&ボーカロイド",
-      "folder": "PiNK",
-      "jacket": "maimai/469.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Touch Tap Baby",
-      "artist": "ハッカドール",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/470.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "オモイヨシノ",
       "artist": "loos feat. 柊莉杏",
       "category": "ゲーム＆バラエティ",
@@ -12578,144 +10361,6 @@
       ]
     },
     {
-      "name": "ゲラゲラポーのうた",
-      "artist": "キング・クリームソーダ「妖怪ウォッチ」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/473.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 9.5,
-          "levelConstant": 9.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "秘密の扉から会いにきて",
-      "artist": "田村 ゆかり「のうりん」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/474.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "かくしん的☆めたまるふぉ～ぜっ！",
-      "artist": "土間うまる [CV.田中あいみ]「干物妹！うまるちゃん」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/475.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "極上スマイル",
-      "artist": "Wake Up, Girls！",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/476.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "厨病激発ボーイ",
       "artist": "れるりり",
       "category": "niconico&ボーカロイド",
@@ -12749,39 +10394,6 @@
       ]
     },
     {
-      "name": "Dragon Night",
-      "artist": "SEKAI NO OWARI",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/479.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "HIMITSUスパーク",
       "artist": "カラスは真っ白",
       "category": "POPS＆アニメ",
@@ -12810,39 +10422,6 @@
           "diffClass": "master",
           "lvl": 13,
           "levelConstant": 13.2,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "でんでんぱっしょん",
-      "artist": "でんぱ組.Inc",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/481.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
           "flags": ["std"]
         }
       ]
@@ -12914,138 +10493,6 @@
       ]
     },
     {
-      "name": "Luminize",
-      "artist": "fripSide「フューチャーカード バディファイト ハンドレッド」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/484.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Falling Roses",
-      "artist": "シンガンクリムゾンズ「SHOW BY ROCK!!」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/485.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "青春はNon-Stop！",
-      "artist": "プラズマジカ「SHOW BY ROCK!!」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK",
-      "jacket": "maimai/486.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ようかい体操第一",
-      "artist": "Dream5「妖怪ウォッチ」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/487.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 8.5,
-          "levelConstant": 8.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "Lividi",
       "artist": "Feryquitous",
       "category": "maimai",
@@ -13107,39 +10554,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ヘタリアン☆ジェット",
-      "artist": "イタリア (CV.浪川大輔)「ヘタリア The World Twinkle」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/491.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.0,
           "flags": ["std"]
         }
       ]
@@ -13349,276 +10763,6 @@
       ]
     },
     {
-      "name": "夏にキスしていいですか？",
-      "artist": "アルスマグナ",
-      "category": "niconico&ボーカロイド",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/498.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "夏祭り",
-      "artist": "Jitterin' Jinn [covered by ろん]",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/499.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "シュガーソングとビターステップ",
-      "artist": "UNISON SQUARE GARDEN",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/500.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Daydream café",
-      "artist": "Petit Rabbit's「ご注文はうさぎですか？」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/501.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Scatman (Ski Ba Bop Ba Dop Bop)",
-      "artist": "Scatman John",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/502.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "イチズレシピ",
-      "artist": "アイドルカレッジ「俺がお嬢様学校に「庶民サンプル」としてゲッツされた件」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/503.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ふ・れ・ん・ど・し・た・い",
-      "artist": "学園生活部「がっこうぐらし！」",
-      "category": "POPS＆アニメ",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/504.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ちょちょちょ！ゆるゆり☆かぷりっちょ！！！",
-      "artist": "七森中☆ごらく部「ゆるゆり さん☆ハイ！」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/505.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "セハガガガンバッちゃう！！",
       "artist": "Hi☆sCoool! セハガール",
       "category": "POPS＆アニメ",
@@ -13746,39 +10890,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ヒビカセ",
-      "artist": "GigaReol",
-      "category": "niconico&ボーカロイド",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/510.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11.5,
-          "levelConstant": 11.6,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.1,
           "flags": ["std"]
         }
       ]
@@ -14148,39 +11259,6 @@
           "diffClass": "master",
           "lvl": 13,
           "levelConstant": 13.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Mr. Wonderland",
-      "artist": "sasakure.UK",
-      "category": "niconico&ボーカロイド",
-      "folder": "PiNK PLUS",
-      "jacket": "maimai/522.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.2,
           "flags": ["std"]
         }
       ]
@@ -14891,39 +11969,6 @@
       ]
     },
     {
-      "name": "ゆりゆららららゆるゆり大事件",
-      "artist": "七森中☆ごらく部「ゆるゆり」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/544.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7,
-          "levelConstant": 7.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "フォルテシモBELL",
       "artist": "天王洲 なずな(CV:山本 彩乃)",
       "category": "オンゲキ＆CHUNITHM",
@@ -15018,72 +12063,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "PERFECT HUMAN",
-      "artist": "RADIO FISH",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/550.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ファッとして桃源郷",
-      "artist": "新庄かなえ(CV:三森すずこ)「てーきゅう」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/551.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.3,
           "flags": ["std"]
         }
       ]
@@ -15386,39 +12365,6 @@
       ]
     },
     {
-      "name": "いぇす！ゆゆゆ☆ゆるゆり♪♪",
-      "artist": "七森中☆ごらく部「ゆるゆり♪♪」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/562.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "ENJOY POLIS",
       "artist": "LOPIT",
       "category": "maimai",
@@ -15711,72 +12657,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Star☆Glitter",
-      "artist": "セブンスシスターズ",
-      "category": "バラエティ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/575.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.6,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "H-A-J-I-M-A-R-I-U-T-A-!!",
-      "artist": "777☆SISTERS",
-      "category": "バラエティ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/576.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.1,
           "flags": ["std"]
         }
       ]
@@ -16283,39 +13163,6 @@
       ]
     },
     {
-      "name": "SUSHI食べたい feat.ソイソース",
-      "artist": "ORANGE RANGE",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/600.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "きらっせ☆ウッド村ファーム",
       "artist": "uno(IOSYS) feat.miko",
       "category": "POPS＆アニメ",
@@ -16415,72 +13262,6 @@
       ]
     },
     {
-      "name": "Jumping!!",
-      "artist": "Rhodanthe*",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/604.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "7 Girls War",
-      "artist": "Wake Up, Girls！",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi",
-      "jacket": "maimai/605.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10,
-          "levelConstant": 10.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "The wheel to the right",
       "artist": "Sampling Masters MEGA",
       "category": "オンゲキ＆CHUNITHM",
@@ -16509,39 +13290,6 @@
           "diffClass": "master",
           "lvl": 14,
           "levelConstant": 14.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "SAKURAスキップ",
-      "artist": "fourfolium「NEW GAME!」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/609.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.1,
           "flags": ["std"]
         }
       ]
@@ -16707,39 +13455,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Paradisus-Paradoxum",
-      "artist": "MYTH & ROID「Re：ゼロから始める異世界生活」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/615.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 8,
-          "levelConstant": 8.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.2,
           "flags": ["std"]
         }
       ]
@@ -17477,72 +14192,6 @@
       ]
     },
     {
-      "name": "ホシトハナ",
-      "artist": "讃州中学勇者部「結城友奈は勇者である」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/645.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "名探偵連続殺人事件",
-      "artist": "てにをは",
-      "category": "niconico&ボーカロイド",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/646.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11,
-          "levelConstant": 11.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "エイリアンエイリアン",
       "artist": "ナユタン星人",
       "category": "niconico&ボーカロイド",
@@ -17675,39 +14324,6 @@
       ]
     },
     {
-      "name": "Now Loading!!!!",
-      "artist": "fourfolium「NEW GAME!」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/653.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "真・ハンサム体操でズンドコホイ",
       "artist": "10Re;「学園ハンサム」",
       "category": "POPS＆アニメ",
@@ -17769,39 +14385,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "未来(ソラ)の歌",
-      "artist": "Questy「ポッピンQ」",
-      "category": "POPS＆アニメ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/656.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
           "flags": ["std"]
         }
       ]
@@ -17901,72 +14484,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "CALL HEAVEN!!",
-      "artist": "夢色キャスト",
-      "category": "ゲーム＆バラエティ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/661.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Sunshine world tour",
-      "artist": "夢色キャスト",
-      "category": "ゲーム＆バラエティ",
-      "folder": "MURASAKi PLUS",
-      "jacket": "maimai/662.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.4,
           "flags": ["std"]
         }
       ]
@@ -18136,39 +14653,6 @@
         },
         {
           "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "あ・え・い・う・え・お・あお!!",
-      "artist": "劇団ひととせ「ひなこのーと」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK",
-      "jacket": "maimai/669.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 8,
-          "levelConstant": 8.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.9,
           "flags": ["std"]
@@ -18402,72 +14886,6 @@
           "diffClass": "master",
           "lvl": 11,
           "levelConstant": 11.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "This game",
-      "artist": "鈴木このみ「ノーゲーム・ノーライフ」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK",
-      "jacket": "maimai/678.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11.5,
-          "levelConstant": 11.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Los! Los! Los!",
-      "artist": "ターニャ・デグレチャフ(CV.悠木碧)「幼女戦記」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK",
-      "jacket": "maimai/679.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 8,
-          "levelConstant": 8.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.6,
           "flags": ["std"]
         }
       ]
@@ -18963,39 +15381,6 @@
           "diffClass": "master",
           "lvl": 13,
           "levelConstant": 13.4,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "ガヴリールドロップキック",
-      "artist": "ガヴリール（富田美憂），ヴィーネ（大西沙織），サターニャ（大空直美），ラフィエル（花澤香菜）「ガヴリールドロップアウト」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK",
-      "jacket": "maimai/697.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
           "flags": ["std"]
         }
       ]
@@ -19535,39 +15920,6 @@
       ]
     },
     {
-      "name": "ヤバい○○",
-      "artist": "上坂すみれ",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK",
-      "jacket": "maimai/718.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.6,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "エンドマークに希望と涙を添えて",
       "artist": "cosMo＠暴走P",
       "category": "オンゲキ＆CHUNITHM",
@@ -19794,123 +16146,6 @@
           "diffClass": "master",
           "lvl": 13,
           "levelConstant": 13.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "POP TEAM EPIC",
-      "artist": "上坂すみれ「ポプテピピック」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/728.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 13.5,
-          "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "にめんせい☆ウラオモテライフ！",
-      "artist": "土間うまる（田中あいみ）「干物妹！うまるちゃんR」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/729.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.6,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 11.5,
-          "levelConstant": 11.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "うまるん体操",
-      "artist": "妹Ｓ「干物妹！うまるちゃんR」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/730.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12,
-          "levelConstant": 12.2,
           "flags": ["std"]
         }
       ]
@@ -20324,84 +16559,6 @@
       ]
     },
     {
-      "name": "アンチクロックワイズ",
-      "artist": "After the Rain（そらる×まふまふ）",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/743.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 13,
-          "levelConstant": 13.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "全力☆Summer!",
-      "artist": "angela「アホガール」",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/744.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.7,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.4,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12,
-          "levelConstant": 12.0,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "keep hopping",
       "artist": "kamome sano",
       "category": "maimai",
@@ -20534,39 +16691,6 @@
       ]
     },
     {
-      "name": "Ievan Polkka",
-      "artist": "Otomania feat. 初音ミク",
-      "category": "niconico&ボーカロイド",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/749.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11,
-          "levelConstant": 11.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.1,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "初音ミクの激唱",
       "artist": "Storyteller",
       "category": "niconico&ボーカロイド",
@@ -20694,39 +16818,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "Arrival of Tears",
-      "artist": "彩音",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/754.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
           "flags": ["std"]
         }
       ]
@@ -21344,45 +17435,6 @@
       ]
     },
     {
-      "name": "甲賀忍法帖",
-      "artist": "陰陽座",
-      "category": "POPS＆アニメ",
-      "folder": "MiLK PLUS",
-      "jacket": "maimai/774.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "ジンギスカン",
       "artist": "仁井山征弘 Feat. GREAT G and surprise",
       "category": "POPS＆アニメ",
@@ -21681,45 +17733,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.6,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "NOISY LOVE POWER☆",
-      "artist": "大橋彩香",
-      "category": "POPS＆アニメ",
-      "folder": "FiNALE",
-      "jacket": "maimai/788.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.1,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 10.5,
-          "levelConstant": 10.9,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.8,
           "flags": ["std"]
         }
       ]
@@ -22814,39 +18827,6 @@
       ]
     },
     {
-      "name": "Deep in Abyss",
-      "artist": "リコ（CV：富田美憂）、レグ（CV：伊瀬茉莉也）",
-      "category": "POPS＆アニメ",
-      "folder": "FiNALE",
-      "jacket": "maimai/824.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.3,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "雷切-RAIKIRI-",
       "artist": "kanone",
       "category": "maimai",
@@ -22959,39 +18939,6 @@
           "diffClass": "remaster",
           "lvl": 12,
           "levelConstant": 12.5,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "アリサのテーマ",
-      "artist": "池頼広",
-      "category": "ゲーム＆バラエティ",
-      "folder": "FiNALE",
-      "jacket": "maimai/828.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.3,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.5,
           "flags": ["std"]
         }
       ]
@@ -23489,39 +19436,6 @@
       ]
     },
     {
-      "name": "ワンダーラスト",
-      "artist": "sasakure.UK",
-      "category": "niconico&ボーカロイド",
-      "folder": "FiNALE",
-      "jacket": "maimai/843.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 5,
-          "levelConstant": 5.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13.5,
-          "levelConstant": 13.8,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
       "name": "End Time",
       "artist": "Cres.",
       "category": "ゲーム＆バラエティ",
@@ -23748,39 +19662,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.9,
-          "flags": ["std"]
-        }
-      ]
-    },
-    {
-      "name": "全世界共通リズム感テスト",
-      "artist": "☆リズムに合わせてボタンを叩き達成率を競うゲームです☆",
-      "category": "maimai",
-      "folder": "FiNALE",
-      "jacket": "maimai/854.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 6,
-          "levelConstant": 6.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 8,
-          "levelConstant": 8.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["std"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
           "flags": ["std"]
         }
       ]
@@ -24017,45 +19898,6 @@
       ]
     },
     {
-      "name": "コネクト",
-      "artist": "ClariS　「魔法少女まどか☆マギカ」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/10021.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.3,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "ハッピーシンセサイザ",
       "artist": "EasyPop",
       "category": "niconico&ボーカロイド",
@@ -24282,39 +20124,6 @@
           "diffClass": "master",
           "lvl": 12.5,
           "levelConstant": 12.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "君の知らない物語",
-      "artist": "supercell「化物語」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/10181.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
           "flags": ["dx"]
         }
       ]
@@ -25079,105 +20888,6 @@
       ]
     },
     {
-      "name": "かくしん的☆めたまるふぉ～ぜっ！",
-      "artist": "土間うまる [CV.田中あいみ]「干物妹！うまるちゃん」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/10475.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.7,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.3,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "シュガーソングとビターステップ",
-      "artist": "UNISON SQUARE GARDEN",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/10500.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.3,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.9,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "Daydream café",
-      "artist": "Petit Rabbit's「ご注文はうさぎですか？」",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/10501.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "色は匂へど散りぬるを",
       "artist": "幽閉サテライト",
       "category": "東方Project",
@@ -25442,39 +21152,6 @@
       ]
     },
     {
-      "name": "Paradisus-Paradoxum",
-      "artist": "MYTH & ROID「Re：ゼロから始める異世界生活」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/10615.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "Maxi",
       "artist": "Nizikawa",
       "category": "ゲーム＆バラエティ",
@@ -25701,39 +21378,6 @@
           "diffClass": "master",
           "lvl": 11,
           "levelConstant": 11.2,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "POP TEAM EPIC",
-      "artist": "上坂すみれ「ポプテピピック」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/10728.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.8,
           "flags": ["dx"]
         }
       ]
@@ -26816,78 +22460,6 @@
       ]
     },
     {
-      "name": "LOSER",
-      "artist": "米津玄師",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11035.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 1,
-          "levelConstant": 1.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.9,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "U.S.A.",
-      "artist": "DA PUMP",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11036.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 12.5,
-          "levelConstant": 12.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "HOT LIMIT",
       "artist": "T.M.Revolution [covered by 光吉猛修]",
       "category": "POPS＆アニメ",
@@ -26916,138 +22488,6 @@
           "diffClass": "master",
           "lvl": 11.5,
           "levelConstant": 11.9,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "新宝島",
-      "artist": "サカナクション",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11038.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.1,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "UNION",
-      "artist": "OxT",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11039.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "乗ってけ！ジャパリビート",
-      "artist": "どうぶつビスケッツ×PPP「けものフレンズ２」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11041.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "フレ！フレ！ベストフレンズ",
-      "artist": "どうぶつビスケッツ×PPP「けものフレンズ」",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11042.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
           "flags": ["dx"]
         }
       ]
@@ -27119,39 +22559,6 @@
       ]
     },
     {
-      "name": "アウトサイダー",
-      "artist": "Eve",
-      "category": "niconico&ボーカロイド",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11045.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.3,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "アディショナルメモリー",
       "artist": "じん",
       "category": "niconico&ボーカロイド",
@@ -27180,39 +22587,6 @@
           "diffClass": "master",
           "lvl": 12,
           "levelConstant": 12.5,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "ジャガーノート",
-      "artist": "夏代孝明 feat. 初音ミク",
-      "category": "niconico&ボーカロイド",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11047.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.7,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
           "flags": ["dx"]
         }
       ]
@@ -27383,105 +22757,6 @@
       ]
     },
     {
-      "name": "POPPY PAPPY DAY",
-      "artist": "ポプ子(CV:五十嵐裕美)＆ピピ美(CV:松嵜麗)",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11055.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6.5,
-          "levelConstant": 6.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.1,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "Clattanoia",
-      "artist": "OxT",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11056.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.6,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "The Gong of Knockout",
-      "artist": "Fear, and Loathing in Las Vegas",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11057.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7.5,
-          "levelConstant": 7.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 11,
-          "levelConstant": 11.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 13,
-          "levelConstant": 13.5,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "デンパラダイム",
       "artist": "lumo",
       "category": "niconico&ボーカロイド",
@@ -27609,72 +22884,6 @@
           "diffClass": "master",
           "lvl": 11.5,
           "levelConstant": 11.9,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "徒花ネクロマンシー",
-      "artist": "フランシュシュ",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11062.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 10,
-          "levelConstant": 10.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.6,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "目覚めRETURNER",
-      "artist": "フランシュシュ",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11063.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
           "flags": ["dx"]
         }
       ]
@@ -27878,72 +23087,6 @@
       ]
     },
     {
-      "name": "東奔西走行進曲",
-      "artist": "BLACK STARS（ブラック指令・ペガッサ星人・シルバーブルーメ・ノーバ）",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11071.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "Soul-ride ON!",
-      "artist": "アギラ・キングジョー・ガッツ星人（CV：飯田里穂・三森すずこ・松田利冴）",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11072.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "アカリがやってきたぞっ",
       "artist": "GYARI",
       "category": "niconico&ボーカロイド",
@@ -28005,39 +23148,6 @@
           "diffClass": "master",
           "lvl": 13.5,
           "levelConstant": 13.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "未完成人",
-      "artist": "ンダホ&ぺけたん from Fischer's",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす",
-      "jacket": "maimai/11076.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.7,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.9,
           "flags": ["dx"]
         }
       ]
@@ -29177,39 +24287,6 @@
       ]
     },
     {
-      "name": "青空のラプソディ",
-      "artist": "fhána",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11114.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.7,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "だから僕は音楽を辞めた",
       "artist": "ヨルシカ",
       "category": "POPS＆アニメ",
@@ -29232,72 +24309,6 @@
           "diffClass": "expert",
           "lvl": 8.5,
           "levelConstant": 8.7,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.5,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "ラブ・ドラマティック feat. 伊原六花",
-      "artist": "鈴木雅之",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11116.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.9,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "異世界かるてっと",
-      "artist": "アインズ(日野聡)、カズマ(福島潤)、スバル(小林裕介)、ターニャ(悠木碧)",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11117.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
           "flags": ["dx"]
         },
         {
@@ -29370,39 +24381,6 @@
           "diffClass": "master",
           "lvl": 11,
           "levelConstant": 11.2,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "オトモダチフィルム",
-      "artist": "オーイシマサヨシ",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11120.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 4,
-          "levelConstant": 4.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 7,
-          "levelConstant": 7.4,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9.5,
-          "levelConstant": 9.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.9,
           "flags": ["dx"]
         }
       ]
@@ -30167,39 +25145,6 @@
       ]
     },
     {
-      "name": "六厘歌",
-      "artist": "六厘舎",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11144.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.4,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
       "name": "Entrance",
       "artist": "Ice",
       "category": "ゲーム＆バラエティ",
@@ -30393,39 +25338,6 @@
           "diffClass": "master",
           "lvl": 12,
           "levelConstant": 12.0,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "馬と鹿",
-      "artist": "米津玄師",
-      "category": "POPS＆アニメ",
-      "folder": "maimaiでらっくす PLUS",
-      "jacket": "maimai/11151.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 1,
-          "levelConstant": 1.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5.5,
-          "levelConstant": 5.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8,
-          "levelConstant": 8.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.3,
           "flags": ["dx"]
         }
       ]
@@ -31296,144 +26208,6 @@
           "diffClass": "remaster",
           "lvl": 13.5,
           "levelConstant": 13.7,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "ノーポイッ!",
-      "artist": "Petit Rabbit's",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/11178.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.9,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "町かどタンジェント",
-      "artist": "shami momo（吉田優子・千代田桃）／CV：小原好美・鬼頭明里",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/11179.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 8.5,
-          "levelConstant": 8.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11.5,
-          "levelConstant": 11.8,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "紅蓮華",
-      "artist": "LiSA",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/11180.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 11,
-          "levelConstant": 11.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "remaster",
-          "lvl": 13,
-          "levelConstant": 13.0,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "MIRACLE RUSH",
-      "artist": "StylipS",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/11182.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 3,
-          "levelConstant": 3.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 6,
-          "levelConstant": 6.2,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.5,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12,
-          "levelConstant": 12.0,
           "flags": ["dx"]
         }
       ]
@@ -32496,39 +27270,6 @@
           "diffClass": "master",
           "lvl": 14,
           "levelConstant": 14.4,
-          "flags": ["dx"]
-        }
-      ]
-    },
-    {
-      "name": "Pretender",
-      "artist": "Official髭男dism",
-      "category": "POPS＆アニメ",
-      "folder": "Splash",
-      "jacket": "maimai/11217.png",
-      "charts": [
-        {
-          "diffClass": "basic",
-          "lvl": 2,
-          "levelConstant": 2.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "advanced",
-          "lvl": 5.5,
-          "levelConstant": 5.8,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "expert",
-          "lvl": 9,
-          "levelConstant": 9.0,
-          "flags": ["dx"]
-        },
-        {
-          "diffClass": "master",
-          "lvl": 12.5,
-          "levelConstant": 12.7,
           "flags": ["dx"]
         }
       ]

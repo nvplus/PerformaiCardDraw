@@ -25,15 +25,20 @@ function parseSongPool(songPoolString: string): SongPoolEntry[] {
   const entries: SongPoolEntry[] = [];
 
   for (const line of lines) {
-    const parts = line.split('|').map((part) => part.trim());
+    const parts = line.split('|');
     if (parts.length === 3) {
       const [songName, type, difficulty] = parts;
-      const trimmedSongName = songName.substring(2);
-      if ((type === 'std' || type === 'dx') && songName && difficulty) {
+      // Only trim type and difficulty, preserve song name exactly as is
+      const trimmedType = type.trim();
+      const trimmedDifficulty = difficulty.trim();
+      if (
+        (trimmedType === 'std' || trimmedType === 'dx') &&
+        trimmedDifficulty
+      ) {
         entries.push({
-          songName: trimmedSongName,
-          type: type as 'std' | 'dx',
-          difficulty,
+          songName: songName, // Don't trim the song name to preserve whitespace
+          type: trimmedType as 'std' | 'dx',
+          difficulty: trimmedDifficulty,
         });
       }
     }
@@ -46,6 +51,24 @@ function findMatchingSong(
   gameData: GameData,
   entry: SongPoolEntry,
 ): { song: Song; chart: Chart } | null {
+  // Handle empty/whitespace-only song names by looking for exact match including whitespace
+  // This handles cases like the song "　" (Japanese space character) in maimai
+  if (!entry.songName.trim()) {
+    // Look for songs with empty or whitespace-only names
+    for (const song of gameData.songs) {
+      if (!song.name.trim() || song.name === entry.songName) {
+        for (const chart of song.charts) {
+          const difficulty = gameData.meta.difficulties.find(
+            (d) => d.key.toLowerCase() === entry.difficulty.toLowerCase(),
+          );
+          if (difficulty && chart.diffClass === difficulty.key) {
+            return { song, chart };
+          }
+        }
+      }
+    }
+  }
+
   // Try to find exact match first
   for (const song of gameData.songs) {
     if (song.name.toLowerCase() === entry.songName.toLowerCase()) {

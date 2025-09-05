@@ -6,6 +6,8 @@ import * as yaml from 'js-yaml';
  * - Chronomia|dx|master
  * - Chronomia|dx|basic
  * - ダーリンダンス|dx|remaster
+ * - 　|dx|master
+ * - Little "Sister" Bitch|dx|master
  */
 export function parseYamlToSongPoolString(yamlContent: string): string {
   try {
@@ -21,21 +23,34 @@ export function parseYamlToSongPoolString(yamlContent: string): string {
         throw new Error(`Entry at index ${index} must be a string`);
       }
 
-      const parts = entry.split('|');
-      if (parts.length !== 3) {
+      // Find the last two pipe characters to split type and difficulty
+      // This allows song titles to contain pipe characters
+      const lastPipeIndex = entry.lastIndexOf('|');
+      if (lastPipeIndex === -1) {
         throw new Error(
           `Entry "${entry}" must be in format "Song Title|type|difficulty"`,
         );
       }
 
-      const [title, type, difficulty] = parts;
-      if (!title.trim() || !type.trim() || !difficulty.trim()) {
-        throw new Error(`Entry "${entry}" has empty fields`);
+      const secondLastPipeIndex = entry.lastIndexOf('|', lastPipeIndex - 1);
+      if (secondLastPipeIndex === -1) {
+        throw new Error(
+          `Entry "${entry}" must be in format "Song Title|type|difficulty"`,
+        );
       }
 
-      if (type !== 'std' && type !== 'dx') {
+      const type = entry.substring(secondLastPipeIndex + 1, lastPipeIndex);
+      const difficulty = entry.substring(lastPipeIndex + 1);
+
+      // Allow blank/whitespace-only titles (like Japanese space character)
+      // but ensure type and difficulty are not empty
+      if (!type.trim() || !difficulty.trim()) {
+        throw new Error(`Entry "${entry}" has empty type or difficulty fields`);
+      }
+
+      if (type.trim() !== 'std' && type.trim() !== 'dx') {
         throw new Error(
-          `Entry "${entry}" has invalid type "${type}". Must be "std" or "dx"`,
+          `Entry "${entry}" has invalid type "${type.trim()}". Must be "std" or "dx"`,
         );
       }
 

@@ -8,6 +8,7 @@ import {
   Divider,
   Drawer,
   DrawerSize,
+  FileInput,
   FormGroup,
   HTMLSelect,
   Icon,
@@ -40,6 +41,7 @@ import { loadConfig, saveConfig } from '../config-persistence';
 import { ErrorBoundary } from 'react-error-boundary';
 import { ErrorFallback } from '../utils/error-fallback';
 import { formatLevel } from '../game-data-utils';
+import { parseYamlToSongPoolString } from '../utils/yaml-parser';
 
 function getAvailableDifficulties(gameData: GameData) {
   const s = new Set<string>();
@@ -520,15 +522,49 @@ function GeneralSettings() {
         <Collapse isOpen={configState.useSongPool}>
           <FormGroup
             label="Song Pool"
-            helperText="Enter songs in format: Song Name|std or dx|Difficulty Name (one per line)"
+            helperText="Enter songs in format: - Song Name|std or dx|Difficulty Name (one per line), or upload a YAML file"
           >
+            <div style={{ marginBottom: '10px' }}>
+              <FileInput
+                text="Upload YAML file..."
+                buttonText="Browse"
+                onInputChange={(e) => {
+                  const target = e.target as HTMLInputElement;
+                  const file = target.files?.[0];
+                  if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                      try {
+                        const yamlContent = event.target?.result as string;
+                        const songPoolString =
+                          parseYamlToSongPoolString(yamlContent);
+                        updateState({ songPoolString });
+                      } catch (error) {
+                        // Show error to user - you might want to use a toast notification here
+                        alert(
+                          `Error parsing YAML file: ${
+                            error instanceof Error
+                              ? error.message
+                              : 'Unknown error'
+                          }`,
+                        );
+                      }
+                    };
+                    reader.readAsText(file);
+                  }
+                }}
+                inputProps={{
+                  accept: '.yaml,.yml',
+                }}
+              />
+            </div>
             <TextArea
               id="songPoolString"
               value={configState.songPoolString}
               onChange={(e) => {
                 updateState({ songPoolString: e.target.value });
               }}
-              placeholder="Example:&#10;Song Title 1|std|Expert&#10;Song Title 2|dx|Master&#10;Song Title 3|std|Advanced"
+              placeholder="Example:&#10;- Song Title 1|std|Expert&#10;- Song Title 2|dx|Master&#10;- Song Title 3|std|Advanced"
               rows={8}
               fill
             />

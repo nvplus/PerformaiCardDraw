@@ -22,6 +22,8 @@ export interface ConfigState {
   tournamentRounds: string[];
   showPlayerAndRoundLabels: boolean;
   defaultPlayersPerDraw: number;
+  useSongPool: boolean;
+  songPoolString: string;
   update: StoreApi<ConfigState>['setState'];
 }
 
@@ -54,6 +56,8 @@ export const useConfigState = createWithEqualityFn<ConfigState>(
     ],
     showPlayerAndRoundLabels: false,
     defaultPlayersPerDraw: 2,
+    useSongPool: false,
+    songPoolString: '',
     update: set,
   }),
   Object.is,

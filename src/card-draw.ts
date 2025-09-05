@@ -7,6 +7,97 @@ import { getDifficultyColor } from './hooks/useDifficultyColor';
 import { getDiffAbbr } from './game-data-utils';
 import { getAvailableLevels } from './game-data-utils';
 
+interface SongPoolEntry {
+  songName: string;
+  type: 'std' | 'dx';
+  difficulty: string;
+}
+
+function parseSongPool(songPoolString: string): SongPoolEntry[] {
+  if (!songPoolString.trim()) {
+    return [];
+  }
+
+  const lines = songPoolString
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line);
+  const entries: SongPoolEntry[] = [];
+
+  for (const line of lines) {
+    const parts = line.split('|').map((part) => part.trim());
+    if (parts.length === 3) {
+      const [songName, type, difficulty] = parts;
+      const trimmedSongName = songName.substring(2);
+      if ((type === 'std' || type === 'dx') && songName && difficulty) {
+        entries.push({
+          songName: trimmedSongName,
+          type: type as 'std' | 'dx',
+          difficulty,
+        });
+      }
+    }
+  }
+
+  return entries;
+}
+
+function findMatchingSong(
+  gameData: GameData,
+  entry: SongPoolEntry,
+): { song: Song; chart: Chart } | null {
+  // Try to find exact match first
+  for (const song of gameData.songs) {
+    if (song.name.toLowerCase() === entry.songName.toLowerCase()) {
+      for (const chart of song.charts) {
+        // Try to match difficulty by key
+        const difficulty = gameData.meta.difficulties.find(
+          (d) => d.key.toLowerCase() === entry.difficulty.toLowerCase(),
+        );
+        if (difficulty && chart.diffClass === difficulty.key) {
+          return { song, chart };
+        }
+      }
+    }
+  }
+
+  // Try fuzzy matching on song name if exact match fails
+  for (const song of gameData.songs) {
+    if (
+      song.name.toLowerCase().includes(entry.songName.toLowerCase()) ||
+      entry.songName.toLowerCase().includes(song.name.toLowerCase())
+    ) {
+      for (const chart of song.charts) {
+        const difficulty = gameData.meta.difficulties.find(
+          (d) => d.key.toLowerCase() === entry.difficulty.toLowerCase(),
+        );
+        if (difficulty && chart.diffClass === difficulty.key) {
+          return { song, chart };
+        }
+      }
+    }
+  }
+
+  return null;
+}
+
+function* eligibleChartsFromSongPool(
+  config: ConfigState,
+  gameData: GameData,
+): Generator<EligibleChart> {
+  const songPoolEntries = parseSongPool(config.songPoolString);
+  for (const entry of songPoolEntries) {
+    const match = findMatchingSong(gameData, entry);
+    if (match) {
+      const { song, chart } = match;
+      // Still apply basic validation
+      if (songIsValid(config, song) && chartIsValid(config, chart)) {
+        yield getDrawnChart(gameData, song, chart);
+      }
+    }
+  }
+}
+
 export function getDrawnChart(
   gameData: GameData,
   currentSong: Song,
@@ -96,8 +187,46 @@ export function draw(gameData: GameData, configData: ConfigState): Drawing {
     weights,
     groupSongsAt,
     defaultPlayersPerDraw,
+    useSongPool,
   } = configData;
 
+  // If using song pool, create a simple array-based draw
+  if (useSongPool) {
+    const poolCharts = Array.from(
+      eligibleChartsFromSongPool(configData, gameData),
+    );
+    const drawnCharts: DrawnChart[] = [];
+
+    // Simple random selection from the pool
+    const availableCharts = [...poolCharts];
+    while (
+      drawnCharts.length < numChartsToRandom &&
+      availableCharts.length > 0
+    ) {
+      const randomIndex = Math.floor(Math.random() * availableCharts.length);
+      const randomChart = availableCharts[randomIndex];
+
+      drawnCharts.push({
+        ...randomChart,
+        id: `drawn_chart-${nanoid(5)}`,
+      });
+
+      // Remove drawn chart to prevent duplicates
+      availableCharts.splice(randomIndex, 1);
+    }
+
+    return {
+      id: `draw-${nanoid(10)}`,
+      charts: shuffle(drawnCharts),
+      players: times(defaultPlayersPerDraw, () => ''),
+      bans: [],
+      protects: [],
+      pocketPicks: [],
+      winners: [],
+    };
+  }
+
+  // Original logic for non-song-pool draws
   const validCharts = new Map<number, Array<EligibleChart>>();
   const availableLevels = getAvailableLevels(gameData);
   /** all charts we will consider to be valid for this draw */

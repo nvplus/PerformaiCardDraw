@@ -18,6 +18,7 @@ import {
   Switch,
   Tab,
   Tabs,
+  TextArea,
   Tooltip,
 } from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
@@ -500,12 +501,38 @@ function GeneralSettings() {
             label="Use Level Constants"
           />
         )}
+        <Checkbox
+          id="useSongPool"
+          checked={configState.useSongPool}
+          onChange={(e) => {
+            const useSongPool = !!e.currentTarget.checked;
+            updateState({ useSongPool });
+          }}
+          label="Use Song Pool"
+        />
         <Collapse isOpen={useWeights}>
           <WeightsControls
             usesTiers={false}
             high={upperBound}
             low={lowerBound}
           />
+        </Collapse>
+        <Collapse isOpen={configState.useSongPool}>
+          <FormGroup
+            label="Song Pool"
+            helperText="Enter songs in format: Song Name|std or dx|Difficulty Name (one per line)"
+          >
+            <TextArea
+              id="songPoolString"
+              value={configState.songPoolString}
+              onChange={(e) => {
+                updateState({ songPoolString: e.target.value });
+              }}
+              placeholder="Example:&#10;Song Title 1|std|Expert&#10;Song Title 2|dx|Master&#10;Song Title 3|std|Advanced"
+              rows={8}
+              fill
+            />
+          </FormGroup>
         </Collapse>
       </FormGroup>
     </>

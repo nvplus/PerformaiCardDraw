@@ -1,4 +1,4 @@
-import { eligibleCharts } from '../card-draw';
+import { eligibleCharts, eligibleChartsFromSongPool } from '../card-draw';
 import { useConfigState } from '../config-state';
 import { useDrawState } from '../draw-state';
 import { SongCard } from '../song-card';
@@ -23,10 +23,16 @@ export default function EligibleChartsList() {
   const isNarrow = useIsNarrow();
   const isDisplayFiltered = currentTab !== 'all';
 
-  const charts = useMemo(
-    () => (gameData ? Array.from(eligibleCharts(configState, gameData)) : []),
-    [gameData, configState],
-  );
+  const charts = useMemo(() => {
+    if (!gameData) return [];
+
+    // Use song pool filtering if enabled, otherwise use regular filtering
+    if (configState.useSongPool) {
+      return Array.from(eligibleChartsFromSongPool(configState, gameData));
+    } else {
+      return Array.from(eligibleCharts(configState, gameData));
+    }
+  }, [gameData, configState]);
   const [songs, filteredCharts] = useMemo(() => {
     const songs = new Set<string>();
     const filtered = charts.filter((chart) => {

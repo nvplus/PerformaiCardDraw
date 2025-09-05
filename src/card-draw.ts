@@ -81,19 +81,32 @@ function findMatchingSong(
   return null;
 }
 
-function* eligibleChartsFromSongPool(
+export function* eligibleChartsFromSongPool(
   config: ConfigState,
   gameData: GameData,
 ): Generator<EligibleChart> {
   const songPoolEntries = parseSongPool(config.songPoolString);
+  const songPoolSet = new Set<string>();
+
+  // Create a set of valid song pool entries for quick lookup
   for (const entry of songPoolEntries) {
     const match = findMatchingSong(gameData, entry);
     if (match) {
       const { song, chart } = match;
-      // Still apply basic validation
-      if (songIsValid(config, song) && chartIsValid(config, chart)) {
-        yield getDrawnChart(gameData, song, chart);
-      }
+      songPoolSet.add(`${song.name}:${chart.diffClass}`);
+    }
+  }
+
+  // Use the regular eligibleCharts generator but filter by song pool
+  for (const chart of eligibleCharts(config, gameData)) {
+    const chartKey = `${chart.name}:${chart.song.charts.find(
+      (c) =>
+        c.diffClass === chart.diffAbbr ||
+        getDiffAbbr(gameData, c.diffClass) === chart.diffAbbr,
+    )?.diffClass}`;
+
+    if (songPoolSet.has(chartKey)) {
+      yield chart;
     }
   }
 }
